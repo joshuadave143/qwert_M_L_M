@@ -1,0 +1,88 @@
+CRITICAL - 2021-03-08 00:01:59 --> Class 'Oauth2\Server' not found
+#0 G:\Project\CI\MLM\mlm\app\Libraries\Oauth.php(8): App\Libraries\Oauth->init()
+#1 G:\Project\CI\MLM\mlm\Modules\Admin\Controllers\Dashboard.php(16): App\Libraries\Oauth->__construct()
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Admin\Controllers\Dashboard->index()
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Dashboard))
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-08 00:51:02 --> Class 'Oauth2\Server' not found
+#0 G:\Project\CI\MLM\mlm\app\Libraries\Oauth.php(8): App\Libraries\Oauth->init()
+#1 G:\Project\CI\MLM\mlm\Modules\Admin\Controllers\Dashboard.php(16): App\Libraries\Oauth->__construct()
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Admin\Controllers\Dashboard->index()
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Dashboard))
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-08 00:53:36 --> Class 'Oauth2\Request' not found
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Admin\Controllers\Dashboard->index()
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Dashboard))
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-03-08 01:16:42 --> BasicAuthFilter filter must have a matching alias defined.
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Filters\Filters.php(354): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('BasicAuthFilter')
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(393): CodeIgniter\Filters\Filters->enableFilter('BasicAuthFilter', 'before')
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-03-08 01:16:56 --> Call to undefined method OAuth2\Request::createFromGlobal()
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Filters\Filters.php(181): Modules\Admin\Filters\OAuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(402): CodeIgniter\Filters\Filters->run('api/dashboard/1...', 'before')
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-03-08 01:17:36 --> Class 'Modules\Admin\Filters\Respond' not found
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Filters\Filters.php(181): Modules\Admin\Filters\OAuthFilter->before(Object(OAuth2\Request), NULL)
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(402): CodeIgniter\Filters\Filters->run('api/dashboard/1...', 'before')
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-03-08 01:44:49 --> Invalid file: Modules/Template/Views/default-page.php
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\View\View.php(203): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Modules/Templat...')
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Common.php(1217): CodeIgniter\View\View->render('Modules/Templat...', Array, true)
+#2 G:\Project\CI\MLM\mlm\Modules\Admin\Controllers\Dashboard.php(17): view('Modules/Templat...')
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Admin\Controllers\Dashboard->index()
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Dashboard))
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-03-08 01:47:04 --> Invalid file: Modules/Template/Views/default-page.php
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\View\View.php(203): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Modules/Templat...')
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Common.php(1217): CodeIgniter\View\View->render('Modules/Templat...', Array, true)
+#2 G:\Project\CI\MLM\mlm\Modules\Admin\Controllers\Dashboard.php(21): view('Modules/Templat...')
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Admin\Controllers\Dashboard->index()
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Dashboard))
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-03-08 01:50:15 --> Undefined variable: parser
+#0 G:\Project\CI\MLM\mlm\Modules\Admin\Controllers\Dashboard.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'G:\\Project\\CI\\M...', 22, Array)
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Admin\Controllers\Dashboard->index()
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Dashboard))
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-08 01:52:47 --> Undefined variable: parser
+#0 G:\Project\CI\MLM\mlm\Modules\Admin\Controllers\Dashboard.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'G:\\Project\\CI\\M...', 22, Array)
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Admin\Controllers\Dashboard->index()
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Dashboard))
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-08 01:55:35 --> Undefined variable: parser
+#0 G:\Project\CI\MLM\mlm\Modules\Admin\Controllers\Dashboard.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'G:\\Project\\CI\\M...', 22, Array)
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Admin\Controllers\Dashboard->index()
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Dashboard))
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-08 01:56:01 --> Invalid file: Modules/Template/Views/test.php
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\View\View.php(203): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Modules/Templat...')
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Common.php(1217): CodeIgniter\View\View->render('Modules/Templat...', Array, true)
+#2 G:\Project\CI\MLM\mlm\Modules\Admin\Controllers\Dashboard.php(21): view('Modules/Templat...')
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Admin\Controllers\Dashboard->index()
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Dashboard))
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#7 {main}
