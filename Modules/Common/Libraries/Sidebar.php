@@ -297,7 +297,32 @@ class Sidebar {
 											3 => array( '<i class="icon-book-open"></i> SURVEY FORM', 'library/Survey_form', '' ,4 => array(ADMIN_ACCOUNT)),
 						)
 			),
+			4 => array(
+						'title'			=> 'Codes',
+						'title_desc'	=> ' <small>Codes</small>',
+						'name'			=> 'Codes',
+						'url' 			=> '#',
+						'icon' 			=> '<i class="fa fa-key"></i> ',
+						'permissions'	=> array(ADMIN_ACCOUNT),
+						'sub'			=> array(
+											1 => array( '<i class="fa-spin icon-settings"></i> Activation Codes', 'Activation_Codes', '' ,4 => array(ADMIN_ACCOUNT)),
+											2 => array( '<i class="fa fa-barcode"></i> Product Codes', 'Product_Codes', '' ,4 => array(ADMIN_ACCOUNT)),
+											3 => array( '<i class="fa fa-sitemap"></i> SURVEY FORM', 'library/Survey_form', '' ,4 => array(ADMIN_ACCOUNT)),
+						)
+			),
 			5 => array(
+						'title'			=> 'Members',
+						'title_desc'	=> ' <small>Members</small>',
+						'name'			=> 'Members',
+						'url' 			=> '#',
+						'icon' 			=> '<i class="fa fa-group"></i> ',
+						'permissions'	=> array(ADMIN_ACCOUNT),
+						'sub'			=> array(
+											1 => array( '<i class="fa fa-file-text-o"></i> Add', 'Members_add', '' ,4 => array(ADMIN_ACCOUNT)),
+											2 => array( '<i class="fa fa-list"></i> List', 'Product_Codes', '' ,4 => array(ADMIN_ACCOUNT)),
+						)
+			),
+			6 => array(
 						'title'			=> 'Activation Codes',
 						'title_desc'	=> ' <small>Activation Codes</small>',
 						'name'			=> 'Activation Codes',
