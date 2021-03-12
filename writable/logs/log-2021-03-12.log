@@ -1,7 +1,0 @@
-CRITICAL - 2021-03-12 12:56:24 --> Array to string conversion
-#0 G:\Project\CI\MLM\mlm\Modules\API\Controllers\Api_vw_activation_codes.php(57): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'G:\\Project\\CI\\M...', 57, Array)
-#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\API\Controllers\Api_vw_activation_codes->create()
-#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\API\Controllers\Api_vw_activation_codes))
-#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#4 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
-#5 {main}
