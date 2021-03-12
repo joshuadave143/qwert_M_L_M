@@ -20,7 +20,8 @@ class OAuthFilter implements FilterInterface{
         $response   = new Response(); 
         if( !$oauth->server->verifyResourceRequest($request) ){
             $oauth->server->getResponse()->send(); 
-            die("You must login first yo use this service.");
+            // die("You must login first yo use this service.");
+            die();
         }
     }
 

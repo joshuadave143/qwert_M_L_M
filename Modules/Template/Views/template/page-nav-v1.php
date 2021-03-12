@@ -8,7 +8,7 @@
                 <img src="assets/img/logo.png" alt="logo"/>
             </a> -->
             <p class="nav navbar-brand" style="width: 100%; padding-top: 10px; font-size: 200%;    color: white;font-family: verdana;">
-                Job Request System
+                Rayn's Marketing
             </p>
 		</div>
 		<!-- END LOGO -->

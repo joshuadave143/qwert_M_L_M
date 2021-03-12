@@ -12,6 +12,7 @@
 					</div>
 					<!-- BEGIN SIDEBAR TOGGLER BUTTON -->
 				</li>
+				
 				<?php
 					for($i=0; $i<count($sidebar); $i++) {
 						echo $sidebar[$i];

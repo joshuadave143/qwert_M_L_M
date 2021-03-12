@@ -1,0 +1,283 @@
+ERROR - 2021-03-11 10:13:13 --> mysqli_sql_exception: Unknown column 'tbl_products.package_id' in 'where clause' in G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:314
+Stack trace:
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(314): mysqli->query('SELECT *\nFROM `...')
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Database\BaseConnection.php(715): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1866): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Model.php(169): CodeIgniter\Database\BaseBuilder->get()
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\BaseModel.php(518): CodeIgniter\Model->doFind(true, '5')
+#6 G:\Project\CI\MLM\mlm\Modules\API\Controllers\Api_product.php(105): CodeIgniter\BaseModel->find('5')
+#7 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\API\Controllers\Api_product->delete('5')
+#8 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\API\Controllers\Api_product))
+#9 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-03-11 10:13:13 --> Unknown column 'tbl_products.package_id' in 'where clause'
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(314): mysqli->query('SELECT *\nFROM `...')
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Database\BaseConnection.php(715): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1866): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Model.php(169): CodeIgniter\Database\BaseBuilder->get()
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\BaseModel.php(518): CodeIgniter\Model->doFind(true, '5')
+#6 G:\Project\CI\MLM\mlm\Modules\API\Controllers\Api_product.php(105): CodeIgniter\BaseModel->find('5')
+#7 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\API\Controllers\Api_product->delete('5')
+#8 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\API\Controllers\Api_product))
+#9 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2021-03-11 10:13:16 --> mysqli_sql_exception: Unknown column 'tbl_products.package_id' in 'where clause' in G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:314
+Stack trace:
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(314): mysqli->query('SELECT *\nFROM `...')
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Database\BaseConnection.php(715): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1866): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Model.php(169): CodeIgniter\Database\BaseBuilder->get()
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\BaseModel.php(518): CodeIgniter\Model->doFind(true, '4')
+#6 G:\Project\CI\MLM\mlm\Modules\API\Controllers\Api_product.php(105): CodeIgniter\BaseModel->find('4')
+#7 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\API\Controllers\Api_product->delete('4')
+#8 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\API\Controllers\Api_product))
+#9 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-03-11 10:13:16 --> Unknown column 'tbl_products.package_id' in 'where clause'
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(314): mysqli->query('SELECT *\nFROM `...')
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Database\BaseConnection.php(715): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1866): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Model.php(169): CodeIgniter\Database\BaseBuilder->get()
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\BaseModel.php(518): CodeIgniter\Model->doFind(true, '4')
+#6 G:\Project\CI\MLM\mlm\Modules\API\Controllers\Api_product.php(105): CodeIgniter\BaseModel->find('4')
+#7 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\API\Controllers\Api_product->delete('4')
+#8 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\API\Controllers\Api_product))
+#9 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2021-03-11 10:16:13 --> mysqli_sql_exception: Unknown column 'tbl_products.package_id' in 'where clause' in G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:314
+Stack trace:
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(314): mysqli->query('UPDATE `tbl_pro...')
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Database\BaseConnection.php(715): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tbl_pro...')
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tbl_pro...')
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2472): CodeIgniter\Database\BaseConnection->query('UPDATE `tbl_pro...', Array, false)
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Model.php(353): CodeIgniter\Database\BaseBuilder->update()
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\BaseModel.php(901): CodeIgniter\Model->doUpdate(Array, Array)
+#6 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Model.php(737): CodeIgniter\BaseModel->update(Array, Array)
+#7 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\BaseModel.php(663): CodeIgniter\Model->update('1', Array)
+#8 G:\Project\CI\MLM\mlm\Modules\API\Controllers\Api_product.php(91): CodeIgniter\BaseModel->save(Array)
+#9 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\API\Controllers\Api_product->update('1')
+#10 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\API\Controllers\Api_product))
+#11 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2021-03-11 10:16:13 --> Unknown column 'tbl_products.package_id' in 'where clause'
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(314): mysqli->query('UPDATE `tbl_pro...')
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Database\BaseConnection.php(715): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tbl_pro...')
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tbl_pro...')
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2472): CodeIgniter\Database\BaseConnection->query('UPDATE `tbl_pro...', Array, false)
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Model.php(353): CodeIgniter\Database\BaseBuilder->update()
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\BaseModel.php(901): CodeIgniter\Model->doUpdate(Array, Array)
+#6 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Model.php(737): CodeIgniter\BaseModel->update(Array, Array)
+#7 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\BaseModel.php(663): CodeIgniter\Model->update('1', Array)
+#8 G:\Project\CI\MLM\mlm\Modules\API\Controllers\Api_product.php(91): CodeIgniter\BaseModel->save(Array)
+#9 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\API\Controllers\Api_product->update('1')
+#10 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\API\Controllers\Api_product))
+#11 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2021-03-11 10:16:25 --> mysqli_sql_exception: Unknown column 'tbl_products.package_id' in 'where clause' in G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:314
+Stack trace:
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(314): mysqli->query('UPDATE `tbl_pro...')
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Database\BaseConnection.php(715): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tbl_pro...')
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tbl_pro...')
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2472): CodeIgniter\Database\BaseConnection->query('UPDATE `tbl_pro...', Array, false)
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Model.php(353): CodeIgniter\Database\BaseBuilder->update()
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\BaseModel.php(901): CodeIgniter\Model->doUpdate(Array, Array)
+#6 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Model.php(737): CodeIgniter\BaseModel->update(Array, Array)
+#7 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\BaseModel.php(663): CodeIgniter\Model->update('1', Array)
+#8 G:\Project\CI\MLM\mlm\Modules\API\Controllers\Api_product.php(91): CodeIgniter\BaseModel->save(Array)
+#9 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\API\Controllers\Api_product->update('1')
+#10 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\API\Controllers\Api_product))
+#11 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2021-03-11 10:16:25 --> Unknown column 'tbl_products.package_id' in 'where clause'
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(314): mysqli->query('UPDATE `tbl_pro...')
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Database\BaseConnection.php(715): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tbl_pro...')
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tbl_pro...')
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2472): CodeIgniter\Database\BaseConnection->query('UPDATE `tbl_pro...', Array, false)
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Model.php(353): CodeIgniter\Database\BaseBuilder->update()
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\BaseModel.php(901): CodeIgniter\Model->doUpdate(Array, Array)
+#6 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Model.php(737): CodeIgniter\BaseModel->update(Array, Array)
+#7 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\BaseModel.php(663): CodeIgniter\Model->update('1', Array)
+#8 G:\Project\CI\MLM\mlm\Modules\API\Controllers\Api_product.php(91): CodeIgniter\BaseModel->save(Array)
+#9 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\API\Controllers\Api_product->update('1')
+#10 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\API\Controllers\Api_product))
+#11 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2021-03-11 02:40:36 --> Undefined offset: 5
+#0 G:\Project\CI\MLM\mlm\Modules\Common\Libraries\Sidebar.php(113): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'G:\\Project\\CI\\M...', 113, Array)
+#1 G:\Project\CI\MLM\mlm\Modules\Common\Libraries\Sidebar.php(70): Modules\Common\Libraries\Sidebar->create_sidebar()
+#2 G:\Project\CI\MLM\mlm\Modules\Common\Controllers\AdminBaseController.php(60): Modules\Common\Libraries\Sidebar->process_page_properties()
+#3 G:\Project\CI\MLM\mlm\Modules\Admin\Controllers\Package.php(49): Modules\Common\Controllers\AdminBaseController->load_sidebar(Array)
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Admin\Controllers\Package->index()
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Package))
+#6 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-11 02:41:04 --> Undefined offset: 5
+#0 G:\Project\CI\MLM\mlm\Modules\Common\Libraries\Sidebar.php(113): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'G:\\Project\\CI\\M...', 113, Array)
+#1 G:\Project\CI\MLM\mlm\Modules\Common\Libraries\Sidebar.php(70): Modules\Common\Libraries\Sidebar->create_sidebar()
+#2 G:\Project\CI\MLM\mlm\Modules\Common\Controllers\AdminBaseController.php(60): Modules\Common\Libraries\Sidebar->process_page_properties()
+#3 G:\Project\CI\MLM\mlm\Modules\Admin\Controllers\Package.php(49): Modules\Common\Controllers\AdminBaseController->load_sidebar(Array)
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Admin\Controllers\Package->index()
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Package))
+#6 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-11 02:41:23 --> Undefined offset: 4
+#0 G:\Project\CI\MLM\mlm\Modules\Common\Libraries\Sidebar.php(113): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'G:\\Project\\CI\\M...', 113, Array)
+#1 G:\Project\CI\MLM\mlm\Modules\Common\Libraries\Sidebar.php(70): Modules\Common\Libraries\Sidebar->create_sidebar()
+#2 G:\Project\CI\MLM\mlm\Modules\Common\Controllers\AdminBaseController.php(60): Modules\Common\Libraries\Sidebar->process_page_properties()
+#3 G:\Project\CI\MLM\mlm\Modules\Admin\Controllers\Package.php(49): Modules\Common\Controllers\AdminBaseController->load_sidebar(Array)
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Admin\Controllers\Package->index()
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Package))
+#6 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#8 {main}
+ERROR - 2021-03-11 19:31:30 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`not` is null' at line 3 in G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:314
+Stack trace:
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(314): mysqli->query('SELECT *\nFROM `...')
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Database\BaseConnection.php(715): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1866): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\BaseModel.php(583): CodeIgniter\Model->doFindAll(0, 0)
+#6 G:\Project\CI\MLM\mlm\Modules\API\Controllers\Api_vw_activation_codes.php(29): CodeIgniter\BaseModel->findAll()
+#7 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\API\Controllers\Api_vw_activation_codes->show('1')
+#8 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\API\Controllers\Api_vw_activation_codes))
+#9 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-03-11 19:31:30 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`not` is null' at line 3
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(314): mysqli->query('SELECT *\nFROM `...')
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Database\BaseConnection.php(715): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1866): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\BaseModel.php(583): CodeIgniter\Model->doFindAll(0, 0)
+#6 G:\Project\CI\MLM\mlm\Modules\API\Controllers\Api_vw_activation_codes.php(29): CodeIgniter\BaseModel->findAll()
+#7 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\API\Controllers\Api_vw_activation_codes->show('1')
+#8 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\API\Controllers\Api_vw_activation_codes))
+#9 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2021-03-11 21:33:31 --> Undefined property: Modules\Common\Libraries\Json_format_datatable::$style
+#0 G:\Project\CI\MLM\mlm\Modules\Common\Libraries\Json_format_datatable.php(47): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'G:\\Project\\CI\\M...', 47, Array)
+#1 G:\Project\CI\MLM\mlm\Modules\Common\Libraries\Json_format_datatable.php(19): Modules\Common\Libraries\Json_format_datatable->getTextStyle()
+#2 G:\Project\CI\MLM\mlm\Modules\API\Controllers\Api_vw_activation_codes.php(24): Modules\Common\Libraries\Json_format_datatable->json_format(Array, Array)
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\API\Controllers\Api_vw_activation_codes->index()
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\API\Controllers\Api_vw_activation_codes))
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-03-11 21:33:31 --> Undefined property: Modules\Common\Libraries\Json_format_datatable::$style
+#0 G:\Project\CI\MLM\mlm\Modules\Common\Libraries\Json_format_datatable.php(47): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'G:\\Project\\CI\\M...', 47, Array)
+#1 G:\Project\CI\MLM\mlm\Modules\Common\Libraries\Json_format_datatable.php(19): Modules\Common\Libraries\Json_format_datatable->getTextStyle()
+#2 G:\Project\CI\MLM\mlm\Modules\API\Controllers\Api_vw_activation_codes.php(34): Modules\Common\Libraries\Json_format_datatable->json_format(Array, Array)
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\API\Controllers\Api_vw_activation_codes->show('1')
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\API\Controllers\Api_vw_activation_codes))
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-03-11 21:33:43 --> Undefined property: Modules\Common\Libraries\Json_format_datatable::$style
+#0 G:\Project\CI\MLM\mlm\Modules\Common\Libraries\Json_format_datatable.php(47): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'G:\\Project\\CI\\M...', 47, Array)
+#1 G:\Project\CI\MLM\mlm\Modules\Common\Libraries\Json_format_datatable.php(19): Modules\Common\Libraries\Json_format_datatable->getTextStyle()
+#2 G:\Project\CI\MLM\mlm\Modules\API\Controllers\Api_vw_activation_codes.php(24): Modules\Common\Libraries\Json_format_datatable->json_format(Array, Array)
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\API\Controllers\Api_vw_activation_codes->index()
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\API\Controllers\Api_vw_activation_codes))
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-03-11 21:33:43 --> Undefined property: Modules\Common\Libraries\Json_format_datatable::$style
+#0 G:\Project\CI\MLM\mlm\Modules\Common\Libraries\Json_format_datatable.php(47): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'G:\\Project\\CI\\M...', 47, Array)
+#1 G:\Project\CI\MLM\mlm\Modules\Common\Libraries\Json_format_datatable.php(19): Modules\Common\Libraries\Json_format_datatable->getTextStyle()
+#2 G:\Project\CI\MLM\mlm\Modules\API\Controllers\Api_vw_activation_codes.php(34): Modules\Common\Libraries\Json_format_datatable->json_format(Array, Array)
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\API\Controllers\Api_vw_activation_codes->show('1')
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\API\Controllers\Api_vw_activation_codes))
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-03-11 21:33:48 --> Undefined property: Modules\Common\Libraries\Json_format_datatable::$style
+#0 G:\Project\CI\MLM\mlm\Modules\Common\Libraries\Json_format_datatable.php(47): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'G:\\Project\\CI\\M...', 47, Array)
+#1 G:\Project\CI\MLM\mlm\Modules\Common\Libraries\Json_format_datatable.php(19): Modules\Common\Libraries\Json_format_datatable->getTextStyle()
+#2 G:\Project\CI\MLM\mlm\Modules\API\Controllers\Api_vw_activation_codes.php(24): Modules\Common\Libraries\Json_format_datatable->json_format(Array, Array)
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\API\Controllers\Api_vw_activation_codes->index()
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\API\Controllers\Api_vw_activation_codes))
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-03-11 21:33:48 --> Undefined property: Modules\Common\Libraries\Json_format_datatable::$style
+#0 G:\Project\CI\MLM\mlm\Modules\Common\Libraries\Json_format_datatable.php(47): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'G:\\Project\\CI\\M...', 47, Array)
+#1 G:\Project\CI\MLM\mlm\Modules\Common\Libraries\Json_format_datatable.php(19): Modules\Common\Libraries\Json_format_datatable->getTextStyle()
+#2 G:\Project\CI\MLM\mlm\Modules\API\Controllers\Api_vw_activation_codes.php(34): Modules\Common\Libraries\Json_format_datatable->json_format(Array, Array)
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\API\Controllers\Api_vw_activation_codes->show('1')
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\API\Controllers\Api_vw_activation_codes))
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-03-11 21:34:34 --> Undefined index: activation_code_id
+#0 G:\Project\CI\MLM\mlm\Modules\Common\Libraries\Json_format_datatable.php(19): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'G:\\Project\\CI\\M...', 19, Array)
+#1 G:\Project\CI\MLM\mlm\Modules\API\Controllers\Api_vw_activation_codes.php(34): Modules\Common\Libraries\Json_format_datatable->json_format(Array, Array)
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\API\Controllers\Api_vw_activation_codes->show('1')
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\API\Controllers\Api_vw_activation_codes))
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-11 21:34:34 --> Undefined index: activation_code_id
+#0 G:\Project\CI\MLM\mlm\Modules\Common\Libraries\Json_format_datatable.php(19): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'G:\\Project\\CI\\M...', 19, Array)
+#1 G:\Project\CI\MLM\mlm\Modules\API\Controllers\Api_vw_activation_codes.php(24): Modules\Common\Libraries\Json_format_datatable->json_format(Array, Array)
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\API\Controllers\Api_vw_activation_codes->index()
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\API\Controllers\Api_vw_activation_codes))
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-11 21:36:41 --> Undefined index: activation_code_id
+#0 G:\Project\CI\MLM\mlm\Modules\Common\Libraries\Json_format_datatable.php(19): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'G:\\Project\\CI\\M...', 19, Array)
+#1 G:\Project\CI\MLM\mlm\Modules\API\Controllers\Api_vw_activation_codes.php(34): Modules\Common\Libraries\Json_format_datatable->json_format(Array, Array)
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\API\Controllers\Api_vw_activation_codes->show('1')
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\API\Controllers\Api_vw_activation_codes))
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-11 21:36:41 --> Undefined index: activation_code_id
+#0 G:\Project\CI\MLM\mlm\Modules\Common\Libraries\Json_format_datatable.php(19): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'G:\\Project\\CI\\M...', 19, Array)
+#1 G:\Project\CI\MLM\mlm\Modules\API\Controllers\Api_vw_activation_codes.php(24): Modules\Common\Libraries\Json_format_datatable->json_format(Array, Array)
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\API\Controllers\Api_vw_activation_codes->index()
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\API\Controllers\Api_vw_activation_codes))
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-11 21:41:08 --> Undefined variable: hasher
+#0 G:\Project\CI\MLM\mlm\Modules\Common\Libraries\Joshua_auth.php(46): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'G:\\Project\\CI\\M...', 46, Array)
+#1 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(50): Modules\Common\Libraries\Joshua_auth->admin_login('mlm', 'admin')
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-11 21:41:25 --> sizeof(): Parameter must be an array or an object that implements Countable
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'sizeof(): Param...', 'G:\\Project\\CI\\M...', 62, Array)
+#1 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(62): sizeof(NULL)
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-11 21:41:34 --> sizeof(): Parameter must be an array or an object that implements Countable
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'sizeof(): Param...', 'G:\\Project\\CI\\M...', 62, Array)
+#1 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(62): sizeof(NULL)
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#6 {main}

@@ -24,7 +24,7 @@ class Format extends BaseConfig
 	 */
 	public $supportedResponseFormats = [
 		'application/json',
-		'application/xml', // machine-readable XML
+		// 'application/xml', // machine-readable XML
 		'text/xml', // human-readable XML
 	];
 

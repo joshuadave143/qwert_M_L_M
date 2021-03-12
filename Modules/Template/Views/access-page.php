@@ -43,37 +43,33 @@
         </div>
         <!-- END LOGO -->
         <!-- BEGIN LOGIN -->
-        <?php
-            $alert = $action === "login" ||  $action == "register"? "alert-danger" : "alert-success";
-        ?>
         <div class="content">
             <!-- BEGIN LOGIN FORM -->
-            <?php
-                if( $action == "login" ) :
-            ?>
-            <form class="login-form" action="<?=base_url()?>{action}" method="post" accept-charset="utf-8">
+            
+
+            <form class="login-form" action="<?=base_url()?>/Auth" method="post" accept-charset="utf-8">
                 <div>
-                    <img src="<?=base_url()?>assets/img/logo-large.png" alt="logo" class="img-responsive" width="100"
+                    <img src="<?=base_url()?>/assets/img/logo.png" alt="logo" class="img-responsive" width="100"
                     style="margin-left: auto; margin-right: auto; display: block;"/>
                   
                 </div>
                 <h3 class="form-title">Login to your account</h3>
-                <div class="alert <?=$alert?> display-hide"<?php echo $has_error ? ' style="display: block"' : ''; ?>>
-					<button class="close" data-close="alert"></button>
-					<span>
-					<?php 
-						$prevpage = isset($_SESSION['prev_page']) ? $_SESSION['prev_page'] : 'login';
-
-						if ($has_error) : 
-							if ($action === "register") :
-								echo $error_msg;
-							else :
-								echo !is_array($error_msg) ? $error_msg : $error_msg['err_msg'];
-							endif;
-						endif;
-					?>
-					</span>
-				</div>
+                <?php 
+                    if(isset($validation)):?>
+                    <div class="alert alert-danger">
+                        <button class="close" data-close="alert"></button>
+                        <span>
+                        <?= $validation->listErrors()?>
+                        </span>
+                    </div>
+                <?php elseif($has_error): ?>
+                    <div class="alert alert-danger">
+                        <button class="close" data-close="alert"></button>
+                        <span>
+                        <?= $error_msg['err_msg']?>
+                        </span>
+                    </div>
+                <?php endif?>
                 <div class="alert alert-error display-hide">
                     <button class="close" data-close="alert"></button>
                     <span>
@@ -82,17 +78,17 @@
                 </div>
                 <div class="form-group">
                     <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
-                    <label class="control-label visible-ie8 visible-ie9">ID no.</label>
+                    <label class="control-label visible-ie8 visible-ie9">Username</label>
                     <div class="input-icon">
                         <i class="fa fa-user"></i>
-                        <input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="DCE No." name="idno"  onkeyup="this.value = this.value.toUpperCase();"/>
+                        <input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="Username" name="username"  value='<?=set_value('username') ?>'/>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label visible-ie8 visible-ie9">Password</label>
                     <div class="input-icon">
                         <i class="fa fa-lock"></i>
-                        <input class="form-control placeholder-no-fix" type="password" autocomplete="off" placeholder="Password" name="password"/>
+                        <input class="form-control placeholder-no-fix" type="password" autocomplete="off" placeholder="Password" name="password"  value='<?=set_value('password') ?>'/>
                     </div>
                 </div>
                 <div class="form-actions">
@@ -102,55 +98,12 @@
                     Login </button>
                 </div>
             </form>
-            <?php 
-                elseif( $action == "register" ) :
-            ?>
-            <!-- END LOGIN FORM -->
-
-            <form class="forget-form" action="{action}" method="post"  style="display: block;">
-                <h3>Register Password</h3>
-                <div class="alert <?=$alert?> display-hide"<?php echo $has_error ? ' style="display: block"' : ''; ?>>
-					<button class="close" data-close="alert"></button>
-					<span>
-					<?php 
-						$prevpage = isset($_SESSION['prev_page']) ? $_SESSION['prev_page'] : 'login';
-
-						if ($has_error) : 
-							if ($action === "register") :
-								echo !is_array($error_msg) ? $error_msg : $error_msg['err_msg'];
-							else :
-								echo !is_array($error_msg) ? $error_msg : $error_msg['err_msg'];
-							endif;
-						endif;
-					?>
-					</span>
-				</div>
-                <div class="form-group">
-                    <div class="input-icon">
-                        <i class="fa fa-lock"></i>
-                        <input class="form-control placeholder-no-fix" type="password" autocomplete="off" placeholder="Password" name="password"/>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="input-icon">
-                        <i class="fa fa-lock"></i>
-                        <input class="form-control placeholder-no-fix" type="password" autocomplete="off" placeholder="Confirmation-password" name="re_password"/>
-                    </div>
-                </div>
-                <div class="form-actions">
-                    <button type="submit" class="btn btn-info pull-right" name="submit">
-                    Submit </button>
-                </div>
-            </form>
-
-            <?php
-                endif;
-            ?>
+            
         </div>
         <!-- END LOGIN -->
         <!-- BEGIN COPYRIGHT -->
         <div class="copyright">
-            2019 &copy; CISIT.
+            2021 &copy; Tonido, Joshua Dave.
         </div>
         <!-- END COPYRIGHT -->
         <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->

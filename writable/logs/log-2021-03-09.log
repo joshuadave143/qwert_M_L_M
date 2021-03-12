@@ -1,0 +1,834 @@
+CRITICAL - 2021-03-09 00:26:08 --> Undefined property: Modules\Auth\Controllers\Auth::$validate
+#0 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'G:\\Project\\CI\\M...', 35, Array)
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-09 00:28:52 --> Undefined variable: action
+#0 G:\Project\CI\MLM\mlm\Modules\Template\Views\access-page.php(47): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'G:\\Project\\CI\\M...', 47, Array)
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\View\View.php(220): include('G:\\Project\\CI\\M...')
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\View\View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Common.php(1217): CodeIgniter\View\View->render('Modules\\Templat...', Array, true)
+#4 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(43): view('Modules\\Templat...', Array)
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#6 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#7 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-03-09 00:29:21 --> Undefined variable: action
+#0 G:\Project\CI\MLM\mlm\Modules\Template\Views\access-page.php(49): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'G:\\Project\\CI\\M...', 49, Array)
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\View\View.php(220): include('G:\\Project\\CI\\M...')
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\View\View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Common.php(1217): CodeIgniter\View\View->render('Modules\\Templat...', Array, true)
+#4 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(43): view('Modules\\Templat...', Array)
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#6 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#7 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-03-09 00:29:48 --> Undefined property: Modules\Auth\Controllers\Auth::$validate
+#0 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'G:\\Project\\CI\\M...', 35, Array)
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-09 00:30:25 --> Undefined property: Modules\Auth\Controllers\Auth::$validate
+#0 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(36): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'G:\\Project\\CI\\M...', 36, Array)
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-09 00:31:48 --> Undefined property: Modules\Auth\Controllers\Auth::$validate
+#0 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(36): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'G:\\Project\\CI\\M...', 36, Array)
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-09 00:33:53 --> Undefined property: CodeIgniter\Validation\Validation::$validate
+#0 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(37): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'G:\\Project\\CI\\M...', 37, Array)
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-09 00:34:37 --> Cannot use object of type CodeIgniter\Validation\Validation as array
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-03-09 00:34:47 --> Undefined property: Modules\Auth\Controllers\Auth::$validate
+#0 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(36): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'G:\\Project\\CI\\M...', 36, Array)
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-09 00:36:05 --> Object of class CodeIgniter\Validation\Validation could not be converted to string
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\View\Parser.php(283): CodeIgniter\Debug\Exceptions->errorHandler(4096, 'Object of class...', 'G:\\Project\\CI\\M...', 283, Array)
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\View\Parser.php(179): CodeIgniter\View\Parser->parse('<!-- DEBUG-VIEW...', Array, NULL)
+#2 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(46): CodeIgniter\View\Parser->renderString('<!-- DEBUG-VIEW...')
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-03-09 00:50:43 --> Undefined property: Modules\Auth\Controllers\Auth::$data1
+#0 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(48): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'G:\\Project\\CI\\M...', 48, Array)
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-09 00:57:35 --> Undefined property: App\Libraries\Joshua_auth::$ci
+#0 G:\Project\CI\MLM\mlm\app\Libraries\Joshua_auth.php(46): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'G:\\Project\\CI\\M...', 46, Array)
+#1 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(45): App\Libraries\Joshua_auth->login('USER@TUTORIALVI...', '123456')
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-09 00:58:28 --> Call to undefined method Modules\Auth\Models\Auth::get_user_acc_details
+#0 G:\Project\CI\MLM\mlm\app\Libraries\Joshua_auth.php(46): CodeIgniter\Model->__call('get_user_acc_de...', Array)
+#1 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(45): App\Libraries\Joshua_auth->login('USER@TUTORIALVI...', '123456')
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-09 00:59:38 --> Undefined variable: idno
+#0 G:\Project\CI\MLM\mlm\app\Libraries\Joshua_auth.php(44): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'G:\\Project\\CI\\M...', 44, Array)
+#1 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(45): App\Libraries\Joshua_auth->login('user@tutorialvi...', '123456')
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-09 01:04:56 --> Class 'App\Libraries\PasswordHash' not found
+#0 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(45): App\Libraries\Joshua_auth->login('user@tutorialvi...', '123456')
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-09 01:10:14 --> Undefined property: App\Libraries\Joshua_auth::$ci
+#0 G:\Project\CI\MLM\mlm\app\Libraries\Joshua_auth.php(49): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'G:\\Project\\CI\\M...', 49, Array)
+#1 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(45): App\Libraries\Joshua_auth->login('user@tutorialvi...', '123456')
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-09 01:18:07 --> Trying to get property 'user_type' of non-object
+#0 G:\Project\CI\MLM\mlm\app\Libraries\Joshua_auth.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'G:\\Project\\CI\\M...', 52, Array)
+#1 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(45): App\Libraries\Joshua_auth->login('user@tutorialvi...', '123456')
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-09 01:18:29 --> Undefined index: user_type
+#0 G:\Project\CI\MLM\mlm\app\Libraries\Joshua_auth.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'G:\\Project\\CI\\M...', 52, Array)
+#1 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(45): App\Libraries\Joshua_auth->login('user@tutorialvi...', '123456')
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-09 01:18:50 --> Undefined index: user_type
+#0 G:\Project\CI\MLM\mlm\app\Libraries\Joshua_auth.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'G:\\Project\\CI\\M...', 52, Array)
+#1 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(45): App\Libraries\Joshua_auth->login('user@tutorialvi...', '123456')
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-09 01:20:11 --> Undefined index: user_type
+#0 G:\Project\CI\MLM\mlm\app\Libraries\Joshua_auth.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'G:\\Project\\CI\\M...', 52, Array)
+#1 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(45): App\Libraries\Joshua_auth->login('test1', 'test1')
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-09 01:21:04 --> Undefined index: user_type
+#0 G:\Project\CI\MLM\mlm\app\Libraries\Joshua_auth.php(49): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'G:\\Project\\CI\\M...', 49, Array)
+#1 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(45): App\Libraries\Joshua_auth->login('test1', 'test1')
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-09 01:21:17 --> Undefined index: user_type
+#0 G:\Project\CI\MLM\mlm\app\Libraries\Joshua_auth.php(49): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'G:\\Project\\CI\\M...', 49, Array)
+#1 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(45): App\Libraries\Joshua_auth->login('test1', 'test1')
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-09 01:21:49 --> Undefined index: user_type
+#0 G:\Project\CI\MLM\mlm\app\Libraries\Joshua_auth.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'G:\\Project\\CI\\M...', 52, Array)
+#1 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(45): App\Libraries\Joshua_auth->login('test1', 'test1')
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-09 01:23:26 --> Undefined index: user_type
+#0 G:\Project\CI\MLM\mlm\app\Libraries\Joshua_auth.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'G:\\Project\\CI\\M...', 52, Array)
+#1 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(45): App\Libraries\Joshua_auth->login('test1', 'test1')
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-09 01:26:38 --> Undefined variable: admin
+#0 G:\Project\CI\MLM\mlm\app\Libraries\Joshua_auth.php(53): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'G:\\Project\\CI\\M...', 53, Array)
+#1 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(45): App\Libraries\Joshua_auth->login('test1', 'test1')
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-09 01:36:44 --> Trying to get property 'password' of non-object
+#0 G:\Project\CI\MLM\mlm\app\Libraries\Joshua_auth.php(54): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'G:\\Project\\CI\\M...', 54, Array)
+#1 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(45): App\Libraries\Joshua_auth->admin_login('test1', 'test1')
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-09 01:39:53 --> Undefined variable: admin
+#0 G:\Project\CI\MLM\mlm\app\Libraries\Joshua_auth.php(56): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'G:\\Project\\CI\\M...', 56, Array)
+#1 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(45): App\Libraries\Joshua_auth->admin_login('test1', 'test1')
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-09 01:42:38 --> Trying to get property 'LASTNAME' of non-object
+#0 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(49): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'G:\\Project\\CI\\M...', 49, Array)
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-09 01:43:34 -->  route cannot be found while reverse-routing.
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\HTTP\RedirectResponse.php(63): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('')
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Common.php(918): CodeIgniter\HTTP\RedirectResponse->route(false)
+#2 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(28): redirect('/Dashboard')
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-03-09 01:44:34 -->  route cannot be found while reverse-routing.
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\HTTP\RedirectResponse.php(63): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('')
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Common.php(918): CodeIgniter\HTTP\RedirectResponse->route(false)
+#2 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(28): redirect('/Dashboard')
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-03-09 01:46:45 -->  route cannot be found while reverse-routing.
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\HTTP\RedirectResponse.php(63): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('')
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Common.php(918): CodeIgniter\HTTP\RedirectResponse->route(false)
+#2 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(28): redirect('/Dashboard')
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-03-09 01:47:01 -->  route cannot be found while reverse-routing.
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\HTTP\RedirectResponse.php(63): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('')
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Common.php(918): CodeIgniter\HTTP\RedirectResponse->route(false)
+#2 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(28): redirect('/Dashboard')
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-03-09 01:47:17 --> syntax error, unexpected '}'
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(274): CodeIgniter\Autoloader\Autoloader->includeFile('G:\\Project\\CI\\M...')
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(228): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Modules\\Auth\\Co...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('Modules\\Auth\\Co...')
+#3 [internal function]: spl_autoload_call('Modules\\Auth\\Co...')
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(892): class_exists('\\Modules\\Auth\\C...', true)
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(416): CodeIgniter\CodeIgniter->startController()
+#6 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-09 01:47:31 -->  route cannot be found while reverse-routing.
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\HTTP\RedirectResponse.php(63): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('')
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Common.php(918): CodeIgniter\HTTP\RedirectResponse->route(false)
+#2 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(28): redirect('/Dashboard')
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-03-09 01:49:04 -->  route cannot be found while reverse-routing.
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\HTTP\RedirectResponse.php(63): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('')
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Common.php(918): CodeIgniter\HTTP\RedirectResponse->route(false)
+#2 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(28): redirect('/Dashboard')
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-03-09 01:50:35 -->  route cannot be found while reverse-routing.
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\HTTP\RedirectResponse.php(63): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('')
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Common.php(918): CodeIgniter\HTTP\RedirectResponse->route(false)
+#2 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(28): redirect('/Dashboard')
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-03-09 01:50:38 -->  route cannot be found while reverse-routing.
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\HTTP\RedirectResponse.php(63): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('')
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Common.php(918): CodeIgniter\HTTP\RedirectResponse->route(false)
+#2 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(28): redirect('/Dashboard')
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-03-09 01:56:29 -->  route cannot be found while reverse-routing.
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\HTTP\RedirectResponse.php(63): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('')
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Common.php(918): CodeIgniter\HTTP\RedirectResponse->route(false)
+#2 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(28): redirect('/Dashboard')
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-03-09 01:56:48 -->  route cannot be found while reverse-routing.
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\HTTP\RedirectResponse.php(63): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('')
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Common.php(918): CodeIgniter\HTTP\RedirectResponse->route(false)
+#2 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(28): redirect('/Dashboard')
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-03-09 01:56:53 --> syntax error, unexpected 'else' (T_ELSE)
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(274): CodeIgniter\Autoloader\Autoloader->includeFile('G:\\Project\\CI\\M...')
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(228): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Modules\\Auth\\Co...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('Modules\\Auth\\Co...')
+#3 [internal function]: spl_autoload_call('Modules\\Auth\\Co...')
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(892): class_exists('\\Modules\\Auth\\C...', true)
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(416): CodeIgniter\CodeIgniter->startController()
+#6 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-09 01:57:01 -->  route cannot be found while reverse-routing.
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\HTTP\RedirectResponse.php(63): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('')
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Common.php(918): CodeIgniter\HTTP\RedirectResponse->route(false)
+#2 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(28): redirect('/Dashboard')
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-03-09 01:59:44 -->  route cannot be found while reverse-routing.
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\HTTP\RedirectResponse.php(63): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('')
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Common.php(918): CodeIgniter\HTTP\RedirectResponse->route(false)
+#2 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(28): redirect('/Dashboard')
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-03-09 01:59:47 -->  route cannot be found while reverse-routing.
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\HTTP\RedirectResponse.php(63): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('')
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Common.php(918): CodeIgniter\HTTP\RedirectResponse->route(false)
+#2 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(28): redirect('/Dashboard')
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-03-09 02:05:34 -->  route cannot be found while reverse-routing.
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\HTTP\RedirectResponse.php(63): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('')
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Common.php(918): CodeIgniter\HTTP\RedirectResponse->route(false)
+#2 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(28): redirect('/Dashboard')
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-03-09 02:05:53 -->  route cannot be found while reverse-routing.
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\HTTP\RedirectResponse.php(63): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('')
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Common.php(918): CodeIgniter\HTTP\RedirectResponse->route(false)
+#2 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(28): redirect('/Dashboard')
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-03-09 02:05:58 -->  route cannot be found while reverse-routing.
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\HTTP\RedirectResponse.php(63): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('')
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Common.php(918): CodeIgniter\HTTP\RedirectResponse->route(false)
+#2 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(28): redirect('/Dashboard')
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-03-09 02:05:59 -->  route cannot be found while reverse-routing.
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\HTTP\RedirectResponse.php(63): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('')
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Common.php(918): CodeIgniter\HTTP\RedirectResponse->route(false)
+#2 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(28): redirect('/Dashboard')
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-03-09 02:07:12 --> Undefined variable: usr
+#0 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'G:\\Project\\CI\\M...', 28, Array)
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-09 02:18:36 --> syntax error, unexpected ';', expecting ')'
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(274): CodeIgniter\Autoloader\Autoloader->includeFile('G:\\Project\\CI\\M...')
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(228): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Modules\\Admin\\C...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('Modules\\Admin\\C...')
+#3 [internal function]: spl_autoload_call('Modules\\Admin\\C...')
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(892): class_exists('\\Modules\\Admin\\...', true)
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(416): CodeIgniter\CodeIgniter->startController()
+#6 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-09 02:19:20 --> syntax error, unexpected ';', expecting ')'
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(274): CodeIgniter\Autoloader\Autoloader->includeFile('G:\\Project\\CI\\M...')
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(228): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Modules\\Admin\\C...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('Modules\\Admin\\C...')
+#3 [internal function]: spl_autoload_call('Modules\\Admin\\C...')
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(892): class_exists('\\Modules\\Admin\\...', true)
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(416): CodeIgniter\CodeIgniter->startController()
+#6 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-09 02:20:10 --> syntax error, unexpected ';', expecting ')'
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(274): CodeIgniter\Autoloader\Autoloader->includeFile('G:\\Project\\CI\\M...')
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(228): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Modules\\Admin\\C...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('Modules\\Admin\\C...')
+#3 [internal function]: spl_autoload_call('Modules\\Admin\\C...')
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(892): class_exists('\\Modules\\Admin\\...', true)
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(416): CodeIgniter\CodeIgniter->startController()
+#6 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-09 02:37:36 --> Undefined property: App\Libraries\Joshua_auth::$ci
+#0 G:\Project\CI\MLM\mlm\app\Libraries\Joshua_auth.php(164): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'G:\\Project\\CI\\M...', 164, Array)
+#1 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(76): App\Libraries\Joshua_auth->logout()
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->logout()
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-09 02:38:18 --> Call to undefined method CodeIgniter\Session\Session::set_userdata()
+#0 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(76): App\Libraries\Joshua_auth->logout()
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->logout()
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-09 02:38:26 --> Undefined property: App\Libraries\Joshua_auth::$ci
+#0 G:\Project\CI\MLM\mlm\app\Libraries\Joshua_auth.php(165): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'G:\\Project\\CI\\M...', 165, Array)
+#1 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(76): App\Libraries\Joshua_auth->logout()
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->logout()
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-09 02:38:44 -->  route cannot be found while reverse-routing.
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\HTTP\RedirectResponse.php(63): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('')
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Common.php(918): CodeIgniter\HTTP\RedirectResponse->route(false)
+#2 G:\Project\CI\MLM\mlm\app\Libraries\Joshua_auth.php(166): redirect('login')
+#3 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(76): App\Libraries\Joshua_auth->logout()
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->logout()
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#6 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-09 03:04:22 --> Cannot declare class Modules\Admin\Filters\Auth, because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-03-09 03:06:53 --> Undefined index: lastname
+#0 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'G:\\Project\\CI\\M...', 52, Array)
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-09 03:16:26 --> Call to a member function listErrors() on array
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\View\View.php(220): include()
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\View\View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Common.php(1217): CodeIgniter\View\View->render('Modules\\Templat...', Array, true)
+#3 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(72): view('Modules\\Templat...', Array)
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#6 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-09 03:18:18 --> Undefined variable: has_error
+#0 G:\Project\CI\MLM\mlm\Modules\Template\Views\access-page.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'G:\\Project\\CI\\M...', 65, Array)
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\View\View.php(220): include('G:\\Project\\CI\\M...')
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\View\View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Common.php(1217): CodeIgniter\View\View->render('Modules\\Templat...', Array, true)
+#4 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(71): view('Modules\\Templat...', Array)
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#6 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#7 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-03-09 03:18:25 --> syntax error, unexpected 'if' (T_IF), expecting ':'
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\View\View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Common.php(1217): CodeIgniter\View\View->render('Modules\\Templat...', Array, true)
+#2 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(71): view('Modules\\Templat...', Array)
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-03-09 03:18:51 --> Undefined variable: has_error
+#0 G:\Project\CI\MLM\mlm\Modules\Template\Views\access-page.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'G:\\Project\\CI\\M...', 65, Array)
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\View\View.php(220): include('G:\\Project\\CI\\M...')
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\View\View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Common.php(1217): CodeIgniter\View\View->render('Modules\\Templat...', Array, true)
+#4 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(71): view('Modules\\Templat...', Array)
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#6 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#7 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-03-09 03:19:20 --> Undefined variable: has_error
+#0 G:\Project\CI\MLM\mlm\Modules\Template\Views\access-page.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'G:\\Project\\CI\\M...', 65, Array)
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\View\View.php(220): include('G:\\Project\\CI\\M...')
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\View\View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Common.php(1217): CodeIgniter\View\View->render('Modules\\Templat...', Array, true)
+#4 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(72): view('Modules\\Templat...', Array)
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#6 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#7 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-03-09 03:20:52 --> Array to string conversion
+#0 G:\Project\CI\MLM\mlm\Modules\Template\Views\access-page.php(69): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'G:\\Project\\CI\\M...', 69, Array)
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\View\View.php(220): include('G:\\Project\\CI\\M...')
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\View\View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Common.php(1217): CodeIgniter\View\View->render('Modules\\Templat...', Array, true)
+#4 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(72): view('Modules\\Templat...', Array)
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#6 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#7 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-03-09 05:46:13 --> Call to undefined method OAuth2\Request::getPostGet()
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Admin\Controllers\Dashboard->login()
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Dashboard))
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-03-09 05:48:05 --> Call to undefined method OAuth2\Request::getPostGet()
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Admin\Controllers\Dashboard->login()
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Dashboard))
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-03-09 05:53:27 --> Illegal string offset 'access_token'
+#0 G:\Project\CI\MLM\mlm\Modules\Admin\Controllers\Dashboard.php(73): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'G:\\Project\\CI\\M...', 73, Array)
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Admin\Controllers\Dashboard->login()
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Dashboard))
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-09 06:31:05 --> syntax error, unexpected 'else' (T_ELSE)
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(274): CodeIgniter\Autoloader\Autoloader->includeFile('G:\\Project\\CI\\M...')
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(228): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Modules\\Auth\\Co...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('Modules\\Auth\\Co...')
+#3 [internal function]: spl_autoload_call('Modules\\Auth\\Co...')
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(892): class_exists('\\Modules\\Auth\\C...', true)
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(416): CodeIgniter\CodeIgniter->startController()
+#6 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-09 06:31:40 --> Undefined property: stdClass::$access_token
+#0 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(88): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'G:\\Project\\CI\\M...', 88, Array)
+#1 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(55): Modules\Auth\Controllers\Auth->api_login()
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-09 06:32:41 --> Undefined property: stdClass::$access_token
+#0 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(89): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'G:\\Project\\CI\\M...', 89, Array)
+#1 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(55): Modules\Auth\Controllers\Auth->api_login()
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-09 06:33:24 --> Undefined property: stdClass::$access_token
+#0 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(90): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'G:\\Project\\CI\\M...', 90, Array)
+#1 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(55): Modules\Auth\Controllers\Auth->api_login()
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-09 06:34:04 --> Undefined property: stdClass::$access_token
+#0 G:\Project\CI\MLM\mlm\Modules\Admin\Controllers\Dashboard.php(73): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'G:\\Project\\CI\\M...', 73, Array)
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Admin\Controllers\Dashboard->login()
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Dashboard))
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-09 06:38:05 --> Undefined property: stdClass::$access_token
+#0 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(90): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'G:\\Project\\CI\\M...', 90, Array)
+#1 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(55): Modules\Auth\Controllers\Auth->api_login()
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-09 06:43:48 --> Undefined property: App\Libraries\Joshua_auth::$ci
+#0 G:\Project\CI\MLM\mlm\app\Libraries\Joshua_auth.php(159): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'G:\\Project\\CI\\M...', 159, Array)
+#1 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(55): App\Libraries\Joshua_auth->set_session_data('access_token', 'ac1fa0a685b9e4b...')
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-09 06:45:54 --> Undefined variable: session
+#0 G:\Project\CI\MLM\mlm\Modules\Admin\Controllers\Dashboard.php(30): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'G:\\Project\\CI\\M...', 30, Array)
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Admin\Controllers\Dashboard->index()
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Dashboard))
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-09 06:46:03 --> Undefined property: Modules\Admin\Controllers\Dashboard::$session
+#0 G:\Project\CI\MLM\mlm\Modules\Admin\Controllers\Dashboard.php(30): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'G:\\Project\\CI\\M...', 30, Array)
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Admin\Controllers\Dashboard->index()
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Dashboard))
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-09 07:05:33 --> Class 'Modules\Basecontroller\Controllers\AdminBaseController' not found
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(342): include_once()
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(274): CodeIgniter\Autoloader\Autoloader->includeFile('G:\\Project\\CI\\M...')
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(228): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Modules\\Admin\\C...')
+#3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('Modules\\Admin\\C...')
+#4 [internal function]: spl_autoload_call('Modules\\Admin\\C...')
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(892): class_exists('\\Modules\\Admin\\...', true)
+#6 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(416): CodeIgniter\CodeIgniter->startController()
+#7 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-03-09 20:59:53 --> Class 'App\Libraries\Joshua_auth' not found
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(908): Modules\Basecontroller\Controllers\AdminBaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(421): CodeIgniter\CodeIgniter->createController()
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-03-09 21:01:22 --> Class 'Modules\Basecontroller\Controllers\AdminBaseController' not found
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(342): include_once()
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(274): CodeIgniter\Autoloader\Autoloader->includeFile('G:\\Project\\CI\\M...')
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(228): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Modules\\Admin\\C...')
+#3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('Modules\\Admin\\C...')
+#4 [internal function]: spl_autoload_call('Modules\\Admin\\C...')
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(892): class_exists('\\Modules\\Admin\\...', true)
+#6 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(416): CodeIgniter\CodeIgniter->startController()
+#7 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-03-09 21:01:46 --> Class 'Modules\Common\Models\Tbl_users' not found
+#0 G:\Project\CI\MLM\mlm\Modules\Common\Controllers\AdminBaseController.php(52): Modules\Common\Libraries\Joshua_auth->__construct()
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(908): Modules\Common\Controllers\AdminBaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(421): CodeIgniter\CodeIgniter->createController()
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-09 21:05:55 --> Class 'Modules\Common\Models\Tbl_users' not found
+#0 G:\Project\CI\MLM\mlm\Modules\Common\Controllers\AdminBaseController.php(52): Modules\Common\Libraries\Joshua_auth->__construct()
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(908): Modules\Common\Controllers\AdminBaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(421): CodeIgniter\CodeIgniter->createController()
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-09 21:06:13 --> Class 'App\Libraries\Sidebar' not found
+#0 G:\Project\CI\MLM\mlm\Modules\Admin\Controllers\Package.php(50): Modules\Common\Controllers\AdminBaseController->load_sidebar(Array)
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Admin\Controllers\Package->index()
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Package))
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-09 21:07:12 --> Class 'Modules\Common\Libraries\Sidebar' not found
+#0 G:\Project\CI\MLM\mlm\Modules\Admin\Controllers\Package.php(50): Modules\Common\Controllers\AdminBaseController->load_sidebar(Array)
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Admin\Controllers\Package->index()
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Package))
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-09 21:13:51 --> Class 'Modules\Common\Libraries\PasswordHash' not found
+#0 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(50): Modules\Common\Libraries\Joshua_auth->admin_login('test1', 'test1')
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-09 21:14:18 --> Class 'App\Libraries\Oauth' not found
+#0 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(54): Modules\Auth\Controllers\Auth->api_login()
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-09 21:14:48 --> Class 'Modules\Basecontroller\Controllers\AdminBaseController' not found
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(342): include_once()
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(274): CodeIgniter\Autoloader\Autoloader->includeFile('G:\\Project\\CI\\M...')
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(228): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Modules\\Admin\\C...')
+#3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('Modules\\Admin\\C...')
+#4 [internal function]: spl_autoload_call('Modules\\Admin\\C...')
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(892): class_exists('\\Modules\\Admin\\...', true)
+#6 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(416): CodeIgniter\CodeIgniter->startController()
+#7 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-03-09 21:15:43 --> Class 'Modules\Common\Libraries\Oauth' not found
+#0 G:\Project\CI\MLM\mlm\Modules\Auth\Controllers\Auth.php(54): Modules\Auth\Controllers\Auth->api_login()
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\Auth\Controllers\Auth->index()
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Auth))
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-09 21:20:33 --> Class 'App\Libraries\Oauth' not found
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Filters\Filters.php(181): Modules\Admin\Filters\OAuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(402): CodeIgniter\Filters\Filters->run('api/dashboard/1...', 'before')
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-03-09 21:21:09 --> Class 'App\Libraries\Oauth' not found
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Filters\Filters.php(181): Modules\Admin\Filters\OAuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(402): CodeIgniter\Filters\Filters->run('api/dashboard/1...', 'before')
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-03-09 21:21:45 --> Class 'App\Libraries\Oauth' not found
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Filters\Filters.php(181): Modules\Admin\Filters\OAuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(402): CodeIgniter\Filters\Filters->run('api/dashboard/1...', 'before')
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-03-09 21:24:19 --> Class 'Modules\Common\App\Filters\Auth' not found
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(402): CodeIgniter\Filters\Filters->run('admin/test/dash...', 'before')
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#2 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#3 {main}
+CRITICAL - 2021-03-09 22:09:54 --> Class 'Modules\API\Controllers\TablesIgniter' not found
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\API\Controllers\Api_package->index()
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\API\Controllers\Api_package))
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-03-09 22:10:57 --> Class 'TablesIgniter' not found
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\API\Controllers\Api_package->index()
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\API\Controllers\Api_package))
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-03-09 22:13:37 --> Must be requested by jQuery DataTables.
+#0 G:\Project\CI\MLM\mlm\Modules\API\Controllers\Api_package.php(20): monken\TablesIgniter->__construct()
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\API\Controllers\Api_package->index()
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\API\Controllers\Api_package))
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-09 22:14:01 --> Must be requested by jQuery DataTables.
+#0 G:\Project\CI\MLM\mlm\Modules\API\Controllers\Api_package.php(20): monken\TablesIgniter->__construct()
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\API\Controllers\Api_package->index()
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\API\Controllers\Api_package))
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-09 22:15:01 --> Must be requested by jQuery DataTables.
+#0 G:\Project\CI\MLM\mlm\Modules\API\Controllers\Api_package.php(20): monken\TablesIgniter->__construct()
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\API\Controllers\Api_package->index()
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\API\Controllers\Api_package))
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-09 22:15:16 --> Must be requested by jQuery DataTables.
+#0 G:\Project\CI\MLM\mlm\Modules\API\Controllers\Api_package.php(20): monken\TablesIgniter->__construct()
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\API\Controllers\Api_package->index()
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\API\Controllers\Api_package))
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-09 22:15:21 --> Class 'Modules\API\Controllers\MembersModel' not found
+#0 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\API\Controllers\Api_package->create()
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\API\Controllers\Api_package))
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-03-09 22:16:35 --> Must be requested by jQuery DataTables.
+#0 G:\Project\CI\MLM\mlm\Modules\API\Controllers\Api_package.php(32): monken\TablesIgniter->__construct()
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\API\Controllers\Api_package->show('draw')
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\API\Controllers\Api_package))
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-09 22:17:11 --> Must be requested by jQuery DataTables.
+#0 G:\Project\CI\MLM\mlm\Modules\API\Controllers\Api_package.php(32): monken\TablesIgniter->__construct()
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\API\Controllers\Api_package->show('draw')
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\API\Controllers\Api_package))
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-09 22:17:32 --> Argument 1 passed to monken\TablesIgniter::setTable() must be an instance of CodeIgniter\Database\BaseBuilder, array given, called in G:\Project\CI\MLM\mlm\Modules\API\Controllers\Api_package.php on line 33
+#0 G:\Project\CI\MLM\mlm\Modules\API\Controllers\Api_package.php(33): monken\TablesIgniter->setTable(Array)
+#1 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(935): Modules\API\Controllers\Api_package->show('draw')
+#2 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(431): CodeIgniter\CodeIgniter->runController(Object(Modules\API\Controllers\Api_package))
+#3 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-09 23:04:03 --> invalid data source name
+#0 G:\Project\CI\MLM\mlm\vendor\bshaffer\oauth2-server-php\src\OAuth2\Storage\Pdo.php(67): PDO->__construct('', '', '', Array)
+#1 G:\Project\CI\MLM\mlm\Modules\Common\Libraries\Oauth.php(16): OAuth2\Storage\Pdo->__construct(Array)
+#2 G:\Project\CI\MLM\mlm\Modules\Common\Libraries\Oauth.php(8): Modules\Common\Libraries\Oauth->init()
+#3 G:\Project\CI\MLM\mlm\Modules\Common\Filters\OAuthFilter.php(18): Modules\Common\Libraries\Oauth->__construct()
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Filters\Filters.php(181): Modules\Common\Filters\OAuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(402): CodeIgniter\Filters\Filters->run('api/package', 'before')
+#6 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-09 23:29:11 --> invalid data source name
+#0 G:\Project\CI\MLM\mlm\vendor\bshaffer\oauth2-server-php\src\OAuth2\Storage\Pdo.php(67): PDO->__construct('', '', '', Array)
+#1 G:\Project\CI\MLM\mlm\Modules\Common\Libraries\Oauth.php(16): OAuth2\Storage\Pdo->__construct(Array)
+#2 G:\Project\CI\MLM\mlm\Modules\Common\Libraries\Oauth.php(8): Modules\Common\Libraries\Oauth->init()
+#3 G:\Project\CI\MLM\mlm\Modules\Common\Filters\OAuthFilter.php(18): Modules\Common\Libraries\Oauth->__construct()
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Filters\Filters.php(181): Modules\Common\Filters\OAuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(402): CodeIgniter\Filters\Filters->run('api/package', 'before')
+#6 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-09 23:33:49 --> invalid data source name
+#0 G:\Project\CI\MLM\mlm\vendor\bshaffer\oauth2-server-php\src\OAuth2\Storage\Pdo.php(67): PDO->__construct('', '', '', Array)
+#1 G:\Project\CI\MLM\mlm\Modules\Common\Libraries\Oauth.php(16): OAuth2\Storage\Pdo->__construct(Array)
+#2 G:\Project\CI\MLM\mlm\Modules\Common\Libraries\Oauth.php(8): Modules\Common\Libraries\Oauth->init()
+#3 G:\Project\CI\MLM\mlm\Modules\Common\Filters\OAuthFilter.php(18): Modules\Common\Libraries\Oauth->__construct()
+#4 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\Filters\Filters.php(181): Modules\Common\Filters\OAuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#5 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(402): CodeIgniter\Filters\Filters->run('api/package', 'before')
+#6 G:\Project\CI\MLM\mlm\vendor\codeigniter4\framework\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 G:\Project\CI\MLM\mlm\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#8 {main}

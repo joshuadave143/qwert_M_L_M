@@ -1,6 +1,6 @@
 -- --------------------------------------------------------
 -- Host:                         127.0.0.1
--- Server version:               5.7.24 - MySQL Community Server (GPL)
+-- Server version:               10.4.14-MariaDB - mariadb.org binary distribution
 -- Server OS:                    Win64
 -- HeidiSQL Version:             10.2.0.5599
 -- --------------------------------------------------------
@@ -13,8 +13,50 @@
 
 
 -- Dumping database structure for mlm
-CREATE DATABASE IF NOT EXISTS `mlm` /*!40100 DEFAULT CHARACTER SET latin1 */;
+CREATE DATABASE IF NOT EXISTS `mlm` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
 USE `mlm`;
+
+-- Dumping structure for procedure mlm.activation_code_generator
+DELIMITER //
+CREATE DEFINER=`root`@`localhost` PROCEDURE `activation_code_generator`(
+	IN `package_id_in` INT
+
+
+
+
+
+,
+	IN `count_in` INT
+
+
+
+
+
+
+)
+BEGIN
+	DECLARE counts INT DEFAULT 1;
+	WHILE count_in >= counts DO
+		set counts = counts + 1;
+		INSERT INTO tbl_activation_codes  (`package_id`) VALUES (package_id_in); -- leaving out the number plate
+		SELECT @lid:=LAST_INSERT_ID();
+
+		UPDATE tbl_activation_codes SET activation_code=concat('pck-',
+		  substring('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789', rand(@seed:=round(rand(@lid)*4294967296))*36+1, 1),
+		  substring('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789', rand(@seed:=round(rand(@seed)*4294967296))*36+1, 1),
+		  substring('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789', rand(@seed:=round(rand(@seed)*4294967296))*36+1, 1),
+		  substring('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789', rand(@seed:=round(rand(@seed)*4294967296))*36+1, 1),
+		  substring('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789', rand(@seed:=round(rand(@seed)*4294967296))*36+1, 1),
+		  substring('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789', rand(@seed:=round(rand(@seed)*4294967296))*36+1, 1),
+		  substring('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789', rand(@seed:=round(rand(@seed)*4294967296))*36+1, 1),
+		  substring('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789', rand(@seed)*36+1, 1)
+		)
+		WHERE activation_code_id=@lid;
+		
+		
+	END while;
+END//
+DELIMITER ;
 
 -- Dumping structure for table mlm.lib_countries
 CREATE TABLE IF NOT EXISTS `lib_countries` (
@@ -279,7 +321,7 @@ INSERT INTO `lib_countries` (`country_id`, `name`, `iso2`, `iso3`, `ccc`, `statu
 CREATE TABLE IF NOT EXISTS `lib_member_ids` (
   `member_id` bigint(11) NOT NULL,
   `block` int(11) NOT NULL COMMENT 'Member code block',
-  `status` int(5) NOT NULL DEFAULT '4' COMMENT '1 = Company, 2 = Reserved, 3 = In Use, 4 = Available',
+  `status` int(5) NOT NULL DEFAULT 4 COMMENT '1 = Company, 2 = Reserved, 3 = In Use, 4 = Available',
   PRIMARY KEY (`member_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -10312,6 +10354,239 @@ BEGIN
 END//
 DELIMITER ;
 
+-- Dumping structure for table mlm.oauth_access_tokens
+CREATE TABLE IF NOT EXISTS `oauth_access_tokens` (
+  `access_token` varchar(40) NOT NULL,
+  `client_id` varchar(80) NOT NULL,
+  `user_id` varchar(80) DEFAULT NULL,
+  `expires` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `scope` varchar(4000) DEFAULT NULL,
+  PRIMARY KEY (`access_token`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Dumping data for table mlm.oauth_access_tokens: ~61 rows (approximately)
+/*!40000 ALTER TABLE `oauth_access_tokens` DISABLE KEYS */;
+INSERT INTO `oauth_access_tokens` (`access_token`, `client_id`, `user_id`, `expires`, `scope`) VALUES
+	('0141a1a536737fe9b6abcff79dcf4acc7e707528', 'mlm_api', 'qwerty123', '2021-03-11 22:37:22', NULL),
+	('0178948ef6ad7637428f0f212fe77dde98cf7f88', 'test', 'qwerty123', '2021-03-09 07:41:59', NULL),
+	('022176df297beeb91a1189ec0e92f669d890332f', 'test', 'jeep', '2021-03-08 23:50:50', 'jeep@gmail.com'),
+	('0565f61095ef9168391c01f4f1f3214bd78e4910', 'test', 'jeep', '2021-03-08 09:28:43', 'jeep@gmail.com'),
+	('0982f27c7aa3ea62eaa56d9b6141c1e8c38bccea', 'mlm_api', 'qwerty123', '2021-03-09 21:38:36', NULL),
+	('0a492f82e399b352d0f1ef996a26bd169aa5bcb5', 'mlm_api', 'qwerty123', '2021-03-10 10:38:00', NULL),
+	('0be1cb3df64442bde3bae8aa613e39dd387408f0', 'mlm_api', 'qwerty123', '2021-03-10 02:51:06', NULL),
+	('10184a03745d8bee32989b7e6423f817d74d7d84', 'test', 'qwerty123', '2021-03-09 07:41:55', NULL),
+	('1b686522d88cd7bd52491192820d0305178b15ed', 'mlm_api', 'qwerty123', '2021-03-09 21:08:14', NULL),
+	('1d4f1b58c31e41e245bfbbec3c010cd6879120f0', 'test', 'qwerty123', '2021-03-09 07:42:25', NULL),
+	('233fa78d187c134ae31dd0437cc6966e212e3987', 'test', 'jeep', '2021-03-09 06:52:35', 'jeep@gmail.com'),
+	('26a653d8561d6eee153f0f92daed8d662523caf2', 'mlm_api', 'qwerty123', '2021-03-10 03:28:15', NULL),
+	('27315f589ad604ac92d27cc9919efaa35e24702f', 'mlm_api', 'qwerty123', '2021-03-10 21:01:51', NULL),
+	('2b844a76b1a89999be7fbb06a12b3e94c112016c', 'test', 'jeep', '2021-03-09 06:52:01', 'jeep@gmail.com'),
+	('2cfbedb0640cae81202014afae11f83c3ee67241', 'mlm_api', 'qwerty123', '2021-03-11 08:17:27', NULL),
+	('347ecd7ad3e6a03925ed3b5ea57c10186e0a1ee5', 'test', 'qwerty123', '2021-03-09 07:36:46', NULL),
+	('363af0be7e4e72a9504ea215204a4bfe2cf1f253', 'test', 'jeep', '2021-03-08 02:19:06', 'jeep@gmail.com'),
+	('3b52524865a4c58175af0b67ce31e9215f5aab5c', 'test', 'jeep', '2021-03-09 06:53:05', 'jeep@gmail.com'),
+	('3b899e1af5a900f1184207551d0252b9dc64854b', 'mlm_api', 'qwerty123', '2021-03-10 23:44:18', NULL),
+	('3ec69a86453da37dd1b74d27b7b7985e45bcdcd0', 'mlm_api', 'qwerty123', '2021-03-09 22:16:28', NULL),
+	('475856ef478b00af1a8f8a441b59da99895ee647', 'mlm_api', 'qwerty123', '2021-03-11 06:31:19', NULL),
+	('48749d6e0d827ffbbbf06a0e6410dc0ce3f6d2d6', 'mlm_api', 'qwerty123', '2021-03-11 04:43:08', NULL),
+	('505c0daab9901b831d1fdbf9aa14161737ac4b56', 'mlm_api', 'qwerty123', '2021-03-11 05:24:41', NULL),
+	('5397ebe5b21dd19cb0c1d35a801ebc97b3584c17', 'mlm_api', 'qwerty123', '2021-03-11 22:42:42', NULL),
+	('5724d21dbcd40d9ec613f6bae1c2a3ae2b9fc7da', 'mlm_api', 'qwerty123', '2021-03-09 22:19:00', NULL),
+	('5d7820fb73d7ecc75c0d9aa2a7852c9aaa0fb0fe', 'mlm_api', 'qwerty123', '2021-03-11 08:33:40', NULL),
+	('5dd5e12db92886c5a94350c23611e30d836af0e9', 'mlm_api', 'qwerty123', '2021-03-09 22:24:19', NULL),
+	('604a0a1f9f1526ab26d9f7d35f63b5abaf020342', 'mlm_api', 'qwerty123', '2021-03-11 21:30:57', NULL),
+	('6192e13918b15013f3f7a276cf44690badb0cb79', 'mlm_api', 'qwerty123', '2021-03-09 22:24:55', NULL),
+	('66fba5474849ad01f20c7cd94e69c8faf3279a30', 'mlm_api', 'qwerty123', '2021-03-09 00:58:06', NULL),
+	('6b7c65a24d19b7475044fdf303feffa0669a57d6', 'mlm_api', 'qwerty123', '2021-03-10 10:01:13', NULL),
+	('73b05cba34a0714c79939a48e742beb89e6cc7a0', 'test', 'jeep', '2021-03-08 02:02:21', 'jeep@gmail.com'),
+	('73cc82c037174ccde28edadc9ae72095d2333086', 'test', 'qwerty123', '2021-03-09 07:37:25', NULL),
+	('75039267898218d4fbdb3f28e4aafe3a45e82d6c', 'test', 'jeep', '2021-03-09 06:53:57', 'jeep@gmail.com'),
+	('76f65ac08ffdbd820aa37565ca93e7f415414d60', 'mlm_api', 'qwerty123', '2021-03-11 01:04:31', NULL),
+	('81530205c55a5f307faa771b9347ccb865d38b3c', 'test', 'jeep', '2021-03-08 02:02:38', 'jeep@gmail.com'),
+	('844b9c30679ebec58066f1ba89a14bfcd3db22e7', 'test', 'qwerty123', '2021-03-09 07:39:22', NULL),
+	('844d1c2ad7b3c3175a8ab5c98f777b41ee62aed0', 'mlm_api', 'qwerty123', '2021-03-10 22:12:17', NULL),
+	('8dc2022af42d0e90a0ccdc30a5fc7c0d2887d80e', 'test', '2', '2021-03-08 21:13:57', NULL),
+	('8e794ffb52bbfb66993b27e96cb8c7732fdb36ff', 'mlm_api', 'qwerty123', '2021-03-11 03:42:19', NULL),
+	('90e8adda807d05b5bed370d2c52a904f1fb03ae9', 'test', 'jeep', '2021-03-09 06:48:05', 'jeep@gmail.com'),
+	('92445021a730081419de3eea229b58e2c4d882e5', 'mlm_api', 'qwerty123', '2021-03-11 22:43:01', NULL),
+	('96a9db1cb8a0374aaa8eb9bb9a9fbed7f56bfc12', 'mlm_api', 'qwerty123', '2021-03-09 07:43:21', NULL),
+	('9763db15440ccbd34272e12ed9eaf80c88fd0ea9', 'test', 'jeep', '2021-03-08 02:10:54', 'jeep@gmail.com'),
+	('9cb435aa3eef706ae920ad2390d3875144578916', 'mlm_api', 'qwerty123', '2021-03-09 07:44:47', NULL),
+	('a0d674f8b6b9791ff5e8fb1e768c17caeddf345c', 'test', 'jeep', '2021-03-09 06:45:56', 'jeep@gmail.com'),
+	('a7ed4b38e1df6f52ec9855f360e144e302e11ff3', 'mlm_api', 'qwerty123', '2021-03-09 23:56:22', NULL),
+	('ac1fa0a685b9e4b8079a1086f42b7369ac9abaf3', 'mlm_api', 'qwerty123', '2021-03-09 07:43:48', NULL),
+	('ac4b357b13772cc87e928bdc88979d74dd8da066', 'mlm_api', 'qwerty123', '2021-03-10 06:09:09', NULL),
+	('b4a2a5fe75737a451ed172769c2b8d3931d26ac7', 'test', 'jeep', '2021-03-09 06:46:13', 'jeep@gmail.com'),
+	('b73a453e0776ed6673983fe060dd0445eaa198c1', 'mlm_api', 'qwerty123', '2021-03-10 01:16:20', NULL),
+	('b7570dbae4a84f316e78a588574d5927bb52c4c4', 'mlm_api', 'qwerty123', '2021-03-11 23:50:28', NULL),
+	('c3f3511f57cfd89d633ddfbf7244bd0ef4d3629d', 'mlm_api', 'qwerty123', '2021-03-10 01:52:49', NULL),
+	('c5af48087459e29e9f06ad1b38f161a025da312d', 'test', 'qwerty123', '2021-03-09 07:37:26', NULL),
+	('c5b5aa7cf7807d618d3c167e2a3e9999cfe2f313', 'mlm_api', 'qwerty123', '2021-03-10 19:59:50', NULL),
+	('c7fbdf3fba6cbb610e9e74fc63f8d994d2ce7106', 'test', 'qwerty123', '2021-03-09 07:42:13', NULL),
+	('c822632e7bdbce91c67693fdf03a5f67e77a3e85', 'test', 'jeep', '2021-03-09 06:54:15', 'jeep@gmail.com'),
+	('d564d684ef52025fc409b7bc4f7a6f85c04553f6', 'test', 'jeep', '2021-03-09 06:38:53', 'jeep@gmail.com'),
+	('dbd69a48a6a3a379713d68ded61e48a6b871e16e', 'mlm_api', 'qwerty123', '2021-03-10 04:28:44', NULL),
+	('dfad34b0286b132bf8dd561a6fb7051f89bc04f8', 'test', 'qwerty123', '2021-03-09 07:42:15', NULL),
+	('e3a08fe1f9ce0cdb169df96e59b8efe423e405af', 'test', 'jeep', '2021-03-08 02:35:55', 'jeep@gmail.com'),
+	('e3ac17b1e9db5f497cf31c2b621bd6964cb33e96', 'test', 'qwerty123', '2021-03-09 07:37:22', NULL),
+	('ed7349aaaedc77466e2f45f7bd12cf28e357b110', 'mlm_api', 'qwerty123', '2021-03-09 08:22:31', NULL),
+	('fccd0b5deb21866ce0d1016ba495aff4978384a0', 'test', 'qwerty123', '2021-03-09 07:42:09', NULL),
+	('fe5f1dc01f8f47a94de75cb99d54ff440951d687', 'test', 'jeep', '2021-03-09 06:53:27', 'jeep@gmail.com');
+/*!40000 ALTER TABLE `oauth_access_tokens` ENABLE KEYS */;
+
+-- Dumping structure for table mlm.oauth_authorization_codes
+CREATE TABLE IF NOT EXISTS `oauth_authorization_codes` (
+  `authorization_code` varchar(40) NOT NULL,
+  `client_id` varchar(80) NOT NULL,
+  `user_id` varchar(80) DEFAULT NULL,
+  `redirect_uri` varchar(2000) DEFAULT NULL,
+  `expires` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `scope` varchar(4000) DEFAULT NULL,
+  `id_token` varchar(1000) DEFAULT NULL,
+  PRIMARY KEY (`authorization_code`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Dumping data for table mlm.oauth_authorization_codes: ~0 rows (approximately)
+/*!40000 ALTER TABLE `oauth_authorization_codes` DISABLE KEYS */;
+/*!40000 ALTER TABLE `oauth_authorization_codes` ENABLE KEYS */;
+
+-- Dumping structure for table mlm.oauth_clients
+CREATE TABLE IF NOT EXISTS `oauth_clients` (
+  `client_id` varchar(80) NOT NULL,
+  `client_secret` varchar(80) DEFAULT NULL,
+  `redirect_uri` varchar(2000) DEFAULT NULL,
+  `grant_types` varchar(80) DEFAULT NULL,
+  `scope` varchar(4000) DEFAULT NULL,
+  `user_id` varchar(80) DEFAULT NULL,
+  PRIMARY KEY (`client_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Dumping data for table mlm.oauth_clients: ~0 rows (approximately)
+/*!40000 ALTER TABLE `oauth_clients` DISABLE KEYS */;
+INSERT INTO `oauth_clients` (`client_id`, `client_secret`, `redirect_uri`, `grant_types`, `scope`, `user_id`) VALUES
+	('mlm_api', 'wIw_@p!', NULL, 'password', NULL, NULL);
+/*!40000 ALTER TABLE `oauth_clients` ENABLE KEYS */;
+
+-- Dumping structure for table mlm.oauth_jwt
+CREATE TABLE IF NOT EXISTS `oauth_jwt` (
+  `client_id` varchar(80) NOT NULL,
+  `subject` varchar(80) DEFAULT NULL,
+  `public_key` varchar(2000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Dumping data for table mlm.oauth_jwt: ~0 rows (approximately)
+/*!40000 ALTER TABLE `oauth_jwt` DISABLE KEYS */;
+/*!40000 ALTER TABLE `oauth_jwt` ENABLE KEYS */;
+
+-- Dumping structure for table mlm.oauth_refresh_tokens
+CREATE TABLE IF NOT EXISTS `oauth_refresh_tokens` (
+  `refresh_token` varchar(40) NOT NULL,
+  `client_id` varchar(80) NOT NULL,
+  `user_id` varchar(80) DEFAULT NULL,
+  `expires` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `scope` varchar(4000) DEFAULT NULL,
+  PRIMARY KEY (`refresh_token`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Dumping data for table mlm.oauth_refresh_tokens: ~61 rows (approximately)
+/*!40000 ALTER TABLE `oauth_refresh_tokens` DISABLE KEYS */;
+INSERT INTO `oauth_refresh_tokens` (`refresh_token`, `client_id`, `user_id`, `expires`, `scope`) VALUES
+	('08d210b309d97ff0b75d74b06b0c665b6a73ae10', 'mlm_api', 'qwerty123', '2021-03-25 23:50:28', NULL),
+	('0c6fb3062cd57812e2a0c821213d1aef7c33cbe3', 'test', 'jeep', '2021-03-23 06:48:05', 'jeep@gmail.com'),
+	('0c9cb9426f19efe08fdaaae8a323539a78001b43', 'test', 'jeep', '2021-03-22 02:19:06', 'jeep@gmail.com'),
+	('0d5c0998fc33165833bb75f383058143782d6128', 'mlm_api', 'qwerty123', '2021-03-23 23:56:22', NULL),
+	('0d5e7b0433e9702e3d40737bce8d0ef09ba9869b', 'test', 'qwerty123', '2021-03-23 07:37:26', NULL),
+	('12a639d6790f2e16097408817dbd8e9b7b951c75', 'test', 'jeep', '2021-03-23 06:38:53', 'jeep@gmail.com'),
+	('150e2bc0006d6b3e248d9ae6e91fd7ed2b81add0', 'test', 'jeep', '2021-03-23 06:53:27', 'jeep@gmail.com'),
+	('17e38a3d743eaf3b936f7bab1588824c09a64712', 'test', 'jeep', '2021-03-22 02:35:55', 'jeep@gmail.com'),
+	('20b613a9fb904e3956b8e9e66fb1bab0e35bb036', 'mlm_api', 'qwerty123', '2021-03-23 21:08:14', NULL),
+	('23002493ba200b9670e553ec9a038e0460857873', 'mlm_api', 'qwerty123', '2021-03-23 22:24:55', NULL),
+	('25e3e38c9af80eb5171346972b0047f99d653514', 'mlm_api', 'qwerty123', '2021-03-24 01:16:20', NULL),
+	('25eb19afef3c3296f41212ead2a2f49a4c1c7854', 'test', 'jeep', '2021-03-23 06:52:01', 'jeep@gmail.com'),
+	('290c7db26e4bef66d94c139683ff90658968d59e', 'test', 'jeep', '2021-03-23 06:45:56', 'jeep@gmail.com'),
+	('2acf729393223ed4f2d596e609918f544e86a005', 'test', 'qwerty123', '2021-03-23 07:42:09', NULL),
+	('434e025f3761a1aa02700bd3511cee43c77096b6', 'mlm_api', 'qwerty123', '2021-03-24 03:28:15', NULL),
+	('4544d22422508d80a535e9cc19c1c7c7e1e74ac0', 'mlm_api', 'qwerty123', '2021-03-24 21:01:51', NULL),
+	('466d26d45e100aca70256fe3717e47d20e5866a5', 'mlm_api', 'qwerty123', '2021-03-23 07:44:47', NULL),
+	('47ef2a7a9befa29fdffe6752ea5a9863af80476a', 'mlm_api', 'qwerty123', '2021-03-23 08:22:31', NULL),
+	('49d1093ab4666b0ae4940ca7c44efd883cef64f2', 'test', 'qwerty123', '2021-03-23 07:37:25', NULL),
+	('514b15f6f59da208bc8a3c5d8054503bfbee14bf', 'test', 'qwerty123', '2021-03-23 07:36:46', NULL),
+	('525b339632d1a49ad7b9feb3e8dc3ff8b320ae51', 'test', 'qwerty123', '2021-03-23 07:42:13', NULL),
+	('526de1287549360d8791d9756ef54faf7d4cceaf', 'test', 'jeep', '2021-03-22 23:50:50', 'jeep@gmail.com'),
+	('5373e9a8d08853f7900e525f52247eafb3e5e183', 'test', 'qwerty123', '2021-03-23 07:39:22', NULL),
+	('56a4c0d2905925753b9a8dcca57154ab4269a18e', 'mlm_api', 'qwerty123', '2021-03-25 08:17:27', NULL),
+	('58ba38a9da69d749683dc4e1a679304e06145a29', 'mlm_api', 'qwerty123', '2021-03-25 22:37:22', NULL),
+	('62240c0e813c41ac5a6f45d23369da7b3354f89e', 'mlm_api', 'qwerty123', '2021-03-23 22:19:00', NULL),
+	('625e46354dcb1a9634570bc2a60fb5c0bddda3b5', 'test', 'qwerty123', '2021-03-23 07:42:25', NULL),
+	('67028b0a7d6702dff7837389e54c697208739843', 'test', 'jeep', '2021-03-23 06:54:15', 'jeep@gmail.com'),
+	('6741a00d639c3cf48e4c516327bffac815fdd655', 'test', 'jeep', '2021-03-22 02:02:38', 'jeep@gmail.com'),
+	('67b1c945d99d7a2ed87c50634770e197cd1dd3de', 'mlm_api', 'qwerty123', '2021-03-23 21:38:36', NULL),
+	('6bae6151e3e4a348afbd79bcb6ff60b37780994a', 'mlm_api', 'qwerty123', '2021-03-24 04:28:44', NULL),
+	('6c9d77bf1e8714bcef18b3ce2a836b8891524b90', 'test', 'jeep', '2021-03-23 06:46:13', 'jeep@gmail.com'),
+	('6f6a9e6e8ba688756d279b3b2ce8973e05d6d9ee', 'test', 'qwerty123', '2021-03-23 07:37:22', NULL),
+	('79f1806c06ae9b0cd5d5f0c60d992c2f1ca86e25', 'mlm_api', 'qwerty123', '2021-03-24 00:58:06', NULL),
+	('809d4b2ea93becf6707937640789c969bd482ec1', 'test', 'qwerty123', '2021-03-23 07:41:55', NULL),
+	('811921acb7e6ea5cb9a213d161f0a4149d98da1a', 'mlm_api', 'qwerty123', '2021-03-23 22:24:19', NULL),
+	('866670870aff65c344e0bfe118d287aa3ae77a15', 'mlm_api', 'qwerty123', '2021-03-24 22:12:17', NULL),
+	('8a179e825be24124bfac84850952d53fab616139', 'mlm_api', 'qwerty123', '2021-03-24 10:01:13', NULL),
+	('8b49b8f04c34dda4b189fa8392245c021901841a', 'mlm_api', 'qwerty123', '2021-03-23 07:43:48', NULL),
+	('8b734319e09377b2b2692dc3ea7cbd4d540598c5', 'test', 'jeep', '2021-03-22 02:10:54', 'jeep@gmail.com'),
+	('9317e2912060eca97ae51458263651a0718bdf68', 'mlm_api', 'qwerty123', '2021-03-24 10:38:00', NULL),
+	('9347d289edfead6bf1a27ba9e36e0d5b7a145b10', 'mlm_api', 'qwerty123', '2021-03-24 23:44:18', NULL),
+	('9f153149da3c8a8f3e04978b21810e1be5944d84', 'test', 'jeep', '2021-03-22 02:02:21', 'jeep@gmail.com'),
+	('a25a4a8b01c832a981c4f8d83cb3ce08ae6a0581', 'mlm_api', 'qwerty123', '2021-03-25 03:42:19', NULL),
+	('a2f23439d1e06de47fad9d294454e0ae6a7486ce', 'test', 'jeep', '2021-03-22 09:28:43', 'jeep@gmail.com'),
+	('a3a3ba431afc888aebadb80fdf1642f860ca6117', 'mlm_api', 'qwerty123', '2021-03-25 21:30:57', NULL),
+	('a44cc8e9b76ffe5c03637dfbcfe1fcdd0868bdfc', 'mlm_api', 'qwerty123', '2021-03-25 08:33:40', NULL),
+	('a5aa28807122760b931b765b64f837dcc322c6ea', 'mlm_api', 'qwerty123', '2021-03-24 06:09:09', NULL),
+	('a5e02693fbc582861538808ec8d90c7d1a1b0e51', 'mlm_api', 'qwerty123', '2021-03-25 22:42:42', NULL),
+	('ae0b0aaafbb70f0d5101ae22cedd7aaf2564053c', 'test', 'jeep', '2021-03-23 06:53:05', 'jeep@gmail.com'),
+	('b28509f70cb414398f55b1510f3eb3945ee93f97', 'mlm_api', 'qwerty123', '2021-03-23 07:43:21', NULL),
+	('b76c94a69d73f395487022b468620aa9a36df2ef', 'test', 'qwerty123', '2021-03-23 07:42:15', NULL),
+	('bead2b1e59f8aafcc271bee68f9e756c3b939e57', 'mlm_api', 'qwerty123', '2021-03-25 05:24:41', NULL),
+	('c6f5bed619c25c15f038b23c7e5cf587658887c8', 'mlm_api', 'qwerty123', '2021-03-24 19:59:50', NULL),
+	('c8dfa620f085c3700a046dce8fd6f50ea10eaf39', 'mlm_api', 'qwerty123', '2021-03-23 22:16:28', NULL),
+	('cadde64115d912941f7d53f5c364dd9e56ca5872', 'test', 'qwerty123', '2021-03-23 07:41:59', NULL),
+	('ceb5223e8cde726215ed437e059bb32324c99d01', 'test', 'jeep', '2021-03-23 06:53:57', 'jeep@gmail.com'),
+	('d40436e67ba9f1276347d8f4039db90239135d44', 'test', 'jeep', '2021-03-23 06:52:35', 'jeep@gmail.com'),
+	('dc24e723a7387271af5a76f8722354d9e73a7b53', 'test', '2', '2021-03-22 21:13:57', NULL),
+	('e09b41f241cd82a540abef87ac53305fde313b18', 'mlm_api', 'qwerty123', '2021-03-25 01:04:31', NULL),
+	('f12b9501e9df36c2cd3d84e49a22a4c14ed15875', 'mlm_api', 'qwerty123', '2021-03-25 22:43:01', NULL),
+	('f50441422b49743db6c9c1b3a5dc95c7177beadd', 'mlm_api', 'qwerty123', '2021-03-24 02:51:06', NULL),
+	('f91c4176de825f1a4115f5d27f5bc9d191283274', 'mlm_api', 'qwerty123', '2021-03-25 04:43:08', NULL),
+	('f98056e5fe28d73219dd69793437a19ed19ab58d', 'mlm_api', 'qwerty123', '2021-03-24 01:52:49', NULL),
+	('fc37b5126b6852c896e70450f82224f94cd839e6', 'mlm_api', 'qwerty123', '2021-03-25 06:31:19', NULL);
+/*!40000 ALTER TABLE `oauth_refresh_tokens` ENABLE KEYS */;
+
+-- Dumping structure for table mlm.oauth_scopes
+CREATE TABLE IF NOT EXISTS `oauth_scopes` (
+  `scope` varchar(80) NOT NULL,
+  `is_default` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`scope`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Dumping data for table mlm.oauth_scopes: ~0 rows (approximately)
+/*!40000 ALTER TABLE `oauth_scopes` DISABLE KEYS */;
+/*!40000 ALTER TABLE `oauth_scopes` ENABLE KEYS */;
+
+-- Dumping structure for table mlm.oauth_users
+CREATE TABLE IF NOT EXISTS `oauth_users` (
+  `username` varchar(80) NOT NULL,
+  `password` varchar(80) DEFAULT NULL,
+  `first_name` varchar(80) DEFAULT NULL,
+  `last_name` varchar(80) DEFAULT NULL,
+  `email` varchar(80) DEFAULT NULL,
+  `email_verified` tinyint(1) DEFAULT NULL,
+  `scope` varchar(4000) DEFAULT NULL,
+  PRIMARY KEY (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Dumping data for table mlm.oauth_users: ~2 rows (approximately)
+/*!40000 ALTER TABLE `oauth_users` DISABLE KEYS */;
+INSERT INTO `oauth_users` (`username`, `password`, `first_name`, `last_name`, `email`, `email_verified`, `scope`) VALUES
+	('qwerty123', '224b36c7e68c1cfb3522caf0554589876e1092c6', 'Joshua dave', 'Tonido', 'joshuadave143@gmail.com', NULL, '');
+/*!40000 ALTER TABLE `oauth_users` ENABLE KEYS */;
+
 -- Dumping structure for procedure mlm.process_pairing
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `process_pairing`(
@@ -10511,29 +10786,62 @@ DELIMITER ;
 CREATE TABLE IF NOT EXISTS `tbl_activation_codes` (
   `activation_code_id` int(11) NOT NULL AUTO_INCREMENT,
   `package_id` int(11) NOT NULL,
-  `batch_no` smallint(6) NOT NULL DEFAULT '1',
-  `activation_code` varchar(256) NOT NULL,
-  `activation_type` tinyint(4) NOT NULL COMMENT '1-paid, 2-free',
-  `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `activation_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `code_status` int(5) NOT NULL DEFAULT '0' COMMENT '0-not activated, 1-activated',
+  `activation_code` varchar(30) NOT NULL DEFAULT '',
+  `activation_type` tinyint(4) NOT NULL DEFAULT 1 COMMENT '1-paid, 2-free',
+  `activation_date` datetime DEFAULT NULL,
+  `code_status` int(5) NOT NULL DEFAULT 1 COMMENT '0-not activated, 1-activated',
+  `date_created` timestamp NOT NULL DEFAULT current_timestamp(),
+  `date_modified` timestamp NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`activation_code_id`),
   KEY `package_id` (`package_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8;
 
--- Dumping data for table mlm.tbl_activation_codes: ~10 rows (approximately)
+-- Dumping data for table mlm.tbl_activation_codes: ~42 rows (approximately)
 /*!40000 ALTER TABLE `tbl_activation_codes` DISABLE KEYS */;
-INSERT INTO `tbl_activation_codes` (`activation_code_id`, `package_id`, `batch_no`, `activation_code`, `activation_type`, `date_created`, `activation_date`, `code_status`) VALUES
-	(1, 1, 1, '781f755c57596a4928d64188462ae61247904d75bc14147ced5af39530c6245d', 1, '2018-10-09 07:36:45', '0000-00-00 00:00:00', 1),
-	(2, 1, 1, '72c16d33454e941b8417d3ce3857f3c17d8b1b80834021d17839276da289cda8', 1, '2018-10-09 07:36:45', '0000-00-00 00:00:00', 1),
-	(3, 1, 1, '9be1e78849fb3dbca692006caa676e73c7d1177937e57ea542b1104191316732', 1, '2018-10-09 07:36:45', '0000-00-00 00:00:00', 0),
-	(4, 1, 1, '12c37eda7bd3a03158b07b296de2823c066b980057f0e160b5aa226ceea6ae39', 1, '2018-10-09 07:36:45', '0000-00-00 00:00:00', 0),
-	(5, 1, 1, '83494b2b3eb8ab4754d85c6f1f90ba569b54c5af015a204ee428200cb71939ad', 1, '2018-10-09 07:36:45', '0000-00-00 00:00:00', 0),
-	(6, 1, 1, 'b1c860574d74b3d7e23cd59cb88fb3cec6dbb237e7332712cb097fd119a8b1aa', 1, '2018-10-09 08:16:41', '0000-00-00 00:00:00', 0),
-	(7, 1, 1, 'd5788bde2f52d5ec06a349a3bed7fbbae9d6c2d4af0d3d3f22019b5303b37983', 1, '2018-10-09 08:16:41', '0000-00-00 00:00:00', 0),
-	(8, 1, 1, 'df86cfd513173e45cc33a78d6eaf0d9157b95eaf9af0536c58af66ef0bb05786', 1, '2018-10-09 08:16:41', '0000-00-00 00:00:00', 0),
-	(9, 1, 1, '4153025ba6efc8ed88d9c4d7bf37aab2b3a24d27b37efbdd48150db17def2265', 1, '2018-10-09 08:16:41', '0000-00-00 00:00:00', 0),
-	(10, 1, 1, '3dbfcb93e6a670e270d1a861b80a296c7c22183783ac96cc38cf87fd8b6cf321', 1, '2018-10-09 08:16:41', '0000-00-00 00:00:00', 0);
+INSERT INTO `tbl_activation_codes` (`activation_code_id`, `package_id`, `activation_code`, `activation_type`, `activation_date`, `code_status`, `date_created`, `date_modified`) VALUES
+	(1, 1, 'dsavv3sv', 1, '0000-00-00 00:00:00', 1, '2018-10-09 07:36:45', '2021-03-11 16:05:45'),
+	(2, 1, 'sfgrg', 1, '0000-00-00 00:00:00', 1, '2018-10-09 07:36:45', '2021-03-11 16:05:45'),
+	(3, 1, 'sdfgsdfef', 1, '0000-00-00 00:00:00', 1, '2018-10-09 07:36:45', '2021-03-11 16:05:45'),
+	(4, 1, 'dgdfgdfv', 1, '0000-00-00 00:00:00', 1, '2018-10-09 07:36:45', '2021-03-11 16:05:45'),
+	(5, 1, 'vcbzccbcvb', 1, '0000-00-00 00:00:00', 1, '2018-10-09 07:36:45', '2021-03-11 16:05:45'),
+	(6, 1, 'sdfggrg', 1, '0000-00-00 00:00:00', 1, '2018-10-09 08:16:41', '2021-03-11 16:05:45'),
+	(7, 1, 'adf', 1, '0000-00-00 00:00:00', 1, '2018-10-09 08:16:41', '2021-03-11 16:05:45'),
+	(8, 1, 'asdvsdfj', 1, '0000-00-00 00:00:00', 1, '2018-10-09 08:16:41', '2021-03-11 16:05:45'),
+	(9, 1, 'asdfav2', 1, '0000-00-00 00:00:00', 1, '2018-10-09 08:16:41', '2021-03-11 16:05:45'),
+	(10, 1, 'sdfgsd', 1, '0000-00-00 00:00:00', 1, '2018-10-09 08:16:41', '2021-03-11 16:05:45'),
+	(11, 1, 'asd', 1, NULL, 1, '2021-03-11 14:47:12', '2021-03-11 16:05:45'),
+	(12, 6, 'KYLXE266', 1, NULL, 1, '2021-03-11 14:55:10', '2021-03-11 16:05:45'),
+	(13, 6, 'TC2TDBHH', 1, NULL, 1, '2021-03-11 14:55:53', '2021-03-11 16:05:45'),
+	(14, 6, '2QJ2CDRR', 1, NULL, 1, '2021-03-11 15:01:45', '2021-03-11 16:05:45'),
+	(15, 6, 'B5XJT33', 1, NULL, 1, '2021-03-11 15:02:14', '2021-03-11 16:05:45'),
+	(16, 6, 'LGFFPVV', 1, NULL, 1, '2021-03-11 15:02:28', '2021-03-11 16:05:45'),
+	(17, 8, 'UUW6QWDD', 1, NULL, 1, '2021-03-11 15:02:57', '2021-03-11 16:05:45'),
+	(18, 8, '386C8AA', 1, NULL, 1, '2021-03-11 15:05:29', '2021-03-11 16:05:45'),
+	(19, 8, 'CNRS5M44', 1, NULL, 1, '2021-03-11 15:05:29', '2021-03-11 16:05:45'),
+	(20, 8, 'L1I10U', 1, NULL, 1, '2021-03-11 15:05:29', '2021-03-11 16:05:45'),
+	(21, 10, 'VF5S6H55', 1, NULL, 1, '2021-03-11 15:05:46', '2021-03-11 16:05:45'),
+	(22, 10, '4TDOEF55', 1, NULL, 1, '2021-03-11 15:05:46', '2021-03-11 16:05:45'),
+	(23, 10, 'D83NUMOO', 1, NULL, 1, '2021-03-11 15:05:46', '2021-03-11 16:05:45'),
+	(24, 10, 'MMLMBkFF', 1, NULL, 1, '2021-03-11 15:07:49', '2021-03-11 16:05:45'),
+	(25, 10, 'WaiMbFhh', 1, NULL, 1, '2021-03-11 15:07:49', '2021-03-11 16:05:45'),
+	(26, 10, 'fEGIZMAA', 1, NULL, 1, '2021-03-11 15:07:49', '2021-03-11 16:05:45'),
+	(27, 1, 'ETgHYZff', 1, NULL, 1, '2021-03-12 12:56:24', '2021-03-12 12:56:24'),
+	(28, 1, 'NhUibfjj', 1, NULL, 1, '2021-03-12 12:56:58', '2021-03-12 12:56:58'),
+	(29, 6, 'WLBedMTT', 1, NULL, 1, '2021-03-12 12:58:34', '2021-03-12 12:58:34'),
+	(30, 6, 'gjbRFObb', 1, NULL, 1, '2021-03-12 12:58:34', '2021-03-12 12:58:34'),
+	(31, 25, 'FNFiNLVV', 1, NULL, 1, '2021-03-12 13:03:19', '2021-03-12 13:03:19'),
+	(32, 25, 'OYXeJdjj', 1, NULL, 1, '2021-03-12 13:03:19', '2021-03-12 13:03:19'),
+	(33, 25, 'XCFeaKjj', 1, NULL, 1, '2021-03-12 13:03:19', '2021-03-12 13:03:19'),
+	(34, 25, 'gQSVgkYY', 1, NULL, 1, '2021-03-12 13:03:19', '2021-03-12 13:03:19'),
+	(35, 25, 'GfjHEfUU', 1, NULL, 1, '2021-03-12 13:03:19', '2021-03-12 13:03:19'),
+	(36, 25, 'PJaQdMcc', 1, NULL, 1, '2021-03-12 13:03:19', '2021-03-12 13:03:19'),
+	(37, 14, 'YXNHGBLL', 1, NULL, 1, '2021-03-12 13:04:03', '2021-03-12 13:04:03'),
+	(38, 14, 'hBVdjHRR', 1, NULL, 1, '2021-03-12 13:04:03', '2021-03-12 13:04:03'),
+	(39, 14, 'GQLCeCYY', 1, NULL, 1, '2021-03-12 13:04:03', '2021-03-12 13:04:03'),
+	(40, 14, 'QedCPBEE', 1, NULL, 1, '2021-03-12 13:04:03', '2021-03-12 13:04:03'),
+	(41, 14, 'ZIQiSMXX', 1, NULL, 1, '2021-03-12 13:04:03', '2021-03-12 13:04:03'),
+	(42, 14, 'iWYYCBTT', 1, NULL, 1, '2021-03-12 13:04:03', '2021-03-12 13:04:03'),
+	(43, 10, 'pck-HBPgXIOO', 1, NULL, 1, '2021-03-12 13:07:10', '2021-03-12 13:07:10');
 /*!40000 ALTER TABLE `tbl_activation_codes` ENABLE KEYS */;
 
 -- Dumping structure for table mlm.tbl_indreferral_bonus
@@ -10541,9 +10849,9 @@ CREATE TABLE IF NOT EXISTS `tbl_indreferral_bonus` (
   `inreferral_id` int(11) NOT NULL AUTO_INCREMENT,
   `node_id` int(11) DEFAULT NULL,
   `downline_id` int(11) DEFAULT NULL,
-  `amount` decimal(10,2) DEFAULT '0.00',
-  `date_created` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-  `inreferral_status` tinyint(4) DEFAULT '0',
+  `amount` decimal(10,2) DEFAULT 0.00,
+  `date_created` timestamp NULL DEFAULT current_timestamp(),
+  `inreferral_status` tinyint(4) DEFAULT 0,
   PRIMARY KEY (`inreferral_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -10555,7 +10863,7 @@ CREATE TABLE IF NOT EXISTS `tbl_indreferral_bonus` (
 CREATE TABLE IF NOT EXISTS `tbl_login_history` (
   `login_history_id` bigint(11) NOT NULL AUTO_INCREMENT,
   `member_id` int(11) DEFAULT NULL,
-  `last_login` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `last_login` timestamp NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`login_history_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
@@ -10584,34 +10892,38 @@ CREATE TABLE IF NOT EXISTS `tbl_members` (
   `email` varchar(20) DEFAULT NULL,
   `mobile_no` varchar(20) DEFAULT NULL,
   `avatar` varchar(100) DEFAULT NULL,
-  `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `member_type` tinyint(4) DEFAULT '1' COMMENT '1-not activated, 2-activated',
-  `member_status` tinyint(4) NOT NULL DEFAULT '1' COMMENT '0-inactive, 1-active',
+  `member_type` tinyint(4) DEFAULT 1 COMMENT '1-not activated, 2-activated',
+  `member_status` tinyint(4) NOT NULL DEFAULT 1 COMMENT '0-inactive, 1-active',
+  `date_created` timestamp NOT NULL DEFAULT current_timestamp(),
+  `date_modified` timestamp NOT NULL DEFAULT current_timestamp(),
+  `date_deleted` timestamp NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`member_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table mlm.tbl_members: ~3 rows (approximately)
+-- Dumping data for table mlm.tbl_members: ~5 rows (approximately)
 /*!40000 ALTER TABLE `tbl_members` DISABLE KEYS */;
-INSERT INTO `tbl_members` (`member_id`, `sponsor_id`, `firstname`, `middlename`, `lastname`, `gender`, `birthdate`, `age`, `tin`, `civil_status`, `address`, `city`, `province`, `country`, `email`, `mobile_no`, `avatar`, `date_created`, `member_type`, `member_status`) VALUES
-	(100001, 100000, 'sharemax', 'admin', 'sharemax', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 169, NULL, NULL, '8206fca5d1987cf03d1146c64871144b.jpg', '2018-08-23 04:08:39', 2, 1),
-	(104782, 100001, 'arvin', 'f', 'asdfasdf', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1234124', NULL, '2019-03-30 14:02:34', 2, 1),
-	(108896, 104782, 'aaaaaa', 'a', 'aaaaaa', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '12341234', NULL, '2019-03-31 23:15:44', 2, 1);
+INSERT INTO `tbl_members` (`member_id`, `sponsor_id`, `firstname`, `middlename`, `lastname`, `gender`, `birthdate`, `age`, `tin`, `civil_status`, `address`, `city`, `province`, `country`, `email`, `mobile_no`, `avatar`, `member_type`, `member_status`, `date_created`, `date_modified`, `date_deleted`) VALUES
+	(0, 104782, 'Joshua Dave', 'F', 'Tonido', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, '2021-03-06 09:32:49', '2021-03-06 09:32:49', '2021-03-06 23:32:49'),
+	(100001, 100000, 'sharemax', 'admin', 'sharemax', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 169, NULL, NULL, '8206fca5d1987cf03d1146c64871144b.jpg', 2, 1, '2018-08-23 04:08:39', '2021-03-06 23:12:51', '2021-03-06 23:12:51'),
+	(104782, 100001, 'arvin', 'f', 'asdfasdf', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1234124', NULL, 2, 1, '2019-03-30 14:02:34', '2021-03-06 23:12:51', '2021-03-06 23:12:51'),
+	(108896, 104782, 'aaaaaa', 'a', 'aaaaaa', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '12341234', NULL, 2, 1, '2019-03-31 23:15:44', '2021-03-06 23:12:51', '2021-03-06 23:12:51'),
+	(123456, 104782, 'Joshua Dave', 'F', 'Tonido', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, '2021-03-06 09:23:03', '2021-03-06 09:23:03', '2021-03-06 23:23:03');
 /*!40000 ALTER TABLE `tbl_members` ENABLE KEYS */;
 
 -- Dumping structure for table mlm.tbl_nodes
 CREATE TABLE IF NOT EXISTS `tbl_nodes` (
   `node_id` int(11) NOT NULL AUTO_INCREMENT,
   `member_id` int(11) NOT NULL,
-  `member_idx` smallint(6) NOT NULL DEFAULT '1',
+  `member_idx` smallint(6) NOT NULL DEFAULT 1,
   `sponsor_id` int(11) NOT NULL,
   `upline_id` int(11) NOT NULL,
-  `placement` tinyint(4) NOT NULL DEFAULT '1' COMMENT '1 - left, 2 - right',
-  `tot_dlines` int(11) NOT NULL DEFAULT '0',
-  `tot_referrals` int(11) NOT NULL DEFAULT '0',
-  `activation_code_id` int(11) NOT NULL DEFAULT '0',
-  `node_type` tinyint(4) NOT NULL DEFAULT '0' COMMENT '0-Vacant Account, 1-Main Account, 2-Add-on Account',
-  `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `status` tinyint(4) NOT NULL DEFAULT '0' COMMENT '0-vacant, 1-active, 2-inactive',
+  `placement` tinyint(4) NOT NULL DEFAULT 1 COMMENT '1 - left, 2 - right',
+  `tot_dlines` int(11) NOT NULL DEFAULT 0,
+  `tot_referrals` int(11) NOT NULL DEFAULT 0,
+  `activation_code_id` int(11) NOT NULL DEFAULT 0,
+  `node_type` tinyint(4) NOT NULL DEFAULT 0 COMMENT '0-Vacant Account, 1-Main Account, 2-Add-on Account',
+  `date_created` timestamp NOT NULL DEFAULT current_timestamp(),
+  `status` tinyint(4) NOT NULL DEFAULT 0 COMMENT '0-vacant, 1-active, 2-inactive',
   PRIMARY KEY (`node_id`),
   KEY `member_id` (`member_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1008 DEFAULT CHARSET=utf8;
@@ -10632,20 +10944,25 @@ INSERT INTO `tbl_nodes` (`node_id`, `member_id`, `member_idx`, `sponsor_id`, `up
 CREATE TABLE IF NOT EXISTS `tbl_packages` (
   `package_id` int(11) NOT NULL AUTO_INCREMENT,
   `package_name` varchar(100) DEFAULT NULL,
-  `package_amt` decimal(10,2) DEFAULT '0.00',
-  `direct_referral` decimal(10,2) DEFAULT '0.00',
-  `pairing_bonus` decimal(10,2) DEFAULT '0.00',
-  `signup_bonus` decimal(10,2) NOT NULL DEFAULT '0.00',
-  `indirect_referral` decimal(10,2) NOT NULL DEFAULT '0.00',
-  `pairs_per_day` tinyint(4) NOT NULL DEFAULT '16',
-  `package_status` tinyint(4) DEFAULT '0',
+  `package_amt` decimal(10,2) DEFAULT 0.00,
+  `direct_referral` decimal(10,2) DEFAULT 0.00,
+  `indirect_referral` decimal(10,2) NOT NULL DEFAULT 0.00,
+  `developer_fee` decimal(10,2) NOT NULL DEFAULT 0.00,
+  `package_status` tinyint(4) DEFAULT 0,
+  `date_created` timestamp NULL DEFAULT NULL,
+  `date_modified` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`package_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
 
--- Dumping data for table mlm.tbl_packages: ~0 rows (approximately)
+-- Dumping data for table mlm.tbl_packages: ~6 rows (approximately)
 /*!40000 ALTER TABLE `tbl_packages` DISABLE KEYS */;
-INSERT INTO `tbl_packages` (`package_id`, `package_name`, `package_amt`, `direct_referral`, `pairing_bonus`, `signup_bonus`, `indirect_referral`, `pairs_per_day`, `package_status`) VALUES
-	(1, 'Entry Package', 1000.00, 100.00, 200.00, 250.00, 10.00, 127, 0);
+INSERT INTO `tbl_packages` (`package_id`, `package_name`, `package_amt`, `direct_referral`, `indirect_referral`, `developer_fee`, `package_status`, `date_created`, `date_modified`) VALUES
+	(1, 'Entry Package', 1000.00, 350.00, 150.00, 100.00, 0, '2021-03-10 00:31:25', '2021-03-11 17:05:01'),
+	(6, 'sweqweqe22222', 100.00, 100.00, 200.00, 100.00, 0, '2021-03-10 02:41:19', '2021-03-10 19:23:46'),
+	(8, 'swe', 100.00, 100.00, 100.00, 100.00, 0, NULL, NULL),
+	(10, '123qwe', 100.00, 100.00, 100.00, 100.00, 0, NULL, NULL),
+	(14, 'web', 1.00, 1.00, 1.00, 1.00, 0, NULL, NULL),
+	(25, 'wer', 1.00, 1.00, 1.00, 1.00, 0, '2021-03-11 17:05:55', '2021-03-11 17:05:55');
 /*!40000 ALTER TABLE `tbl_packages` ENABLE KEYS */;
 
 -- Dumping structure for table mlm.tbl_products
@@ -10653,50 +10970,28 @@ CREATE TABLE IF NOT EXISTS `tbl_products` (
   `product_id` int(11) NOT NULL AUTO_INCREMENT,
   `product_name` varchar(100) DEFAULT NULL,
   `amount` decimal(10,2) DEFAULT NULL,
-  `pairing_amt` decimal(10,2) DEFAULT NULL,
-  `referral_amt` decimal(10,2) DEFAULT NULL,
   `pts` smallint(6) DEFAULT NULL,
-  `product_status` tinyint(4) DEFAULT '0' COMMENT '0-active, 1-inactive',
+  `product_status` tinyint(4) DEFAULT 0 COMMENT '0-active, 1-inactive',
+  `developer_fee` decimal(10,2) DEFAULT NULL,
+  `date_created` timestamp NULL DEFAULT NULL,
+  `date_modified` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`product_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
--- Dumping data for table mlm.tbl_products: ~0 rows (approximately)
+-- Dumping data for table mlm.tbl_products: ~1 rows (approximately)
 /*!40000 ALTER TABLE `tbl_products` DISABLE KEYS */;
-INSERT INTO `tbl_products` (`product_id`, `product_name`, `amount`, `pairing_amt`, `referral_amt`, `pts`, `product_status`) VALUES
-	(1, 'Curcumin Max', 500.00, NULL, NULL, 50, 0);
+INSERT INTO `tbl_products` (`product_id`, `product_name`, `amount`, `pts`, `product_status`, `developer_fee`, `date_created`, `date_modified`) VALUES
+	(1, 'Curcumin Max', 500.00, 1, 0, 1.00, NULL, '2021-03-11 17:46:36');
 /*!40000 ALTER TABLE `tbl_products` ENABLE KEYS */;
-
--- Dumping structure for table mlm.tbl_raw_codes
-CREATE TABLE IF NOT EXISTS `tbl_raw_codes` (
-  `raw_code_id` int(11) NOT NULL AUTO_INCREMENT,
-  `activation_code_id` int(11) NOT NULL,
-  `raw_code` varchar(30) NOT NULL,
-  PRIMARY KEY (`raw_code_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
-
--- Dumping data for table mlm.tbl_raw_codes: ~10 rows (approximately)
-/*!40000 ALTER TABLE `tbl_raw_codes` DISABLE KEYS */;
-INSERT INTO `tbl_raw_codes` (`raw_code_id`, `activation_code_id`, `raw_code`) VALUES
-	(1, 1, 'bQGYHgZjkdq6'),
-	(2, 2, 'jQSF2joiqpha'),
-	(3, 3, 'Y89FtBNKRVhY'),
-	(4, 4, '278bZoX93oDu'),
-	(5, 5, 'NsS4XzTuwS1f'),
-	(6, 6, '4EgwPanhAXGa'),
-	(7, 7, '4FZVqWdtQ7zu'),
-	(8, 8, 'yrE7tv3nzYYC'),
-	(9, 9, 'x0jxWrNPxmjc'),
-	(10, 10, '8BKN907xrAta');
-/*!40000 ALTER TABLE `tbl_raw_codes` ENABLE KEYS */;
 
 -- Dumping structure for table mlm.tbl_referral_bonus
 CREATE TABLE IF NOT EXISTS `tbl_referral_bonus` (
   `referral_id` int(11) NOT NULL AUTO_INCREMENT,
   `node_id` int(11) DEFAULT NULL,
   `downline_id` int(11) DEFAULT NULL,
-  `amount` decimal(10,2) DEFAULT '0.00',
-  `date_created` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-  `referral_status` tinyint(4) DEFAULT '0',
+  `amount` decimal(10,2) DEFAULT 0.00,
+  `date_created` timestamp NULL DEFAULT current_timestamp(),
+  `referral_status` tinyint(4) DEFAULT 0,
   PRIMARY KEY (`referral_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
@@ -10714,7 +11009,7 @@ CREATE TABLE IF NOT EXISTS `tbl_security` (
   `username` varchar(50) NOT NULL,
   `login_pass` varchar(256) NOT NULL,
   `secur_pass` varchar(256) NOT NULL,
-  `last_update` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP,
+  `last_update` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE current_timestamp(),
   PRIMARY KEY (`security_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
@@ -10730,19 +11025,21 @@ INSERT INTO `tbl_security` (`security_id`, `member_id`, `username`, `login_pass`
 CREATE TABLE IF NOT EXISTS `tbl_users` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT,
   `fullname` varchar(50) DEFAULT NULL,
-  `user_name` varchar(50) DEFAULT NULL,
-  `user_pass` varchar(256) DEFAULT NULL,
+  `username` varchar(50) DEFAULT NULL,
+  `password` varchar(256) DEFAULT NULL,
   `avatar` varchar(256) DEFAULT NULL,
-  `user_type` tinyint(4) DEFAULT '3',
-  `date_created` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-  `user_status` tinyint(4) DEFAULT '0',
+  `user_type` tinyint(4) DEFAULT 3,
+  `date_created` timestamp NULL DEFAULT current_timestamp(),
+  `user_status` tinyint(4) DEFAULT 0,
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
--- Dumping data for table mlm.tbl_users: ~0 rows (approximately)
+-- Dumping data for table mlm.tbl_users: ~3 rows (approximately)
 /*!40000 ALTER TABLE `tbl_users` DISABLE KEYS */;
-INSERT INTO `tbl_users` (`user_id`, `fullname`, `user_name`, `user_pass`, `avatar`, `user_type`, `date_created`, `user_status`) VALUES
-	(1, 'admin user', 'deight_user', '$2a$08$mIt5E5roed2vlKHfhnXeoO0YX4QpQRZUorIheljbQAQmDflQ/XVZa', 'f90b5c22ddca5fb8204ee6151e09b891.jpg', 3, '2018-10-16 22:39:40', 0);
+INSERT INTO `tbl_users` (`user_id`, `fullname`, `username`, `password`, `avatar`, `user_type`, `date_created`, `user_status`) VALUES
+	(1, 'admin user', 'deight_user', '$2a$08$mIt5E5roed2vlKHfhnXeoO0YX4QpQRZUorIheljbQAQmDflQ/XVZa', 'f90b5c22ddca5fb8204ee6151e09b891.jpg', 3, '2018-10-16 22:39:40', 0),
+	(2, 'test', 'test1', '$2a$08$vh9FG04pwZfErkRzKLBfHe4JNqFPvd4vw6iCXDTifp1dqQIm92yxG', 'sdf', 0, '2021-03-09 10:13:36', 0),
+	(3, 'Developer', 'mlm', '$2a$08$tHjQcrzm06WOwJ6odXVTtOkuan1lnQ6uNwaNjwLRbycuz6bW4pQfG', NULL, 0, '2021-03-12 11:39:04', 0);
 /*!40000 ALTER TABLE `tbl_users` ENABLE KEYS */;
 
 -- Dumping structure for procedure mlm.update_downlines
@@ -10760,12 +11057,14 @@ DELIMITER ;
 CREATE TABLE `vw_activation_codes` (
 	`activation_code_id` INT(11) NULL,
 	`package_id` INT(11) NULL,
-	`activation_code` VARCHAR(256) NULL COLLATE 'utf8_general_ci',
+	`activation_code` VARCHAR(30) NULL COLLATE 'utf8_general_ci',
+	`activation_date` DATETIME NULL,
 	`activation_type` TINYINT(4) NULL COMMENT '1-paid, 2-free',
 	`package_name` VARCHAR(100) NULL COLLATE 'utf8_general_ci',
 	`package_amt` DECIMAL(10,2) NULL,
 	`date_created` TIMESTAMP NULL,
-	`code_status` INT(5) NULL COMMENT '0-not activated, 1-activated'
+	`code_status` INT(5) NULL COMMENT '0-not activated, 1-activated',
+	`node_id` INT(11) NULL
 ) ENGINE=MyISAM;
 
 -- Dumping structure for view mlm.vw_members
@@ -10789,8 +11088,18 @@ CREATE TABLE `vw_members` (
 -- Removing temporary table and create final VIEW structure
 DROP TABLE IF EXISTS `vw_activation_codes`;
 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_activation_codes` AS SELECT 
-	`a`.`activation_code_id` AS `activation_code_id`,`a`.`package_id` AS `package_id`,`a`.`activation_code` AS `activation_code`,`a`.`activation_type` AS `activation_type`,`p`.`package_name` AS `package_name`,`p`.`package_amt` AS `package_amt`,`a`.`date_created` AS `date_created`,`a`.`code_status` AS `code_status` 
-FROM (`tbl_packages` `p` left join `tbl_activation_codes` `a` on((`p`.`package_id` = `a`.`package_id`))) ;
+	`a`.`activation_code_id` AS `activation_code_id`,
+	`a`.`package_id` AS `package_id`,
+	`a`.`activation_code` AS `activation_code`,
+	`a`.`activation_date`, 
+	`a`.`activation_type` AS `activation_type`,
+	`p`.`package_name` AS `package_name`,
+	`p`.`package_amt` AS `package_amt`,
+	`a`.`date_created` AS `date_created`,
+	`a`.`code_status` AS `code_status`,
+	`n`.`node_id` 
+FROM (`tbl_packages` `p` left join `tbl_activation_codes` `a` on((`p`.`package_id` = `a`.`package_id`)) 
+left join `tbl_nodes` `n` on ((`a`.`activation_code_id` = `n`.`activation_code_id`))) ;
 
 -- Dumping structure for view mlm.vw_members
 -- Removing temporary table and create final VIEW structure

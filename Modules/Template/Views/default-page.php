@@ -1,6 +1,3 @@
-<?php
-	defined('BASEPATH') OR exit('No direct script access allowed');
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,10 +12,10 @@
 	
 	<!-- BEGIN GLOBAL MANDATORY STYLES -->
     <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" /> -->
-	<link href="<?=base_url()?>assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
-	<link href="<?=base_url()?>assets/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
-	<link href="<?=base_url()?>assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-	<link href="<?=base_url()?>assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+	<link href="<?=base_url()?>/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+	<link href="<?=base_url()?>/assets/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
+	<link href="<?=base_url()?>/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="<?=base_url()?>/assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
 	<!-- END GLOBAL MANDATORY STYLES -->
 	<!-- BEGIN PAGE LEVEL PLUGIN STYLES -->
 
@@ -27,13 +24,13 @@
 	{/css_entries}
 	<!-- END PAGE LEVEL PLUGIN STYLES -->
 	<!-- BEGIN THEME STYLES -->
-	<link href="<?php echo base_url(); ?>assets/css/style-conquer.css" rel="stylesheet" type="text/css"/>
-	<link href="<?php echo base_url(); ?>assets/css/style.css" rel="stylesheet" type="text/css"/>
-	<link href="<?php echo base_url(); ?>assets/css/style-responsive.css" rel="stylesheet" type="text/css"/>
-	<link href="<?php echo base_url(); ?>assets/css/plugins.css" rel="stylesheet" type="text/css"/>
-	<link href="<?php echo base_url(); ?>assets/css/pages/portfolio.css" rel="stylesheet" type="text/css"/>
-	<link href="<?php echo base_url(); ?>assets/css/themes/default.css" rel="stylesheet" type="text/css" id="style_color"/>
-	<link href="<?php echo base_url(); ?>assets/css/custom.css" rel="stylesheet" type="text/css"/>
+	<link href="<?php echo base_url(); ?>/assets/css/style-conquer.css" rel="stylesheet" type="text/css"/>
+	<link href="<?php echo base_url(); ?>/assets/css/style.css" rel="stylesheet" type="text/css"/>
+	<link href="<?php echo base_url(); ?>/assets/css/style-responsive.css" rel="stylesheet" type="text/css"/>
+	<link href="<?php echo base_url(); ?>/assets/css/plugins.css" rel="stylesheet" type="text/css"/>
+	<link href="<?php echo base_url(); ?>/assets/css/pages/portfolio.css" rel="stylesheet" type="text/css"/>
+	<link href="<?php echo base_url(); ?>/assets/css/themes/default.css" rel="stylesheet" type="text/css" id="style_color"/>
+	<link href="<?php echo base_url(); ?>/assets/css/custom.css" rel="stylesheet" type="text/css"/>
 	<!-- END THEME STYLES -->
 	<style type="text/css">
 		#myModal{
@@ -43,17 +40,17 @@
 	</style>
     
 </head>
-<body class="page-header-fixed page-sidebar-closed">
+<body class="page-header-fixed">
 	<!-- Top Navigation 
 	================================================== -->
-	<?php $this->load->view("template/page-nav-v1.php"); ?>
+	<?= view("Modules\Template\Views\\template\page-nav-v1.php") ?>
 	<!-- end #top-navigation -->
 	<div class="clearfix">
 	</div>
 	<div class="page-container">
 		<!-- Sidebar 
 		================================================== -->
-		<?php $this->load->view("template/page-sidebar.php"); ?>
+		<?= view("Modules\Template\Views\\template\page-sidebar.php") ?>
 		<!-- end #sidebar -->
 		
 		<!-- Content 
@@ -62,9 +59,7 @@
 		<div class="page-content-wrapper">
 			<div class="page-content-wrapper">
 				<div class="page-content">
-					<?php
-						$this->load->view($page);			
-					?>	
+					<?= view($page) ?>
 				</div>
 			</div>
 		</div>	
@@ -82,17 +77,17 @@
 	</div>
     
 	<!-- ================== GLOBAL PLUGINS START ================== -->
-	<script src="<?php echo base_url(); ?>assets/plugins/jquery-1.11.0.min.js"></script>
-	<script src="<?php echo base_url(); ?>assets/plugins/jquery-migrate-1.2.1.min.js"></script>
+	<script src="<?php echo base_url(); ?>/assets/plugins/jquery-1.11.0.min.js"></script>
+	<script src="<?php echo base_url(); ?>/assets/plugins/jquery-migrate-1.2.1.min.js"></script>
 	<!-- ================== GLOBAL PLUGINS START ================== -->
 	<!-- IMPORTANT! Load jquery-ui-1.10.3.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
-	<script src="<?php echo base_url(); ?>assets/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
-	<script src="<?php echo base_url(); ?>assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-	<script src="<?php echo base_url(); ?>assets/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
-	<script src="<?php echo base_url(); ?>assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
-	<script src="<?php echo base_url(); ?>assets/plugins/jquery.blockui.min.js" type="text/javascript"></script>
-	<script src="<?php echo base_url(); ?>assets/plugins/jquery.cokie.min.js" type="text/javascript"></script>
-	<script src="<?php echo base_url(); ?>assets/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
+	<script src="<?php echo base_url(); ?>/assets/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
+	<script src="<?php echo base_url(); ?>/assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="<?php echo base_url(); ?>/assets/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+	<script src="<?php echo base_url(); ?>/assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+	<script src="<?php echo base_url(); ?>/assets/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+	<script src="<?php echo base_url(); ?>/assets/plugins/jquery.cokie.min.js" type="text/javascript"></script>
+	<script src="<?php echo base_url(); ?>/assets/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
 	<!-- END CORE PLUGINS -->
 	<!-- BEGIN PAGE LEVEL PLUGINS -->
 	{js_plug}
@@ -106,11 +101,11 @@
 	<!-- END PAGE LEVEL SCRIPTS -->
 
 	<!-- Application Setting -->
-	<script src="<?php echo base_url(); ?>assets/scripts/app.js" type="text/javascript"></script>
+	<script src="<?php echo base_url(); ?>/assets/scripts/app.js" type="text/javascript"></script>
 	<script>
 		$(document).ready(function() {
 			App.init();
-			{js_init}
+			<?=$js_init?>
 		});
 	</script>
 	<script type="text/javascript">

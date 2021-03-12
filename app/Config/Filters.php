@@ -6,7 +6,8 @@ use CodeIgniter\Config\BaseConfig;
 use CodeIgniter\Filters\CSRF;
 use CodeIgniter\Filters\DebugToolbar;
 use CodeIgniter\Filters\Honeypot;
-use \Modules\Admin\Filters\OAuthFilter;
+use \Modules\Common\Filters\OAuthFilter;
+use \Modules\Common\Filters\Auth;
 
 class Filters extends BaseConfig
 {
@@ -21,6 +22,7 @@ class Filters extends BaseConfig
 		'toolbar'  => DebugToolbar::class,
 		'honeypot' => Honeypot::class,
 		'OAuthFilter' =>  OAuthFilter::class,
+		'Auth' 		=>  Auth::class,
 	];
 
 	/**
@@ -61,6 +63,6 @@ class Filters extends BaseConfig
 	 * @var array
 	 */
 	public $filters = [
-		'OAuthFilter' => ['before' => ['api/*']]
+		'OAuthFilter' => ['before' => ['api/*','api']]
 	];
 }
