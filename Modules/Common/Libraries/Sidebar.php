@@ -319,7 +319,7 @@ class Sidebar {
 						'permissions'	=> array(ADMIN_ACCOUNT),
 						'sub'			=> array(
 											1 => array( '<i class="fa fa-file-text-o"></i> Add', 'Members_add', '' ,4 => array(ADMIN_ACCOUNT)),
-											2 => array( '<i class="fa fa-list"></i> List', 'Product_Codes', '' ,4 => array(ADMIN_ACCOUNT)),
+											2 => array( '<i class="fa fa-list"></i> List', 'Members_list', '' ,4 => array(ADMIN_ACCOUNT)),
 						)
 			),
 			6 => array(

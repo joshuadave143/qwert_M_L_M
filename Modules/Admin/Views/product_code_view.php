@@ -4,7 +4,7 @@
         <div class="portlet">
             <div class="portlet-title">
                 <div class="caption">
-                    <i class="fa fa-edit"></i>Activation Codes not use
+                    <i class="fa fa-edit"></i>Product Codes not use
                 </div>
 
             </div>
@@ -20,58 +20,17 @@
                         </div>
                     </div>
                 </div>
-                <table class="table table-striped table-hover table-bordered" id="activation_table">
+                <table class="table table-striped table-hover table-bordered" id="code_table">
                     <thead>
                         <tr>
                             <th>
                                 #
                             </th>
                             <th>
-                                Package Name
+                                Product Name
                             </th>
                             <th>
-                                Package Amount
-                            </th>
-                            <th>
-                                Activation Code
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <!-- END EXAMPLE TABLE PORTLET-->
-    </div>
-    <div class="col-md-6">
-        <!-- BEGIN EXAMPLE TABLE PORTLET-->
-        <div class="portlet">
-            <div class="portlet-title">
-                <div class="caption">
-                    <i class="fa fa-edit"></i>Activation Codes already used
-                </div>
-
-            </div>
-            <div class="portlet-body">
-
-                <table class="table table-striped table-hover table-bordered" id="activated_table">
-                    <thead>
-                        <tr>
-                            <th>
-                                #
-                            </th>
-                            <th>
-                                Package Name
-                            </th>
-                            <th>
-                                Package Amount
-                            </th>
-                            <th>
-                                Activation Code
-                            </th>
-                            <th>
-                                Date Activated
+                                Code
                             </th>
                         </tr>
                     </thead>
@@ -92,8 +51,8 @@
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
-                        <label>Package</label>
-                        <select multiple="" class="form-control" id="packageList">
+                        <label>Product</label>
+                        <select multiple="" class="form-control" id="productList">
                         </select>
                     </div>
                     <div class="form-group">

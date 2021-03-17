@@ -67,7 +67,7 @@
 	</div>
 	<div class="footer">
 		<div class="footer-inner">
-			2019 &copy; CISIT.
+			2021 &copy; Tonido, Joshua Dave F.
 		</div>
 		<div class="footer-tools">
 			<span class="go-top">

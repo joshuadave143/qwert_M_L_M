@@ -11,7 +11,7 @@ class Members extends Model{
     protected $returnType       =   'array';
     protected $useSoftDeletes   =   false;
 
-    protected $allowedFields    =   ['member_id', 'sponsor_id', 'firstname', 'middlename',
+    protected $allowedFields    =   ['sponsor_id', 'firstname', 'middlename',
                                     'lastname', 'gender', 'birthdate',
                                     'age', 'tin', 'civil_status',
                                     'address', 'city', 'province',

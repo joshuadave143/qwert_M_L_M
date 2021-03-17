@@ -23,9 +23,13 @@ class Api_product extends ResourceController
         return $this->respond(json_decode($json));
     }
     
-    public function show($id=null){
-        $product = $this->model->find($id);
-        return $this->respond($product);
+    public function show($id=null,$is_all = false){
+        if(!$is_all):
+            $package = $this->model->find($id);
+        else:
+            $package = $this->model->findAll();
+        endif;
+        return $this->respond($package);
     }
 
     public function create(){

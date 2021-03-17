@@ -3,6 +3,8 @@ namespace Modules\Common\Libraries;
 class Json_format_datatable{
     public $btn = '';
     public $properties = array();
+    public $case = array();
+    public $ifelse = array();
 
     function json_format($data,$fields){
         $json = '{"data":';
@@ -17,7 +19,7 @@ class Json_format_datatable{
                     $json .= ',';
                 }
                 if( count($this->getTextStyle()) != 0 && array_key_exists($fields[$e],$this->properties)):
-                    $json .=$this->Textstyle($this->properties[$fields[$e]],$data[$i][$fields[$e]]);
+                    $json .=$this->Textstyle($this->properties[$fields[$e]],$data[$i][$fields[$e]],$fields[$e]);
                 else:
                     $json .= '"'.$data[$i][$fields[$e]].'"';
                 endif;
@@ -31,7 +33,10 @@ class Json_format_datatable{
         return $json;
     }
 
-    function Textstyle($style,$text){
+    function Textstyle($style,$text,$fieldname = null){
+        if( count($this->case) > 0 && array_key_exists($fieldname,$this->case) ){
+            $style = $this->case[$fieldname] == $text?$this->ifelse[$fieldname.'_'.$text]:$style;
+        }
         return '"<span class=\"'.$style.'\">'.$text.'</span>"' ;
     }
 
@@ -47,7 +52,9 @@ class Json_format_datatable{
         return $this->properties;
     }
 
-    function setTextStyle($properties){
+    function setTextStyle($properties,$case = array(),$ifelse = array()){
         $this->properties = $properties;
+        $this->case = $case;
+        $this->ifelse = $ifelse;
     }
 }

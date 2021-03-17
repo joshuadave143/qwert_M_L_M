@@ -31,8 +31,8 @@ class Auth extends Controller {
 			$lastname = $this->joshua_auth->get_session_data('LASTNAME');
 			if( $this->joshua_auth->get_session_data('user_type') == 0 )
 				return redirect()->to(base_url( '/admin/'.$this->joshua_auth->get_session_data('fullname').'/dashboard'));
-			else
-				redirect($lastname.'/Request_Logs');
+			// else
+				// redirect($lastname.'/Request_Logs');
 		}
 		else{
 			
@@ -73,6 +73,7 @@ class Auth extends Controller {
 		$template = view('Modules\Template\Views\access-page',$this->data1);
 		return $this->parser->setData($this->data)->renderString($template);
 	}
+	
 	public function api_login(){
 		$_POST['username'] = "qwerty123";
         $_POST['password'] = 'Qw3rty!@#';

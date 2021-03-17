@@ -1,4 +1,4 @@
-var activationTable = function () {
+var product_codeTable = function () {
     var base_url = window.location.origin;
     toastr.options = {
         "closeButton": true,
@@ -17,7 +17,7 @@ var activationTable = function () {
     var NotUseTable = function () {
 
        
-        var table = $('#activation_table');
+        var table = $('#code_table');
 
         var oTable = table.dataTable({
             "lengthMenu": [
@@ -45,18 +45,16 @@ var activationTable = function () {
                 "headers": {
                     "Authorization": "Bearer "+localStorage.getItem('access_token')
                 },
-                "url": base_url+"/api/vw_activation",
+                "url": base_url+"/api/vw_product_code",
                 "contentType": "application/json",
                
                 "data": function ( d ) {
-                    
-                    console.log(d)
                   return JSON.stringify( d );
                 }
               }
         });
 
-        var tableWrapper = $("#package_table_wrapper");
+        var tableWrapper = $("#code_table_wrapper");
 
         tableWrapper.find(".dataTables_length select").select2({
             showSearchInput: false //hide search box with special css class
@@ -64,7 +62,7 @@ var activationTable = function () {
 
         $('#generator').click(function (e) {
             e.preventDefault();
-            package_list();
+            product_list();
             
         });
         
@@ -77,14 +75,14 @@ var activationTable = function () {
                 headers: {
                     "Authorization": "Bearer "+localStorage.getItem('access_token')
                 },
-                url: base_url+"/api/vw_activation",
+                url: base_url+"/api/vw_product_code",
                 data: {
-                    packages    : $('#packageList').val(),
+                    products    : $('#productList').val(),
                     total       : $('#total').val()
                 },
                 success: function (data) {
                     toastr['success'](data.messages.success, "Notifications")
-                    RefreshTable('activation_table')                
+                    RefreshTable('code_table')                
                 }
                 ,error: function(data) {
                     data = JSON.parse(data.responseText)
@@ -101,53 +99,6 @@ var activationTable = function () {
         });
 
     }
-    var UseTable = function () {
-
-       
-        var table = $('#activated_table');
-
-        var oTable = table.dataTable({
-            "lengthMenu": [
-                [5, 15, 20, -1],
-                [5, 15, 20, "All"] // change per page values here
-            ],
-            // set the initial value
-            "pageLength": 10,
-
-            "language": {
-                "lengthMenu": " _MENU_ records"
-            },
-            "columnDefs": [{ // set default column settings
-                'orderable': true,
-                'targets': [0]
-            }, {
-                "searchable": true,
-                "targets": [0]
-            }],
-            "order": [
-                [0, "asc"]
-            ], // set first column as a default sort by asc
-            "ajax": { 
-                type:'GET',
-                "headers": {
-                    "Authorization": "Bearer "+localStorage.getItem('access_token')
-                },
-                "url": base_url+"/api/vw_activation/1",
-                "contentType": "application/json",
-               
-                "data": function ( d ) {
-                    
-                  return JSON.stringify( d );
-                }
-              }
-        });
-
-        var tableWrapper = $("#package_table_wrapper");
-
-        tableWrapper.find(".dataTables_length select").select2({
-            showSearchInput: false //hide search box with special css class
-        });
-    }
 
     var RefreshTable = function (id){
         // base_url+'/active-def-trans-nature'
@@ -156,7 +107,7 @@ var activationTable = function () {
             "headers": {
                 "Authorization": "Bearer "+localStorage.getItem('access_token')
             },
-            url: base_url+"/api/vw_activation",
+            url: base_url+"/api/vw_product_code",
             "contentType": "application/json",
             success: function(json){
                 table = $('#'+id).dataTable();
@@ -178,24 +129,23 @@ var activationTable = function () {
         // });
     }
 
-    var package_list = function (){
+    var product_list = function (){
         $.ajax({
             method:"get",
             headers: {
                 "Authorization": "Bearer "+localStorage.getItem('access_token')
             },
-            url: base_url+"/api/package/0/true",
+            url: base_url+"/api/product/0/true",
             
             success: function (data) {
                 // data = JSON.parse(data)
                 var option = '';
+                $('#productList option').remove();
                 
-                
-                $('#packageList option').remove();
                 $.each(data, function( index, value ) {
-                    option += '<option value="'+value.package_id+'">Package name: '+value.package_name+' | Amount: '+value.package_amt+'</option>'
+                    option += '<option value="'+value.product_id+'">Product name: '+value.product_name+' | Amount: '+value.amount+'</option>'
                 });
-                  $('#packageList').append(option)
+                  $('#productList').append(option)
             }
             ,error: function(data) {
                 
@@ -208,7 +158,6 @@ var activationTable = function () {
         //main function to initiate the module
         init: function () {
             NotUseTable();
-            UseTable();
         }
 
     };
