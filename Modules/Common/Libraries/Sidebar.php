@@ -261,9 +261,9 @@ class Sidebar {
 						'title'			=> 'Dashboard',
 						'title_desc'	=> ' <small>Dashboard</small>',
 						'name'			=> 'Dashboard',
-						'url' 			=> 'Dashboard',
+						'url' 			=> 'dashboard',
 						'icon' 			=> '<i class="fa fa-home"></i> ',
-						'permissions'	=> array(ADMIN_ACCOUNT),
+						'permissions'	=> array(ADMIN_ACCOUNT,MEMBER_ACCOUNT),
 						'sub'			=> array()
 			),
 			2 => array(
@@ -316,9 +316,9 @@ class Sidebar {
 						'name'			=> 'Members',
 						'url' 			=> '#',
 						'icon' 			=> '<i class="fa fa-group"></i> ',
-						'permissions'	=> array(ADMIN_ACCOUNT),
+						'permissions'	=> array(ADMIN_ACCOUNT,MEMBER_ACCOUNT),
 						'sub'			=> array(
-											1 => array( '<i class="fa fa-file-text-o"></i> Add', 'Members_add', '' ,4 => array(ADMIN_ACCOUNT)),
+											1 => array( '<i class="fa fa-file-text-o"></i> Add', 'Members_add', '' ,4 => array(ADMIN_ACCOUNT,MEMBER_ACCOUNT)),
 											2 => array( '<i class="fa fa-list"></i> List', 'Members_list', '' ,4 => array(ADMIN_ACCOUNT)),
 						)
 			),

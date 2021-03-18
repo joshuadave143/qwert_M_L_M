@@ -1,5 +1,5 @@
 <?php
-namespace Modules\Admin\Controllers;
+namespace Modules\Member\Controllers;
 use \CodeIgniter\Controller;
 use CodeIgniter\API\ResponseTrait;
 
@@ -8,7 +8,7 @@ use \OAuth2\Request;
 
 use \Modules\Common\Models\Lib_countries;
 use \Modules\Common\Models\Members;
-class Entry_member extends \Modules\Common\Controllers\AdminBaseController
+class Entry_member extends \Modules\Common\Controllers\MemberBaseController
 {
 use ResponseTrait;
 public $parser;
@@ -45,7 +45,7 @@ public function index(){
     // var_dump( );
     $this->data['js_init']      = "member_entry.init()";
     $this->data['title']        = 'Members';
-    $this->data['page']         = 'Modules\Admin\Views\add_entry';
+    $this->data['page']         = 'Modules\Member\Views\add_entry';
     $this->data['css_custom']   = "";
     $this->data['js_custom']    = "";
     $this->data['message']      = "";
@@ -53,7 +53,7 @@ public function index(){
     
     $side['side_bar'] = $this->load_sidebar(array('item_index' => 5, 'sub_index' => 1, 'page_title' => 'Dashboard', 'show_page_title' => 1, 'show_breadcrumbs' => 1, 'user_type' => $this->joshua_auth->get_session_data('user_type')));
     if($this->save()){
-        return redirect()->to(base_url( '/admin/'.$this->joshua_auth->get_session_data('fullname').'/Members_add'));
+        return redirect()->to(base_url( '/member/'.$this->joshua_auth->get_session_data('fullname').'/Members_add'));
     }
     
     if ($this->joshua_auth->get_session_data('success')){
@@ -71,14 +71,6 @@ public function index(){
 function save(){
     if( $this->request->getMethod() == 'post' ){
         $rules = [
-            'sponsor_id'    => 'required',
-            'spname'        => [
-                'label'  => 'Sponser Name',
-                'rules'  => 'required',
-                'errors' => [
-                    'required' => 'There is no {field} provided.'
-                ]
-            ],
             'firtname'      => [
                 'label'  => 'First Name',
                 'rules'  => 'required',
@@ -146,7 +138,7 @@ function save(){
             $Members = new Members;
             $input = $this->request->getPost();
             $data = [
-                'sponsor_id'    => $input['sponsor_id'],
+                'sponsor_id'    => $this->joshua_auth->get_session_data('member_id'),
                 'firstname'     => $input['firtname'],
                 'middlename'    => $input['middlename'],
                 'lastname'      => $input['lastname'],
@@ -192,7 +184,7 @@ public function members_list(){
     
     $this->data['js_init']      = "members_listTable.init()";
     $this->data['title']        = 'Package Library';
-    $this->data['page']         = 'Modules\Admin\Views\member_list';
+    $this->data['page']         = 'Modules\Member\Views\member_list';
     $this->data['css_custom']   = "";
     $this->data['js_custom']    = "";
     $this->data['message']      = "";

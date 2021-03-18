@@ -47,13 +47,13 @@
             <!-- BEGIN LOGIN FORM -->
             
 
-            <form class="login-form" action="<?=base_url()?>/admin/auth" method="post" accept-charset="utf-8">
+            <form class="login-form" action="<?=base_url()?>/Auth" method="post" accept-charset="utf-8">
                 <div>
                     <img src="<?=base_url()?>/assets/img/logo.png" alt="logo" class="img-responsive" width="100"
                     style="margin-left: auto; margin-right: auto; display: block;"/>
                   
                 </div>
-                <h3 class="form-title">Admin Login</h3>
+                <h3 class="form-title">Login to your account</h3>
                 <?php 
                     if(isset($validation)):?>
                     <div class="alert alert-danger">
@@ -96,6 +96,11 @@
                     <input type="checkbox" name="remember" value="1"/> Remember me </label>
                     <button type="submit" class="btn btn-info pull-right">
                     Login </button>
+                </div>
+                <div class="create-account">
+                    <p>
+                        Don't have an account yet ?&nbsp; <a href="<?=base_url()?>/register" >Create an account</a>
+                    </p>
                 </div>
             </form>
             

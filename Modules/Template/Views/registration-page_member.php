@@ -47,13 +47,13 @@
             <!-- BEGIN LOGIN FORM -->
             
 
-            <form class="login-form" action="<?=base_url()?>/admin/auth" method="post" accept-charset="utf-8">
+            <form class="login-form" action="<?=base_url()?>/register" method="post" accept-charset="utf-8">
                 <div>
                     <img src="<?=base_url()?>/assets/img/logo.png" alt="logo" class="img-responsive" width="100"
                     style="margin-left: auto; margin-right: auto; display: block;"/>
                   
                 </div>
-                <h3 class="form-title">Admin Login</h3>
+                <h3 class="form-title">Registration</h3>
                 <?php 
                     if(isset($validation)):?>
                     <div class="alert alert-danger">
@@ -78,6 +78,22 @@
                 </div>
                 <div class="form-group">
                     <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
+                    <label class="control-label visible-ie8 visible-ie9">Activation Code</label>
+                    <div class="input-icon">
+                        <i class="fa fa-key"></i>
+                        <input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="Activation Code" name="activation_code"  value='<?=set_value('activation_code') ?>'/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
+                    <label class="control-label visible-ie8 visible-ie9">Member ID</label>
+                    <div class="input-icon">
+                        <i class="fa fa-barcode"></i>
+                        <input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="Member ID" name="member_id"  value='<?=set_value('member_id') ?>'/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
                     <label class="control-label visible-ie8 visible-ie9">Username</label>
                     <div class="input-icon">
                         <i class="fa fa-user"></i>
@@ -88,14 +104,19 @@
                     <label class="control-label visible-ie8 visible-ie9">Password</label>
                     <div class="input-icon">
                         <i class="fa fa-lock"></i>
-                        <input class="form-control placeholder-no-fix" type="password" autocomplete="off" placeholder="Password" name="password"  value='<?=set_value('password') ?>'/>
+                        <input class="form-control placeholder-no-fix" type="password" autocomplete="off" placeholder="Password" name="password" id="password"  value='<?=set_value('password') ?>'/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label visible-ie8 visible-ie9">Confirm Password</label>
+                    <div class="input-icon">
+                        <i class="fa fa-lock"></i>
+                        <input class="form-control placeholder-no-fix" type="password" autocomplete="off" placeholder="Confirm Password" name="confirm_password"  value='<?=set_value('confirm_password') ?>'/>
                     </div>
                 </div>
                 <div class="form-actions">
-                    <label class="checkbox">
-                    <input type="checkbox" name="remember" value="1"/> Remember me </label>
                     <button type="submit" class="btn btn-info pull-right">
-                    Login </button>
+                    Register </button>
                 </div>
             </form>
             
@@ -127,11 +148,11 @@
         <!-- END PAGE LEVEL PLUGINS -->
         <!-- BEGIN PAGE LEVEL SCRIPTS -->
         <script src="<?=base_url()?>/assets/scripts/app.js" type="text/javascript"></script>
-        <script src="<?=base_url()?>/assets/scripts/login.js" type="text/javascript"></script>
+        <script src="<?=base_url()?>/assets/scripts/registration.js" type="text/javascript"></script>
         <!-- END PAGE LEVEL SCRIPTS -->
         <script>
             jQuery(document).ready(function() {     
-                App.init();
+                // App.init();
                 Login.init();
             });
         </script>
