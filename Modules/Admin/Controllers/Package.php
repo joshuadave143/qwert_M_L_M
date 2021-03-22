@@ -39,7 +39,8 @@ class Package extends \Modules\Common\Controllers\AdminBaseController
 			array('js_link' => base_url().'/assets/scripts/package.js')
         );
         
-        $this->data['js_init']      = "packageTable.init()";
+        $this->data['js_init']      = "packageTable.init()
+        localStorage.setItem('access_token','".$this->session->get('access_token')."');";
 		$this->data['title']        = 'Package Library';
 		$this->data['page']         = 'Modules\Admin\Views\package_lib_view';
         $this->data['css_custom']   = "";

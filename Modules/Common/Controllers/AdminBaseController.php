@@ -51,6 +51,11 @@ class AdminBaseController extends Controller
 		$this->session      = \Config\Services::session();
 		$this->joshua_auth = new Joshua_auth();
 		$this->data['name'] = $this->joshua_auth->get_session_data('fullname');
+		
+		if( date('H:i') >= $this->joshua_auth->get_session_data('api_time_expired')){
+			
+			$this->joshua_auth->api_login();
+		}
 	}
 
 	protected function load_sidebar($params){

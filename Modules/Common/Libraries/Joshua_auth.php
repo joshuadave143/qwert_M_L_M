@@ -7,6 +7,9 @@ use Modules\Common\Models\Tbl_users as usersModel;
 use Modules\Common\Models\Tbl_nodes;
 use Modules\Common\Models\Tbl_login_history;
 use Modules\Common\Libraries\PasswordHash;
+
+use \Modules\Common\Libraries\Oauth;
+use \OAuth2\Request;
 /**
 * 
 * 
@@ -181,4 +184,24 @@ class Joshua_auth {
         return  ($this->securityModel->affectedRows() != 1) ? false : true;
        
     }
+
+    public function api_login(){
+		$_POST['username'] = "qwerty123";
+        $_POST['password'] = 'Qw3rty!@#';
+        $_POST['grant_type'] = 'password';
+        $_SERVER['PHP_AUTH_USER'] = 'mlm_api';
+        $_SERVER['PHP_AUTH_PW'] = 'wIw_@p!';
+        $_SERVER['REQUEST_METHOD'] = 'POST';
+        $oauth = new Oauth();
+        $request = new Request();
+        $respond = $oauth->server->handleTokenRequest($request->createFromGlobals());
+        $code = $respond->getStatusCode();
+		$body = $respond->getResponseBody();
+
+		$time = strtotime(date('H:i')) + 60*59;
+		$time = date('H:i', $time);
+		$this->set_session_data('api_time_expired',$time);
+        // print_r(json_decode($body));
+		$this->set_session_data('access_token', json_decode($body)->access_token);
+	}
 }

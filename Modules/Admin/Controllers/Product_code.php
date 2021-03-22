@@ -39,7 +39,8 @@ class Product_code extends \Modules\Common\Controllers\AdminBaseController
 			array('js_link' => base_url().'/assets/scripts/product_code.js')
         );
         
-        $this->data['js_init']      = "product_codeTable.init()";
+        $this->data['js_init']      = "product_codeTable.init()
+        localStorage.setItem('access_token','".$this->session->get('access_token')."');";
 		$this->data['title']        = 'Product Codes';
 		$this->data['page']         = 'Modules\Admin\Views\product_code_view';
         $this->data['css_custom']   = "";

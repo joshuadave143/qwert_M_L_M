@@ -43,7 +43,8 @@ public function index(){
     @$valueSeleted = set_value('country'); //get the selected value
     @$this->data['country_list'][$valueSeleted-1]['selected'] = 'selected'; // set selected item
     // var_dump( );
-    $this->data['js_init']      = "member_entry.init()";
+    $this->data['js_init']      = "member_entry.init()
+    localStorage.setItem('access_token','".$this->session->get('access_token')."');";
     $this->data['title']        = 'Members';
     $this->data['page']         = 'Modules\Admin\Views\add_entry';
     $this->data['css_custom']   = "";

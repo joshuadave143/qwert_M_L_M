@@ -126,12 +126,12 @@
         <script type="text/javascript" src="<?=base_url()?>/assets/plugins/select2/select2.min.js"></script>
         <!-- END PAGE LEVEL PLUGINS -->
         <!-- BEGIN PAGE LEVEL SCRIPTS -->
-        <script src="<?=base_url()?>/assets/scripts/app.js" type="text/javascript"></script>
+        <!-- <script src="<?=base_url()?>/assets/scripts/app.js" type="text/javascript"></script> -->
         <script src="<?=base_url()?>/assets/scripts/login.js" type="text/javascript"></script>
         <!-- END PAGE LEVEL SCRIPTS -->
         <script>
             jQuery(document).ready(function() {     
-                App.init();
+                // App.init();
                 Login.init();
             });
         </script>

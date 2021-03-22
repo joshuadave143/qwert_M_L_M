@@ -844,9 +844,13 @@ var App = function () {
                 // }
                 idleState = false;
                 idleTimer = setTimeout(function () { 
+                    $.ajax({
+                        url:base_url+'/logout',
+                        method:'get'
+                    })
                     alert("Your session has been expired. \nPlease re-login your account.");
                     window.location.href = "/logout";
-                    idleState = true; }, 600000);
+                    idleState = true; }, 900000);//15mins
             });
             $("body").trigger("mousemove");
            

@@ -39,7 +39,8 @@ class Product extends \Modules\Common\Controllers\AdminBaseController
 			array('js_link' => base_url().'/assets/scripts/product.js')
         );
         
-        $this->data['js_init']      = "productTable.init()";
+        $this->data['js_init']      = "productTable.init()
+        localStorage.setItem('access_token','".$this->session->get('access_token')."');";
 		$this->data['title']        = 'Product Library';
 		$this->data['page']         = 'Modules\Admin\Views\product_lib_view';
         $this->data['css_custom']   = "";

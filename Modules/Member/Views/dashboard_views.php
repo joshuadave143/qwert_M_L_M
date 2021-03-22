@@ -1,65 +1,61 @@
 <div class="row stats-overview-cont">
-					<div class="col-md-2 col-sm-4">
-						<div class="stats-overview stat-block">
-							<div class="display stat ok huge">
-								<span class="line-chart" style="display: inline;">
-                               &nbsp;
-									</span>
-								<div class="percent">
-                                &nbsp;
-								</div>
-							</div>
-							<div class="details">
-								<div class="title">
-									Direct Referral
-								</div>
-								<div class="numbers">
-									P 1,360
-								</div>
-							</div>
-							
-						</div>
-					</div>
-                    <div class="col-md-2 col-sm-4">
-						<div class="stats-overview stat-block">
-							<div class="display stat ok huge">
-								<span class="line-chart" style="display: inline;">
-                               &nbsp;
-									</span>
-								<div class="percent">
-                                &nbsp;
-								</div>
-							</div>
-							<div class="details">
-								<div class="title">
-									Indirect Referral
-								</div>
-								<div class="numbers">
-									P 1,360
-								</div>
-							</div>
-							
-						</div>
-					</div>
-                    <div class="col-md-2 col-sm-4">
-						<div class="stats-overview stat-block">
-							<div class="display stat ok huge">
-								<span class="line-chart" style="display: inline;">
-                               &nbsp;
-									</span>
-								<div class="percent">
-                                &nbsp;
-								</div>
-							</div>
-							<div class="details">
-								<div class="title">
-									Direct Referral
-								</div>
-								<div class="numbers">
-									P 1,360
-								</div>
-							</div>
-							
-						</div>
-					</div>
-				</div>
+	<div class="col-lg-3 col-xs-6">
+		<!-- small box -->
+		<div class="small-box bg-aqua">
+		<div class="inner">
+			<h3>150</h3>
+
+			<p>Direct Referral</p>
+		</div>
+		<div class="icon">
+			<i class="ion ion-ios-people-outline"></i>
+		</div>
+		<a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+		</div>
+	</div>
+	
+	<div class="col-lg-3 col-xs-6">
+		<!-- small box -->
+		<div class="small-box bg-yellow">
+		<div class="inner">
+			<h3>150</h3>
+
+			<p>Indirect Referral</p>
+		</div>
+		<div class="icon">
+			<i class="ion ion-ios-people-outline"></i>
+		</div>
+		<a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+		</div>
+	</div>
+	
+	<div class="col-lg-3 col-xs-6">
+		<!-- small box -->
+		<div class="small-box bg-red">
+		<div class="inner">
+			<h3>150</h3>
+
+			<p>Unilevel</p>
+		</div>
+		<div class="icon">
+			<i class="ion ion-bag"></i>
+		</div>
+		<a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+		</div>
+	</div>
+	
+	<div class="col-lg-3 col-xs-6">
+		<!-- small box -->
+		<div class="small-box bg-green">
+		<div class="inner">
+			<h3>150</h3>
+
+			<p>RPT</p>
+		</div>
+		<div class="icon">
+			<i class="ion ion-bag"></i>
+		</div>
+		<a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+		</div>
+	</div>
+</div>

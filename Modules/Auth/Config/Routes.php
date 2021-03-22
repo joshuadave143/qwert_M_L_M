@@ -4,6 +4,7 @@ $routes->setDefaultController('Auth');
 $routes->match(['get','post'],'/', 'Auth::member_index');
 $routes->match(['get','post'],'/Auth', 'Auth::member_index');
 $routes->match(['get','post'],'/auth', 'Auth::member_index');
+$routes->match(['get','post'],'/api_login', 'Auth::api_login');
 
 // admin
 $routes->match(['get','post'],'admin', 'Auth::index');

@@ -9,8 +9,8 @@ use Modules\Common\Models\Members;
 use Modules\Common\Models\Tbl_nodes;
 use Modules\Common\Models\Tbl_security;
 use Modules\Common\Models\Vw_activation_codes;
-use \Modules\Common\Libraries\Oauth;
-use \OAuth2\Request;
+// use \Modules\Common\Libraries\Oauth;
+// use \OAuth2\Request;
 class Auth extends Controller {
 
 	public $joshua_auth;
@@ -58,7 +58,7 @@ class Auth extends Controller {
 					) ) ){
 						
 						if( $this->joshua_auth->get_session_data('user_type') == 0):
-							$this->joshua_auth->set_session_data('access_token',$this->api_login());
+							$this->joshua_auth->api_login();
 							return redirect()->to(base_url( '/admin/'.$usr['fullname'].'/dashboard'));
 						else:
 							return redirect()->to(base_url( '/'.$usr['fullname'].'/dashboard'));
@@ -79,20 +79,6 @@ class Auth extends Controller {
 		}
 		$template = view('Modules\Template\Views\access-page',$this->data1);
 		return $this->parser->setData($this->data)->renderString($template);
-	}
-	
-	public function api_login(){
-		$_POST['username'] = "qwerty123";
-        $_POST['password'] = 'Qw3rty!@#';
-        $_POST['grant_type'] = 'password';
-        $_SERVER['PHP_AUTH_USER'] = 'mlm_api';
-        $_SERVER['PHP_AUTH_PW'] = 'wIw_@p!';
-        $oauth = new Oauth();
-        $request = new Request();
-        $respond = $oauth->server->handleTokenRequest($request->createFromGlobals());
-        $code = $respond->getStatusCode();
-		$body = $respond->getResponseBody();
-		return json_decode($body)->access_token;
 	}
 	
 	public function logout(){
@@ -232,7 +218,7 @@ class Auth extends Controller {
 					) ) ){
 						
 						
-						$this->joshua_auth->set_session_data('access_token',$this->api_login());
+						$this->joshua_auth->api_login();
 						return redirect()->to(base_url( '/member/'.$usr['fullname'].'/dashboard'));
 					
 

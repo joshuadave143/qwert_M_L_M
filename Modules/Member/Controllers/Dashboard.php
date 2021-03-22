@@ -28,6 +28,8 @@ class Dashboard extends \Modules\Common\Controllers\MemberBaseController
 
     public function index(){
         array_push($this->data['css_entries'],
+			array('css_link' => base_url().'/assets/css/AdminLTE.min.css'),
+			array('css_link' => base_url().'/assets/css/ionicons.min.css'),
 			array('css_link' => base_url().'/assets/plugins/bootstrap-toastr/toastr.min.css')
 		);
 		array_push($this->data['js_entries'],
