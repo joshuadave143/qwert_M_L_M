@@ -7,4 +7,5 @@ $routes->group('api', function($routes){
     $routes->resource('vw_activation', ['controller' =>'Api_vw_activation_codes']);
     $routes->resource('members', ['controller' =>'Api_members']);
     $routes->resource('vw_product_code', ['controller' =>'Api_product_codes']);
+    $routes->resource('indirect_ref', ['controller' =>'Api_indirect_referral']);
 });

@@ -14,7 +14,7 @@
 		<!-- END LOGO -->
 		<!-- BEGIN RESPONSIVE MENU TOGGLER -->
 		<a href="javascript:;" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-		    <img src="<?php echo base_url(); ?>assets/img/menu-toggler.png" alt=""/>
+		    <img src="<?php echo base_url(); ?>/assets/img/menu-toggler.png" alt=""/>
 		</a>
 		<!-- END RESPONSIVE MENU TOGGLER -->
 		<!-- BEGIN TOP NAVIGATION MENU -->
@@ -25,7 +25,7 @@
 			<!-- BEGIN USER LOGIN DROPDOWN -->
 			<li class="dropdown user">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-				<img alt="" src="assets/img/avatar3_small.jpg"/>
+				<img alt="" src="/assets/img/avatar3_small.jpg"/>
 				<span class="username username-hide-on-mobile">{name} </span>
 				<i class="fa fa-angle-down"></i>
 				</a>

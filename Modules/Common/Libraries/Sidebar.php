@@ -307,7 +307,7 @@ class Sidebar {
 						'sub'			=> array(
 											1 => array( '<i class="fa-spin icon-settings"></i> Activation Codes', 'Activation_Codes', '' ,4 => array(ADMIN_ACCOUNT)),
 											2 => array( '<i class="fa fa-barcode"></i> Product Codes', 'Product_Codes', '' ,4 => array(ADMIN_ACCOUNT)),
-											3 => array( '<i class="fa fa-sitemap"></i> SURVEY FORM', 'library/Survey_form', '' ,4 => array(ADMIN_ACCOUNT)),
+											3 => array( '<i class="fa fa-sitemap"></i> SURVEY FORM', 'library/Survey_form', '' ,4 => array(DEVELOPER_ACCOUNT)),
 						)
 			),
 			5 => array(
@@ -330,6 +330,18 @@ class Sidebar {
 						'icon' 			=> '<i class="fa fa-key"></i> ',
 						'permissions'	=> array(DEVELOPER_ACCOUNT),
 						'sub'			=> array()
+			),
+			7 => array(
+						'title'			=> 'Referrals',
+						'title_desc'	=> ' <small>Referrals</small>',
+						'name'			=> 'Referrals',
+						'url' 			=> '#',
+						'icon' 			=> '<i class="fa fa-group"></i> ',
+						'permissions'	=> array(MEMBER_ACCOUNT),
+						'sub'			=> array(
+											1 => array( '<i class="fa fa-user"></i> Direct', 'direct_referrals', '' ,4 => array(MEMBER_ACCOUNT)),
+											2 => array( '<i class="fa fa-group"></i> Indirect', 'indirect_referrals', '' ,4 => array(MEMBER_ACCOUNT)),
+						)
 			)
 			
 		);

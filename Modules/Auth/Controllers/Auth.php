@@ -9,6 +9,7 @@ use Modules\Common\Models\Members;
 use Modules\Common\Models\Tbl_nodes;
 use Modules\Common\Models\Tbl_security;
 use Modules\Common\Models\Vw_activation_codes;
+use Modules\Common\Models\Tbl_activation_codes;
 // use \Modules\Common\Libraries\Oauth;
 // use \OAuth2\Request;
 class Auth extends Controller {
@@ -25,6 +26,7 @@ class Auth extends Controller {
 		$this->Members 				=  new Members;
 		$this->Tbl_security 		=  new Tbl_security;
 		$this->wv_activation_codes 	=  new Vw_activation_codes;
+		$this->Tbl_activation_codes 	=  new Tbl_activation_codes;
 		$this->joshua_auth 			=  new Joshua_auth();
         $this->parser 				=  \Config\Services::parser();	
 	}
@@ -140,14 +142,16 @@ class Auth extends Controller {
 						$this->data1['error_msg'] = array("err_msg"=>"Member ID is not exists.");
 						$this->data1['has_error'] = true;
 					}else{
+						$activation_id = $this->get_activation_code_id($data);
 						if(  $this->joshua_auth->register(
 								$data['username'],
 								$data['password'],
 								$data['member_id'],
-								$this->get_activation_code_id($data),
+								$activation_id,
 								$this->get_node_id($data)
 							) ){
 								$this->joshua_auth->set_session_data('register_success',true);
+								$this->update_activation_date($activation_id);
 								return redirect()->to(base_url( '/success'));
 						}
 					}
@@ -238,6 +242,15 @@ class Auth extends Controller {
 		}
 		$template = view('Modules\Template\Views\access-page_member',$this->data1);
 		return $this->parser->setData($this->data)->renderString($template);
+	}
+	
+	private function update_activation_date($id){
+		$data = [
+            'activation_code_id'    => $id,
+            'activation_date'       => date('Y-m-d H:i:s')
+        ];
+     
+        $test = $this->Tbl_activation_codes->save($data);
 	}
 
 	private function get_activation_code_id($data){

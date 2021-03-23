@@ -9,3 +9,5 @@ $routes->match(['get','post'],'/member/(:any)/Members_add', 'Entry_member::index
 $routes->match(['get','post'],'/member/(:any)/Members_list', 'Entry_member::members_list', ['filter' => 'Auth']);
 $routes->match(['get','post'],'/member/(:any)/save', 'Entry_member::save');
 $routes->match(['get','post'],'/member/(:any)/Product_Codes', 'Product_code::index');
+$routes->match(['get','post'],'/member/(:any)/direct_referrals', 'Referrals::index');
+$routes->match(['get','post'],'/member/(:any)/indirect_referrals', 'Referrals::indirect');
