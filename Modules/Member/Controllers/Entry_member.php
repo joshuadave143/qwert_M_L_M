@@ -61,7 +61,11 @@ public function index(){
     if ($this->joshua_auth->get_session_data('success')){
         $this->joshua_auth->set_session_data('success',false);
         $this->data['success'] = true;
-        $this->data['message'] = 'Entry details submitted successfully';
+        $this->data['message'] = 'Entry details submitted successfully
+                            <br>
+                            Member ID:<span class="label label-sm label-danger ">
+                            '.$this->joshua_auth->get_session_data('last_member_id').'
+                        </span> Give this to the new entry member for account registration. ';
     }
     
     $this->data['side_bar_template'] = view('Modules\Template\Views\template\page-sidebar',$side['side_bar'] );
@@ -161,6 +165,7 @@ function save(){
             // $data['post_id'] = $post_id;
             // return $this->respondCreated($data);
             $this->joshua_auth->set_session_data('success',true);
+            $this->joshua_auth->set_session_data('last_member_id',$Members->insertID());
             return true;
         //   return $this->respond($response);
         }

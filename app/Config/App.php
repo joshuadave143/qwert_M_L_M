@@ -23,7 +23,7 @@ class App extends BaseConfig
 	 *
 	 * @var string
 	 */
-	public $baseURL = 'http://192.168.254.115/';
+	public $baseURL = 'http://mlm/';
 
 	/**
 	 * --------------------------------------------------------------------------
