@@ -298,17 +298,13 @@ class Sidebar {
 						)
 			),
 			4 => array(
-						'title'			=> 'Codes',
-						'title_desc'	=> ' <small>Codes</small>',
-						'name'			=> 'Codes',
-						'url' 			=> '#',
-						'icon' 			=> '<i class="fa fa-key"></i> ',
+						'title'			=> 'Unilevel Library',
+						'title_desc'	=> ' <small>Unilevel Library</small>',
+						'name'			=> 'Unilevel Library',
+						'url' 			=> 'unilevel_library',
+						'icon' 			=> '<i class="fa fa-reorder"></i> ',
 						'permissions'	=> array(ADMIN_ACCOUNT),
-						'sub'			=> array(
-											1 => array( '<i class="fa-spin icon-settings"></i> Activation Codes', 'Activation_Codes', '' ,4 => array(ADMIN_ACCOUNT)),
-											2 => array( '<i class="fa fa-barcode"></i> Product Codes', 'Product_Codes', '' ,4 => array(ADMIN_ACCOUNT)),
-											3 => array( '<i class="fa fa-sitemap"></i> SURVEY FORM', 'library/Survey_form', '' ,4 => array(DEVELOPER_ACCOUNT)),
-						)
+						'sub'			=> array()
 			),
 			5 => array(
 						'title'			=> 'Members',
@@ -341,6 +337,28 @@ class Sidebar {
 						'sub'			=> array(
 											1 => array( '<i class="fa fa-user"></i> Direct', 'direct_referrals', '' ,4 => array(MEMBER_ACCOUNT)),
 											2 => array( '<i class="fa fa-group"></i> Indirect', 'indirect_referrals', '' ,4 => array(MEMBER_ACCOUNT)),
+						)
+			),
+			8 => array(
+						'title'			=> 'Genealogy',
+						'title_desc'	=> ' <small>Genealogy</small>',
+						'name'			=> 'Genealogy',
+						'url' 			=> 'genealogy',
+						'icon' 			=> '<i class="fa fa-sitemap"></i> ',
+						'permissions'	=> array(MEMBER_ACCOUNT),
+						'sub'			=> array()
+			),
+			9 => array(
+						'title'			=> 'Codes',
+						'title_desc'	=> ' <small>Codes</small>',
+						'name'			=> 'Codes',
+						'url' 			=> '#',
+						'icon' 			=> '<i class="fa fa-key"></i> ',
+						'permissions'	=> array(ADMIN_ACCOUNT),
+						'sub'			=> array(
+											1 => array( '<i class="fa-spin icon-settings"></i> Activation Codes', 'Activation_Codes', '' ,4 => array(ADMIN_ACCOUNT)),
+											2 => array( '<i class="fa fa-barcode"></i> Product Codes', 'Product_Codes', '' ,4 => array(ADMIN_ACCOUNT)),
+											3 => array( '<i class="fa fa-sitemap"></i> SURVEY FORM', 'library/Survey_form', '' ,4 => array(DEVELOPER_ACCOUNT)),
 						)
 			)
 			

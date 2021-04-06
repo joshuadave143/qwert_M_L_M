@@ -110,8 +110,15 @@ class Auth extends Controller {
 						'errors' => [
 							'required' => 'There is no {field} provided.'
 						]
+					],					
+					'username' 			=> [
+						'label'  => 'Username',
+						'rules'  => 'required|alpha_numeric',
+						'errors' => [
+							'required' 		=> 'There is no {field} provided.',
+							'alpha_numeric' => 'The {field} may only contain alphanumeric characters. Ex. jeep_ny without space'
+						]
 					],
-					'username' 			=> 'required',
 					'password' 			=> 'required',
         			'confirm_password' 	=> 'required|matches[password]',
 				];

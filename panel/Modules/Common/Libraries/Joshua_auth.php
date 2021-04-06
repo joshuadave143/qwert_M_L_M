@@ -27,13 +27,13 @@ class Joshua_auth {
 
 	function __construct() {        
         
-        $this->session      = \Config\Services::session();
-        $this->Vw_members    = new Vw_members;
+        $this->session              = \Config\Services::session();
+        $this->Vw_members           = new Vw_members;
         $this->Tbl_login_history    = new Tbl_login_history;
-        $this->usersModel    = new usersModel;
-        $this->Tbl_nodes    = new Tbl_nodes;
-        $this->securityModel    = new securityModel;
-        $this->url_segments = explode('.', $_SERVER['HTTP_HOST']);
+        $this->usersModel           = new usersModel;
+        $this->Tbl_nodes            = new Tbl_nodes;
+        $this->securityModel        = new securityModel;
+        $this->url_segments         = explode('.', $_SERVER['HTTP_HOST']);
     }
 
 	function get_error_message()

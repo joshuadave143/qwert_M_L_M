@@ -57,4 +57,28 @@ class Json_format_datatable{
         $this->case = $case;
         $this->ifelse = $ifelse;
     }
+
+    /**
+     * for nodes
+     */
+
+    function json_format_node($data,$fields){
+        $json = '[';
+        for( $i = 0; $i < count($data); $i++ ){
+            if($i>=1){
+                $json .= ',';
+            }
+            $json .=  "{";
+            for( $e = 0; $e < count($fields); $e++ ){
+                if($e>=1){
+                    $json .= ',';
+                }
+                $json .= '"'.$fields[$e].'":"'.$data[$i]->{$fields[$e]}.'"';
+            }
+            
+            $json .=  "}";
+        }
+        $json .=  "]";
+        return $json;
+    }
 }

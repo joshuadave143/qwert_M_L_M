@@ -6,6 +6,7 @@ use CodeIgniter\API\ResponseTrait;
 
 // use \Modules\Common\Libraries\Oauth;
 use \Modules\Common\Libraries\Json_format_datatable;
+use \Modules\Common\Models\Tbl_product_codes;
 // use \OAuth2\Request;
 
 class Api_product_codes extends ResourceController
@@ -14,6 +15,12 @@ class Api_product_codes extends ResourceController
     protected $format    = 'json';
 
     use ResponseTrait;
+
+
+	function __construct() {        
+        
+        $this->session              = \Config\Services::session();
+    }
 
     public function index(){
         $json_format     = new Json_format_datatable;
@@ -52,5 +59,45 @@ class Api_product_codes extends ResourceController
             ]
         ];
         return $this->respond($response);
+    }
+
+    public function show($id=null){
+        $product   = $this->model->where('code',$id)
+                    ->where('node_id',0)
+                    ->first();
+        
+        if( is_null($product) ){
+
+            $product = [
+                'status'   => 400,
+                'error'    => null,
+                'messages' => [
+                    'error' => 'Product code does not exist or already claimed.'
+                ]
+            ];
+            return $this->respond($product,400);
+        }
+        return $this->respond($product);
+    }
+
+    public function update($id = null){
+        $Tbl_product_codes = new Tbl_product_codes;
+        
+        $data = [
+            'procode_id'        => $id,
+            'node_id'           => $this->session->get('node_id')
+        ];
+     
+        $test = $Tbl_product_codes->save($data);
+        
+
+        $response = [
+          'status'   => 200,
+          'error'    => null,
+          'messages' => [
+              'success' => 'You have successfully claimed Unilevel bunos.'
+          ]
+      ];
+      return $this->respond($response);
     }
 }

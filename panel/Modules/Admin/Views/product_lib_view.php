@@ -39,6 +39,9 @@
                                 Dev. Fee
                             </th>
                             <th>
+                                Unilevel
+                            </th>
+                            <th>
                                 Tools
                             </th>
                         </tr>
@@ -47,6 +50,7 @@
                     </tbody>
                 </table>
             </div>
+            
         </div>
         <!-- END EXAMPLE TABLE PORTLET-->
     </div>

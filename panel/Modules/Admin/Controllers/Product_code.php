@@ -47,7 +47,7 @@ class Product_code extends \Modules\Common\Controllers\AdminBaseController
         $this->data['js_custom']    = "";
         $this->data['message']      = "";
         
-        $side['side_bar'] = $this->load_sidebar(array('item_index' => 4, 'sub_index' => 2, 'page_title' => 'Dashboard', 'show_page_title' => 1, 'show_breadcrumbs' => 1, 'user_type' => $this->joshua_auth->get_session_data('user_type')));
+        $side['side_bar'] = $this->load_sidebar(array('item_index' => 9, 'sub_index' => 2, 'page_title' => 'Dashboard', 'show_page_title' => 1, 'show_breadcrumbs' => 1, 'user_type' => $this->joshua_auth->get_session_data('user_type')));
 
         $this->data['side_bar_template'] = view('Modules\Template\Views\template\page-sidebar',$side['side_bar'] );
         $this->data['template'] = view('Modules\Template\Views\default-page',$this->data);

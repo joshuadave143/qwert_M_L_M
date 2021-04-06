@@ -37,10 +37,23 @@
 			    display: none;
 		}
 		{css_custom}
+		.no-js #loader { display: none;  }
+		.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+		.se-pre-con {
+			position: fixed;
+			left: 0px;
+			top: 0px;
+			width: 100%;
+			height: 100%;
+			z-index: 9999;
+			background: url(<?=base_url()?>/assets/img/Preloader_8.gif) center no-repeat #fff;
+		}
 	</style>
     
 </head>
 <body class="page-header-fixed">
+	<!-- hide the page if it wasn't completely loaded -->
+	<div class="se-pre-con"></div> 
 	<!-- Top Navigation 
 	================================================== -->
 	<?= view("Modules\Template\Views\\template\page-nav-v1.php") ?>
@@ -67,7 +80,7 @@
 	</div>
 	<div class="footer">
 		<div class="footer-inner">
-			2021 &copy; Tonido, Joshua Dave F.
+		2021 &copy; Rayns Marketing & <a href="https://www.facebook.com/jeepny.ako/" style="color: #ff5f5f;">JD Tonido</a>.
 		</div>
 		<div class="footer-tools">
 			<span class="go-top">
@@ -107,9 +120,14 @@
 			App.init();
 			<?=$js_init?>
 		});
+		$(window).load(function() {
+			// Animate loader off screen
+			$(".se-pre-con").fadeOut("slow");;
+		});
 	</script>
 	<script type="text/javascript">
 		{js_custom}
+
 	</script>
 </body>
 </html>

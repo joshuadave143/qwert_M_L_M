@@ -12,7 +12,7 @@ class Tbl_packages extends Model
     protected $returnType       =   'array';
     protected $useSoftDeletes   =   false;
 
-    protected $allowedFields    =   [ 'package_name', 'package_amt', 'direct_referral',
+    protected $allowedFields    =   [ 'product_id', 'package_name', 'package_amt', 'direct_referral',
                                     'indirect_referral', 'developer_fee'];
 
     protected $useTimestamps    =   true;
@@ -21,6 +21,7 @@ class Tbl_packages extends Model
     protected $deletedField     =   null;
 
     protected $validationRules  =   ['package_name'     => 'required',
+                                    'product_id'        => 'required',
                                     'package_amt'       => 'required',
                                     'direct_referral'   => 'required',
                                     'indirect_referral' => 'required',

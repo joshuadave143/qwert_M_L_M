@@ -39,7 +39,7 @@ class Referrals extends \Modules\Common\Controllers\MemberBaseController
 			array('js_link' => base_url().'/assets/scripts/referral.js')
         );
         
-        $this->data['js_init']      = "referralTable.init()
+        $this->data['js_init']      = "referralTable.init('direct')
         localStorage.setItem('access_token','".$this->session->get('access_token')."');";
 		$this->data['title']        = 'Direct Referrals';
 		$this->data['page']         = 'Modules\Member\Views\referral_view';
@@ -70,7 +70,7 @@ class Referrals extends \Modules\Common\Controllers\MemberBaseController
 			array('js_link' => base_url().'/assets/scripts/referral.js')
         );
         
-        $this->data['js_init']      = "referralTable.init()
+        $this->data['js_init']      = "referralTable.init('indirect')
         localStorage.setItem('access_token','".$this->session->get('access_token')."');";
 		$this->data['title']        = 'Indirect Referrals';
 		$this->data['page']         = 'Modules\Member\Views\referral_view';

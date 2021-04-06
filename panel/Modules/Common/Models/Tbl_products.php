@@ -13,7 +13,7 @@ class Tbl_products extends Model
     protected $useSoftDeletes   =   false;
 
     protected $allowedFields    =   [ 'product_name', 'amount', 'pts',
-                                     'developer_fee'];
+                                     'developer_fee', 'is_unilevel'];
 
     protected $useTimestamps    =   true;
     protected $createdField     =   'date_created';

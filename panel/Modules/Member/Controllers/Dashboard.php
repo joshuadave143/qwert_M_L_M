@@ -34,10 +34,10 @@ class Dashboard extends \Modules\Common\Controllers\MemberBaseController
 		);
 		array_push($this->data['js_entries'],
 			array('js_link' => base_url().'/assets/plugins/bootstrap-toastr/toastr.min.js'),
-			array('js_link' => base_url().'/assets/scripts/adminDash.js')
+			array('js_link' => base_url().'/assets/scripts/Dash.js')
         );
         
-        $this->data['js_init']      = "//Charts.init()
+        $this->data['js_init']      = "dash.init()
                                         localStorage.setItem('access_token','".$this->session->get('access_token')."');"; 
 		$this->data['title']        = 'Dashboard';
 		$this->data['page']         = 'Modules\Member\Views\dashboard_views';
@@ -46,9 +46,9 @@ class Dashboard extends \Modules\Common\Controllers\MemberBaseController
         $this->data['message']      = "";
         
         $income_not_collected = $this->income_summary_not_collected($this->session->get('member_id'));
-        $this->data['DIREC_REF']     = $income_not_collected['reftotal'];
-        $this->data['INDI_REF']      = $income_not_collected['indreftotal'];
-        $this->data['UNILEVEL']      = 0;
+        $this->data['DIREC_REF']     = $this->income_format($income_not_collected['reftotal']);
+        $this->data['INDI_REF']      = $this->income_format($income_not_collected['indreftotal']);
+        $this->data['UNILEVEL']      = $this->income_format($income_not_collected['unileveltotal']);
         $this->data['RPT']           = 0;
 
         $side['side_bar'] = $this->load_sidebar(array('item_index' => 1, 'sub_index' => 0, 'page_title' => 'Dashboard', 'show_page_title' => 1, 'show_breadcrumbs' => 1, 'user_type' => $this->joshua_auth->get_session_data('user_type')));
@@ -62,5 +62,9 @@ class Dashboard extends \Modules\Common\Controllers\MemberBaseController
     public function income_summary_not_collected($id){
         $VISNCModel = new VISNCModel;
         return $VISNCModel->find($id);
+    }
+
+    function income_format($data){
+        return $data != ''?number_format($data, 2, '.', ','):number_format(0, 2, '.', '');
     }
 }

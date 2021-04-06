@@ -12,5 +12,14 @@ class Tbl_product_codes extends Model
     protected $returnType       =   'array';
     protected $useSoftDeletes   =   false;
 
-    protected $allowedFields    =   [ 'code', 'product_id'];
+    protected $allowedFields    =   [ 'code', 'product_id','node_id'];
+    protected $useTimestamps    =   true;
+    protected $createdField     =   'date_created';
+    protected $updatedField     =   'date_modified';
+    protected $deletedField     =   null;
+
+    protected $validationRules  =   [];
+    // protected $validationRules  =   ['sponsor_id'=>'required'];
+    protected $validationMessages  =   [];
+    protected $skipValidation   =   false;
 }

@@ -35,19 +35,32 @@ var productTable = function () {
             jqTds[2].innerHTML = '<input type="text" class="form-control input-small" value="' + aData[2] + '">';
             jqTds[3].innerHTML = '<input type="text" class="form-control input-small" value="' + aData[3] + '">';
             jqTds[4].innerHTML = '<input type="text" class="form-control input-small" value="' + aData[4] + '">';
-            jqTds[5].innerHTML = '<a class="edit btn btn-primary" function="Save" href=""><span class="fa fa-save"></span> Save</a> <a class="cancel btn btn-warning" href=""><span class="fa fa-undo"></span> Cancel</a>';
+            jqTds[5].innerHTML = '<div class="col-md-9">'+
+                                    '<div class="radio-list">'+
+                                    '    <label class="radio-inline">'+
+                                    '        <input type="radio" name="unilevel" class="unilevel"'+
+                                    '            value="Unilevel" '+ ($(aData[5]).text() == 'Unilevel'?'checked':'')+'> Unilevel </label>'+
+                                    '    <label class="radio-inline">'+
+                                    '        <input type="radio" name="unilevel" class="unilevel"'+
+                                    '            value="Not Unilevel" '+ ($(aData[5]).text() == 'Not Unilevel'?'checked':'')+'> Not Unilevel </label>'+
+                                    '</div>'
+                                '</div>';
+            jqTds[6].innerHTML = '<a class="edit btn btn-primary" function="Save" href=""><span class="fa fa-save"></span> Save</a> <a class="cancel btn btn-warning" href=""><span class="fa fa-undo"></span> Cancel</a>';
 
         }
 
         function saveRow(oTable, nRow) {
             var jqInputs = $('input', nRow);
+            var jqoption = $('input[name="unilevel"]:checked', nRow);
+            // console.log(jqoption.value+' <=-===')
             // oTable.fnUpdate(jqInputs[0].value, nRow, 0, false);
             oTable.fnUpdate(jqInputs[0].value, nRow, 1, false);
             oTable.fnUpdate(jqInputs[1].value, nRow, 2, false);
             oTable.fnUpdate(jqInputs[2].value, nRow, 3, false);
             oTable.fnUpdate(jqInputs[3].value, nRow, 4, false);
+            oTable.fnUpdate(jqoption[0].value, nRow, 5, false);
             oTable.fnUpdate('<a class="edit btn btn-success" href=""><span class="fa fa-edit"></span> Edit</a> '+
-            '<a class="delete btn btn-danger" href=""><span class="fa fa-trash-o"></span> Delete</a>', nRow, 5, false);
+            '<a class="delete btn btn-danger" href=""><span class="fa fa-trash-o"></span> Delete</a>', nRow, 6, false);
             oTable.fnDraw();
         }
 
@@ -212,7 +225,8 @@ var productTable = function () {
                         Name       :$(nRow)[0].childNodes[1].innerHTML,
                         Amount     :$(nRow)[0].childNodes[2].innerHTML,
                         Points     :$(nRow)[0].childNodes[3].innerHTML,
-                        Developer  :$(nRow)[0].childNodes[4].innerHTML
+                        Developer  :$(nRow)[0].childNodes[4].innerHTML,
+                        is_unilevel:$(nRow)[0].childNodes[5].innerHTML
                     },
                     success: function (data) {
                         // data = JSON.parse(data)

@@ -10,7 +10,7 @@
 			<div class="icon">
 				<i class="ion ion-ios-body"></i>
 			</div>
-			
+
 			<div class="small-box-footer">
 				<a href="#" class="col-xs-6 btn btn-success">Collect <i class="fa fa-credit-card"></i></a>
 				<a href="direct_referrals" class="col-xs-6 btn btn-primary ">Details <i class="fa fa-list-alt"></i></a>
@@ -31,7 +31,8 @@
 			</div>
 			<div class="small-box-footer">
 				<a href="#" class="col-xs-6 btn btn-success">Collect <i class="fa fa-credit-card"></i></a>
-				<a href="indirect_referrals" class="col-xs-6 btn btn-primary ">Details <i class="fa fa-list-alt"></i></a>
+				<a href="indirect_referrals" class="col-xs-6 btn btn-primary ">Details <i
+						class="fa fa-list-alt"></i></a>
 			</div>
 		</div>
 	</div>
@@ -47,7 +48,7 @@
 			<div class="icon">
 				<i class="ion ion-bag"></i>
 			</div>
-			
+
 			<div class="small-box-footer">
 				<a href="#" class="col-xs-6 btn btn-success">Collect <i class="fa fa-credit-card"></i></a>
 				<a href="#" class="col-xs-6 btn btn-primary ">Details <i class="fa fa-list-alt"></i></a>
@@ -66,10 +67,38 @@
 			<div class="icon">
 				<i class="ion ion-network"></i>
 			</div>
-			
+
 			<div class="small-box-footer">
 				<a href="#" class="col-xs-6 btn btn-success">Collect <i class="fa fa-credit-card"></i></a>
 				<a href="#" class="col-xs-6 btn btn-primary ">Details <i class="fa fa-list-alt"></i></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-3">
+		<div class="portlet ">
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="fa fa-barcode"></i> Product code
+				</div>
+			</div>
+			<div class="portlet-body util-btn-margin-bottom-5 product_code_body">
+				<h4></h4>
+				<form role="form">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="input-group">
+								<input type="text" class="form-control" placeholder="Ex: prod-abCdEfgh" id="code">
+								<span class="input-group-btn">
+									<button class="btn btn-info" type="button" id="productcode">Claim</button>
+								</span>
+							</div>
+							<!-- /input-group -->
+						</div>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>

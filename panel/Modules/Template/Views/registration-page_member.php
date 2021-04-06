@@ -33,10 +33,25 @@
         <link href="<?=base_url()?>/assets/css/pages/login.css" rel="stylesheet" type="text/css"/>
         <link href="<?=base_url()?>/assets/css/custom.css" rel="stylesheet" type="text/css"/>
         <!-- END THEME STYLES -->
-    <link rel="shortcut icon" href="<?=base_url()?>/favicon.html"/>
+        <link rel="shortcut icon" href="<?=base_url()?>/favicon.html"/>
+        <style type="text/css">
+            .no-js #loader { display: none;  }
+            .js #loader { display: block; position: absolute; left: 100px; top: 0; }
+            .se-pre-con {
+                position: fixed;
+                left: 0px;
+                top: 0px;
+                width: 100%;
+                height: 100%;
+                z-index: 9999;
+                background: url(<?=base_url()?>/assets/img/Preloader_8.gif) center no-repeat #fff;
+            }
+        </style>
     </head>
     <!-- BEGIN BODY -->
     <body class="login">
+        <!-- hide the page if it wasn't completely loaded -->
+        <div class="se-pre-con"></div> 
         <!-- BEGIN LOGO -->
         <div class="logo">
             
@@ -124,7 +139,7 @@
         <!-- END LOGIN -->
         <!-- BEGIN COPYRIGHT -->
         <div class="copyright">
-            2021 &copy; Tonido, Joshua Dave.
+        2021 &copy; Rayns Marketing & <a href="https://www.facebook.com/jeepny.ako/" style="color: #ff5f5f;">JD Tonido</a>.
         </div>
         <!-- END COPYRIGHT -->
         <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
@@ -154,6 +169,10 @@
             jQuery(document).ready(function() {     
                 // App.init();
                 Login.init();
+            });
+            $(window).load(function() {
+                // Animate loader off screen
+                $(".se-pre-con").fadeOut("slow");;
             });
         </script>
     </body>

@@ -15,7 +15,7 @@ class Api_indirect_referral extends ResourceController
         $this->session      = \Config\Services::session();
     }
 
-    protected $modelName = 'Modules\Common\Models\Tbl_indreferral_bonus';
+    protected $modelName = 'Modules\Common\Models\tbl_indreferral_bonus';
     protected $format    = 'json';
 
     use ResponseTrait;

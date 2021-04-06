@@ -8,4 +8,7 @@ $routes->group('api', function($routes){
     $routes->resource('members', ['controller' =>'Api_members']);
     $routes->resource('vw_product_code', ['controller' =>'Api_product_codes']);
     $routes->resource('indirect_ref', ['controller' =>'Api_indirect_referral']);
+    $routes->resource('direct_ref', ['controller' =>'Api_direct_referral']);
+    $routes->resource('nodes', ['controller' =>'Api_nodes']);
+    $routes->resource('unilevel', ['controller' =>'Api_unilevel']);
 });
