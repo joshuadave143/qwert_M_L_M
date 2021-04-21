@@ -14,3 +14,18 @@ Mysql_update
 -tbl_product_codes
     +add date_created
     +add date_modified
+-vw_product_codes
+    +date_modified
+-vw_active_account
+-vw_unilevel_details
+-tbl_unilevel_bonus
+    +upline_status
+-process_unilevels
+    update
+-tbl_ewallet
+-process_due_unilevel
+-process_collect_bonus
+-vw_ewallet_total
+-tbl_payout
+-tbl_nodes
+    +date_modified

@@ -11,4 +11,10 @@ $routes->group('api', function($routes){
     $routes->resource('direct_ref', ['controller' =>'Api_direct_referral']);
     $routes->resource('nodes', ['controller' =>'Api_nodes']);
     $routes->resource('unilevel', ['controller' =>'Api_unilevel']);
+    $routes->resource('vw_unilevel_details', ['controller' =>'Api_vw_unilevel_details']);
+    $routes->resource('collect', ['controller' =>'Api_process_collect']);
+    $routes->resource('payout', ['controller' =>'Api_payout']);
+    $routes->resource('vw_ewallet_total', ['controller' =>'Api_vw_ewallet_total']);
+    $routes->resource('country', ['controller' =>'Api_country']);
+    $routes->resource('security', ['controller' =>'Api_security']);
 });

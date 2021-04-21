@@ -15,6 +15,11 @@ class Api_members extends ResourceController
 
     use ResponseTrait;
 
+    function __construct()
+	{	
+        $this->session      = \Config\Services::session();
+    }
+
     public function index(){
         $json_format     = new Json_format_datatable;
         $product         = $this->model->select('member_id,sponsor_id, 
@@ -55,93 +60,40 @@ class Api_members extends ResourceController
         return $this->respond($product);
     }
 
-    // public function create(){
-    //     helper(['form']);
-
-    //     $rules =[
-    //         'Name'=>'required',
-    //         'Amount'=>'required|numeric',
-    //         'Points'=>'required|numeric',
-    //         'Developer'=>'required|numeric',
-    //     ];
-
-    //     if( !$this->validate($rules) ){
-    //         return $this->fail($this->validator->getErrors());
-    //     }
-    //     $input = $this->request->getRawInput();
+    public function update($id = null){
+        // $input = $this->request->getRawInput();
+        // echo $input['value']['city'];
+        // return $this->respond($input);
         
-    //     $data = [
-    //         'product_name'      => $input['Name'],
-    //         'amount'            => $input['Amount'],
-    //         'pts'               => $input['Points'],
-    //         'developer_fee'     => $input['Developer']
-    //     ];
+        $input = $this->request->getRawInput();
+        if( $input['name'] == 'address'){
+            $data = [
+                'member_id'    => $this->session->get('member_id'),
+                'city'         => $input['value']['city'],
+                'address'      => $input['value']['address'],
+                'province'     => $input['value']['province'],
+                'postal_code'  => $input['value']['postcode']
+            ];
+        }
+        else{
+            $data = [
+                'member_id'     => $this->session->get('member_id'),
+                $input['name']  => $input['value']
+            ];
+        }
         
-    //     $post_id = $this->model->insert($data);
-    //     // $data['post_id'] = $post_id;
-    //     // return $this->respondCreated($data);
-
-    //     $response = [
-    //       'status'   => 200,
-    //       'error'    => null,
-    //       'messages' => [
-    //           'success' => 'Product inserted successfully'
-    //       ]
-    //     ];
-    //   return $this->respond($response);
-    // }
-
-    // public function update($id = null){
-        
-    //     helper(['form']);
-
-    //     $rules =[
-    //         'Name'=>'required',
-    //         'Amount'=>'required|numeric',
-    //         'Points'=>'required|numeric',
-    //         'Developer'=>'required|numeric',
-    //     ];
-
-    //     if( !$this->validate($rules) ){
-    //         return $this->fail($this->validator->getErrors());
-    //     }
-    //     $input = $this->request->getRawInput();
-        
-    //     $data = [
-    //         'product_id'            => $id,
-    //         'product_name'      => $input['Name'],
-    //         'amount'            => $input['Amount'],
-    //         'pts'               => $input['Points'],
-    //         'developer_fee'     => $input['Developer']
-    //     ];
      
-    //     $test = $this->model->save($data);
+        $test = $this->model->save($data);
         
 
-    //     $response = [
-    //       'status'   => 200,
-    //       'error'    => null,
-    //       'messages' => [
-    //           'success' => 'Package updated successfully'
-    //       ]
-    //   ];
-    //   return $this->respond($response);
-    // }
+        $response = [
+          'status'   => 200,
+          'error'    => null,
+          'messages' => [
+              'success' => 'Account updated successfully'
+          ]
+      ];
+      return $this->respond($response);
+    }
 
-    // public function delete($id = null){
-	// 	$data = $this->model->find($id);
-	// 	if($data){
-	// 		$this->model->delete($id);
-    //         $response = [
-    //             'status'   => 200,
-    //             'error'    => null,
-    //             'messages' => [
-    //                 'success' => 'Package deleted successfully'
-    //             ]
-    //         ];
-    //         return $this->respond($response);
-	// 	}else{
-	// 		return $this->failNotFound('Item not found');
-	// 	}
-	// }
 }

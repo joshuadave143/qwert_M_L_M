@@ -12,3 +12,7 @@ $routes->match(['get','post'],'/member/(:any)/Product_Codes', 'Product_code::ind
 $routes->match(['get','post'],'/member/(:any)/direct_referrals', 'Referrals::index', ['filter' => 'Auth']);
 $routes->match(['get','post'],'/member/(:any)/indirect_referrals', 'Referrals::indirect', ['filter' => 'Auth']);
 $routes->match(['get','post'],'/member/(:any)/genealogy', 'Genealogy::index', ['filter' => 'Auth']);
+$routes->match(['get','post'],'/member/(:any)/unilevel', 'Unilevel::index', ['filter' => 'Auth']);
+$routes->match(['get','post'],'/member/(:any)/payout_history', 'Payout_history::index', ['filter' => 'Auth']);
+$routes->match(['get','post'],'/member/(:any)/account_settings', 'Account_settings::index', ['filter' => 'Auth']);
+$routes->match(['get','post'],'/member/(:any)/change_password', 'Change_password::index', ['filter' => 'Auth']);

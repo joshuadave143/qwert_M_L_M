@@ -10,3 +10,4 @@ $routes->match(['get','post'],'/admin/(:any)/Members_list', 'Entry_member::membe
 $routes->match(['get','post'],'/admin/(:any)/save', 'Entry_member::save');
 $routes->match(['get','post'],'/admin/(:any)/Product_Codes', 'Product_code::index');
 $routes->match(['get','post'],'/admin/(:any)/unilevel_library', 'Unilevel::index');
+$routes->match(['get','post'],'/admin/(:any)/payout_history', 'Payout_history::index');

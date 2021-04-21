@@ -1,13 +1,12 @@
 <?php
-namespace Modules\Admin\Controllers;
+namespace Modules\Member\Controllers;
 use \CodeIgniter\Controller;
 use CodeIgniter\API\ResponseTrait;
-use Modules\Admin\Models\Members as MembersModel;
 
-use \Modules\Common\Libraries\Oauth;
+use \App\Libraries\Oauth;
 use \OAuth2\Request;
 
-class Dashboard extends \Modules\Common\Controllers\AdminBaseController
+class Unilevel extends \Modules\Common\Controllers\MemberBaseController
 {
 	use ResponseTrait;
     public $parser;
@@ -37,18 +36,19 @@ class Dashboard extends \Modules\Common\Controllers\AdminBaseController
 			array('js_link' => base_url().'/assets/plugins/select2/select2.min.js'),
 			array('js_link' => base_url().'/assets/plugins/datatables/media/js/jquery.dataTables.min.js'),
 			array('js_link' => base_url().'/assets/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js'),
-			array('js_link' => base_url().'/assets/scripts/adminDash.js')
+			array('js_link' => base_url().'/assets/scripts/unilevel_details.js')
         );
         
-        $this->data['js_init']      = "adminDash.init()
-                                        localStorage.setItem('access_token','".$this->session->get('access_token')."');"; 
-		$this->data['title']        = 'tests';
-		$this->data['page']         = 'Modules\Admin\Views\dashboard_views';
+        $this->data['js_init']      = "unilevelTable.init()
+        localStorage.setItem('access_token','".$this->session->get('access_token')."');";
+		$this->data['title']        = 'Direct Referrals';
+		$this->data['page']         = 'Modules\Member\Views\unilevel_view';
         $this->data['css_custom']   = "";
         $this->data['js_custom']    = "";
         $this->data['message']      = "";
+        $this->data['referral_type']      = "Direct Referrals";
         
-        $side['side_bar'] = $this->load_sidebar(array('item_index' => 1, 'sub_index' => 0, 'page_title' => 'Dashboard', 'show_page_title' => 1, 'show_breadcrumbs' => 1, 'user_type' => $this->joshua_auth->get_session_data('user_type')));
+        $side['side_bar'] = $this->load_sidebar(array('item_index' => 10, 'sub_index' => 0, 'page_title' => 'Dashboard', 'show_page_title' => 1, 'show_breadcrumbs' => 1, 'user_type' => $this->joshua_auth->get_session_data('user_type')));
 
         $this->data['side_bar_template'] = view('Modules\Template\Views\template\page-sidebar',$side['side_bar'] );
         $this->data['template'] = view('Modules\Template\Views\default-page',$this->data);
@@ -56,17 +56,4 @@ class Dashboard extends \Modules\Common\Controllers\AdminBaseController
                             ->renderString($this->data['template']);
     }
 
-    public function show($id){
-        $members = new MembersModel;
-        $member = $members->find($id);
-        // $sql = $members->getCompiledSelect();
-        // echo $sql;
-        return $this->respond($member);
-    }
-
-    public function create(){
-        $data = $this->request->getPost();
-        $member = new MembersModel;
-        echo $id = $member->insert($data);
-    }
 }

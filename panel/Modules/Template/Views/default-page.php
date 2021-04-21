@@ -26,6 +26,7 @@
 	<!-- BEGIN THEME STYLES -->
 	<link href="<?php echo base_url(); ?>/assets/css/style-conquer.css" rel="stylesheet" type="text/css"/>
 	<link href="<?php echo base_url(); ?>/assets/css/style.css" rel="stylesheet" type="text/css"/>
+	<link href="<?php echo base_url(); ?>/assets/css/ionicons.min.css" rel="stylesheet" type="text/css"/>
 	<link href="<?php echo base_url(); ?>/assets/css/style-responsive.css" rel="stylesheet" type="text/css"/>
 	<link href="<?php echo base_url(); ?>/assets/css/plugins.css" rel="stylesheet" type="text/css"/>
 	<link href="<?php echo base_url(); ?>/assets/css/pages/portfolio.css" rel="stylesheet" type="text/css"/>

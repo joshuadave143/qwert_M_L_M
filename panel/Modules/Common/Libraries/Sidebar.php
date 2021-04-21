@@ -360,7 +360,43 @@ class Sidebar {
 											2 => array( '<i class="fa fa-barcode"></i> Product Codes', 'Product_Codes', '' ,4 => array(ADMIN_ACCOUNT)),
 											3 => array( '<i class="fa fa-sitemap"></i> SURVEY FORM', 'library/Survey_form', '' ,4 => array(DEVELOPER_ACCOUNT)),
 						)
-			)
+			),
+			10 => array(
+						'title'			=> 'Unilevel',
+						'title_desc'	=> ' <small>Unilevel</small>',
+						'name'			=> 'Unilevel',
+						'url' 			=> 'unilevel',
+						'icon' 			=> '<i class="ion ion-bag"></i> ',
+						'permissions'	=> array(MEMBER_ACCOUNT),
+						'sub'			=> array()
+			),
+			11 => array(
+						'title'			=> 'Payout history',
+						'title_desc'	=> ' <small>Payout history</small>',
+						'name'			=> 'Payout History',
+						'url' 			=> 'payout_history',
+						'icon' 			=> '<i class="fa fa-credit-card"></i> ',
+						'permissions'	=> array(ADMIN_ACCOUNT,MEMBER_ACCOUNT),
+						'sub'			=> array()
+			),
+			12 => array(
+						'title'			=> 'Account Settings',
+						'title_desc'	=> ' <small>Account Settings</small>',
+						'name'			=> 'Account Settings',
+						'url' 			=> 'account_settings',
+						'icon' 			=> '<i class="fa fa-cogs"></i> ',
+						'permissions'	=> array(MEMBER_ACCOUNT),
+						'sub'			=> array()
+			),
+			13 => array(
+						'title'			=> 'Change Password',
+						'title_desc'	=> ' <small>Change Password</small>',
+						'name'			=> 'Change Password',
+						'url' 			=> 'change_password',
+						'icon' 			=> '<i class="fa fa-key"></i> ',
+						'permissions'	=> array(MEMBER_ACCOUNT),
+						'sub'			=> array()
+			),
 			
 		);
 	}
