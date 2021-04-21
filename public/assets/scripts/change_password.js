@@ -35,6 +35,7 @@ var FormEditable = function () {
                 "Authorization": "Bearer "+localStorage.getItem('access_token')
             },
         });
+        
         //global settings 
         $.fn.editable.defaults.inputclass = 'form-control';
 
