@@ -3,12 +3,12 @@
 namespace App\Controllers;
 use \CodeIgniter\Controller;
 use CodeIgniter\API\ResponseTrait;
-class Home extends BaseController
+class Maintenance extends BaseController
 {
 	use ResponseTrait;
 	public function index()
 	{
-		return view('welcome_message');
+		return view('maintenance');
 	}
     public function show($id)
     {

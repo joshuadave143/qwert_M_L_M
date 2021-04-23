@@ -1,31 +1,31 @@
 Mysql_update
--process_map_nodes
--lib_unilevel
+-process_map_nodes/
+-lib_unilevel/
     +libuni_id
     +amount
     +level
--tbl_unilevel_bonus
+-tbl_unilevel_bonus/
     +unilevel_id
     +node_id
     +downline_id
     +amount
     +unilevel_status
--trg_product_codes_after_update
--tbl_product_codes
+-trg_product_codes_after_update/
+-tbl_product_codes/
     +add date_created
     +add date_modified
--vw_product_codes
+-vw_product_codes/
     +date_modified
--vw_active_account
--vw_unilevel_details
--tbl_unilevel_bonus
+-vw_active_account/
+-vw_unilevel_details/
+-tbl_unilevel_bonus/
     +upline_status
--process_unilevels
+-process_unilevels/
     update
--tbl_ewallet
--process_due_unilevel
--process_collect_bonus
--vw_ewallet_total
--tbl_payout
+-tbl_ewallet/
+-process_due_unilevel/
+-process_collect_bonus/
+-vw_ewallet_total/
+-tbl_payout/
 -tbl_nodes
-    +date_modified
+    +date_modified/

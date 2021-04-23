@@ -397,6 +397,15 @@ class Sidebar {
 						'permissions'	=> array(MEMBER_ACCOUNT),
 						'sub'			=> array()
 			),
+			14 => array(
+						'title'			=> 'Developer\'s Fee',
+						'title_desc'	=> ' <small>Developer\'s Fee</small>',
+						'name'			=> 'Developer\'s Fee',
+						'url' 			=> 'developer_fee',
+						'icon' 			=> '<i class="fa fa-code"></i> ',
+						'permissions'	=> array(ADMIN_ACCOUNT),
+						'sub'			=> array()
+			),
 			
 		);
 	}

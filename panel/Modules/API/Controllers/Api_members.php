@@ -24,7 +24,10 @@ class Api_members extends ResourceController
         $json_format     = new Json_format_datatable;
         $product         = $this->model->select('member_id,sponsor_id, 
                         concat(lastname,\', \',firstname,\' \',middlename) as name,
-                        gender,
+                        case 
+                            when gender = 1 then \'Male\'
+                            when gender = 2 then \'Female\'
+                        end as gender,
                         birthdate,
                         age,
                         concat(address,\' \',city,\' \',province,\' \',postal_code,\' \',lc.cname) as address,

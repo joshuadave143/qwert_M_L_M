@@ -10,6 +10,7 @@ use \Modules\Common\Filters\OAuthFilter;
 use \Modules\Common\Filters\Auth;
 use \Modules\Common\Filters\Prevent_member;
 use \Modules\Common\Filters\Prevent_admin;
+use \Modules\Common\Filters\MaintenanceFilter;
 
 class Filters extends BaseConfig
 {
@@ -23,10 +24,11 @@ class Filters extends BaseConfig
 		'csrf'     => CSRF::class,
 		'toolbar'  => DebugToolbar::class,
 		'honeypot' => Honeypot::class,
-		'OAuthFilter' =>  OAuthFilter::class,
-		'Auth' 		=>  Auth::class,
-		'Prevent_member' => Prevent_member::class,
-		'Prevent_admin' => Prevent_admin::class
+		'OAuthFilter' 		=>  OAuthFilter::class,
+		'Auth' 				=>  Auth::class,
+		'Prevent_member' 	=> 	Prevent_member::class,
+		'Prevent_admin' 	=> 	Prevent_admin::class,
+		'MaintenanceFilter' 	=> 	MaintenanceFilter::class
 	];
 
 	/**
@@ -67,8 +69,9 @@ class Filters extends BaseConfig
 	 * @var array
 	 */
 	public $filters = [
-		'OAuthFilter' => ['before' => ['api/*','api']],
-		'Prevent_member' => ['before' => ['admin/*','admin']],
-		'Prevent_admin' => ['before' => ['member/*','member']],
+		'MaintenanceFilter' => ['before' => ['admin/*','admin','member/*','member','auth','/']],
+		'OAuthFilter' 		=> ['before' => ['api/*','api']],
+		'Prevent_member' 	=> ['before' => ['admin/*','admin']],
+		'Prevent_admin' 	=> ['before' => ['member/*','member']],
 	];
 }

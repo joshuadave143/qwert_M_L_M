@@ -1,32 +1,20 @@
-<!-- <div class="row stats-overview-cont">
+<div class="row stats-overview-cont">
 	<div class="col-lg-3 col-xs-6">
 		<div class="small-box bg-aqua">
 			<div class="inner">
-				<h3 id='referral'><i class="fa fa-ruble" style="font-size: 25px;"></i> {DIREC_REF}</h3>
+				<h3 id='total'><i class="fa fa-ruble" style="font-size: 25px;"></i> {Total}</h3>
 
-				<p>Product</p>
+				<p>Total</p>
 			</div>
 			<div class="icon">
 				<i class="ion ion-bag"></i>
 			</div>
-
-			
-		</div>
-	</div>
-
-	<div class="col-lg-3 col-xs-6">
-		<div class="small-box bg-yellow">
-			<div class="inner">
-				<h3 id='Inreferral'><i class="fa fa-ruble" style="font-size: 25px;"></i> {INDI_REF}</h3>
-
-				<p>Indirect Referral</p>
-			</div>
-			<div class="icon">
-				<i class="ion ion-ios-people-outline"></i>
+			<div class="small-box-footer">
+				<a href="#" class="col-xs-12 btn btn-success collect" data-amount="{Total}">Collect <i class="fa fa-credit-card"></i></a>
 			</div>
 		</div>
 	</div>
-</div> -->
+</div>
 
 <div class="row">
     <div class="col-md-12">
@@ -34,35 +22,38 @@
         <div class="portlet">
             <div class="portlet-title">
                 <div class="caption">
-                    <i class="fa fa-ruble"></i>Request Payout
+                    <i class="fa fa-edit"></i>Developer's fee details
                 </div>
                 
             </div>
             <div class="portlet-body">
-                
-                <table class="table table-striped table-hover table-bordered" id="request_payout">
+             
+                <table class="table table-striped table-hover table-bordered" id="dev_fee_table">
                     <thead>
                         <tr>
                             <th>
                                 #
                             </th>
                             <th>
-                                Node ID
-                            </th>
-                            <th>
                                 Member ID
                             </th>
                             <th>
-                                Name
+                                Product Name
+                            </th>
+                            <th>
+                                Package Name
                             </th>
                             <th>
                                 Amount
                             </th>
                             <th>
-                                Date Request
+                                Status
                             </th>
                             <th>
-                                Tools
+                                Date Earned
+                            </th>
+                            <th>
+                                Date Collected
                             </th>
                         </tr>
                     </thead>
@@ -70,6 +61,7 @@
                     </tbody>
                 </table>
             </div>
+            
         </div>
         <!-- END EXAMPLE TABLE PORTLET-->
     </div>

@@ -2,12 +2,12 @@
 namespace Modules\Admin\Controllers;
 use \CodeIgniter\Controller;
 use CodeIgniter\API\ResponseTrait;
-use Modules\Admin\Models\Members as MembersModel;
+use Modules\Common\Models\Tbl_developers_fee;
 
-use \Modules\Common\Libraries\Oauth;
+use \App\Libraries\Oauth;
 use \OAuth2\Request;
 
-class Dashboard extends \Modules\Common\Controllers\AdminBaseController
+class Dev_fee extends \Modules\Common\Controllers\AdminBaseController
 {
 	use ResponseTrait;
     public $parser;
@@ -38,18 +38,20 @@ class Dashboard extends \Modules\Common\Controllers\AdminBaseController
 			array('js_link' => base_url().'/assets/plugins/select2/select2.min.js'),
 			array('js_link' => base_url().'/assets/plugins/datatables/media/js/jquery.dataTables.min.js'),
 			array('js_link' => base_url().'/assets/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js'),
-			array('js_link' => base_url().'/assets/scripts/adminDash.js')
+			array('js_link' => base_url().'/assets/scripts/developers_fee.js')
         );
         
-        $this->data['js_init']      = "adminDash.init()
-                                        localStorage.setItem('access_token','".$this->session->get('access_token')."');"; 
-		$this->data['title']        = 'tests';
-		$this->data['page']         = 'Modules\Admin\Views\dashboard_views';
+        $this->data['js_init']      = "developers_feeTable.init()
+        localStorage.setItem('access_token','".$this->session->get('access_token')."');";
+		$this->data['title']        = 'Product Library';
+		$this->data['page']         = 'Modules\Admin\Views\dev_fee_view';
         $this->data['css_custom']   = "";
         $this->data['js_custom']    = "";
         $this->data['message']      = "";
+        $this->data['Total']      = $this->income_format($this->ewallet()[0]['total']);
+
         
-        $side['side_bar'] = $this->load_sidebar(array('item_index' => 1, 'sub_index' => 0, 'page_title' => 'Dashboard', 'show_page_title' => 1, 'show_breadcrumbs' => 1, 'user_type' => $this->joshua_auth->get_session_data('user_type')));
+        $side['side_bar'] = $this->load_sidebar(array('item_index' => 14, 'sub_index' => 0, 'page_title' => 'Dashboard', 'show_page_title' => 1, 'show_breadcrumbs' => 1, 'user_type' => $this->joshua_auth->get_session_data('user_type')));
 
         $this->data['side_bar_template'] = view('Modules\Template\Views\template\page-sidebar',$side['side_bar'] );
         $this->data['template'] = view('Modules\Template\Views\default-page',$this->data);
@@ -57,17 +59,14 @@ class Dashboard extends \Modules\Common\Controllers\AdminBaseController
                             ->renderString($this->data['template']);
     }
 
-    public function show($id){
-        $members = new MembersModel;
-        $member = $members->find($id);
-        // $sql = $members->getCompiledSelect();
-        // echo $sql;
-        return $this->respond($member);
+    function income_format($data){
+        return $data != ''?number_format($data, 2, '.', ','):number_format(0, 2, '.', '');
     }
 
-    public function create(){
-        $data = $this->request->getPost();
-        $member = new MembersModel;
-        echo $id = $member->insert($data);
+    function ewallet(){
+        $Tbl_developers_fee = new tbl_developers_fee;
+        return $Tbl_developers_fee->select('sum(amount) as total')
+                                    ->where('status', 'Not Collected')
+                                    ->find();
     }
 }

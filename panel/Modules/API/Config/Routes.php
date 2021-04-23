@@ -17,4 +17,5 @@ $routes->group('api', function($routes){
     $routes->resource('vw_ewallet_total', ['controller' =>'Api_vw_ewallet_total']);
     $routes->resource('country', ['controller' =>'Api_country']);
     $routes->resource('security', ['controller' =>'Api_security']);
+    $routes->resource('developers_fee', ['controller' =>'Api_developers_fee']);
 });
