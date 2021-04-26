@@ -41,9 +41,11 @@ class Dashboard extends \Modules\Common\Controllers\AdminBaseController
 			array('js_link' => base_url().'/assets/scripts/adminDash.js')
         );
         
-        $this->data['js_init']      = "adminDash.init()
-                                        localStorage.setItem('access_token','".$this->session->get('access_token')."');"; 
-		$this->data['title']        = 'tests';
+        $this->data['js_init']      = "
+                                    localStorage.setItem('access_token','".$this->session->get('access_token')."')    
+                                    adminDash.init()
+                                        ;"; 
+		$this->data['title']        = 'Dashboard';
 		$this->data['page']         = 'Modules\Admin\Views\dashboard_views';
         $this->data['css_custom']   = "";
         $this->data['js_custom']    = "";

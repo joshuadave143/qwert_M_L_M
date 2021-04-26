@@ -13,7 +13,7 @@ class MaintenanceFilter implements FilterInterface{
         // $maintenance_mode = false; 
         // $_SERVER['REMOTE_ADDR'];
         $maintenance_mode = new maintenance_mode;
-        $maintenance_mode->set(true, '180.191.87.99');
+        $maintenance_mode->set(true, '127.0.0.1');
         $maintenance_mode->check();
         // if(  false ){
         //     return redirect()->to('/maintenance');

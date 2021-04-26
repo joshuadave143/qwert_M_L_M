@@ -38,8 +38,9 @@ class Dashboard extends \Modules\Common\Controllers\MemberBaseController
 			array('js_link' => base_url().'/assets/scripts/Dash.js')
         );
         
-        $this->data['js_init']      = "dash.init()
-                                        localStorage.setItem('access_token','".$this->session->get('access_token')."');"; 
+        $this->data['js_init']      = "localStorage.setItem('access_token','".$this->session->get('access_token')."');
+                                    dash.init()
+                                        "; 
 		$this->data['title']        = 'Dashboard';
 		$this->data['page']         = 'Modules\Member\Views\dashboard_views';
         $this->data['css_custom']   = "";
