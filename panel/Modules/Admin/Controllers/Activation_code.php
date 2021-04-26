@@ -4,7 +4,6 @@ use \CodeIgniter\Controller;
 use CodeIgniter\API\ResponseTrait;
 
 use \App\Libraries\Oauth;
-use \OAuth2\Request;
 
 class Activation_code extends \Modules\Common\Controllers\AdminBaseController
 {
